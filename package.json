@@ -41,5 +41,10 @@
         "simple-git-hooks": "^2.4.1",
         "nano-staged": "^0.5.0",
         "standard-version": "^9.5.0"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:ovchinnikov-lxs/o-components.git"
+    },
+    "license": "ISC"
 }
