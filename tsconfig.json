@@ -11,7 +11,8 @@
             "~/*": [
                 "./src/*"
             ]
-        }
+        },
+        "declaration": true,
     },
     "references": [
         {
