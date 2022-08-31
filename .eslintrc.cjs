@@ -331,7 +331,6 @@ module.exports = {
                 },
             },
         ],
-        'no-duplicate-imports': 'error',
         'no-useless-computed-key': 'error',
         'no-useless-constructor': 'error',
         'no-useless-rename': 'error',

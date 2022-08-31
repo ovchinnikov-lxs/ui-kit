@@ -24,8 +24,23 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint/Fix with ESLint
 
 ```sh
-npm run lint
+npm run el:check
+npm run el:fix
+```
+
+### Lint/Fix with StyleLint
+
+```sh
+npm run sl:check
+npm run sl:fix
+```
+
+### Or all in one
+
+```sh
+npm run lint:check
+npm run lint:fix
 ```

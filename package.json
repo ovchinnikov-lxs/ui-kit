@@ -27,24 +27,40 @@
         "@vue/tsconfig": "^0.1.3",
         "eslint": "8.22.0",
         "eslint-plugin-vue": "^9.3.0",
+        "nano-staged": "^0.5.0",
         "npm-run-all": "^4.1.5",
+        "sass": "^1.54.7",
+        "simple-git-hooks": "^2.4.1",
+        "standard-version": "^9.5.0",
         "stylelint": "^13.13.1",
         "stylelint-config-css-modules": "^2.2.0",
         "stylelint-config-standard": "^20.0.0",
         "stylelint-order": "^4.1.0",
         "stylelint-scss": "^3.14.2",
-        "vite-plugin-stylelint": "^3.0.7",
         "typescript": "~4.7.4",
         "vite": "^3.0.4",
         "vite-plugin-checker": "^0.5.0",
-        "vue-tsc": "^0.39.5",
-        "simple-git-hooks": "^2.4.1",
-        "nano-staged": "^0.5.0",
-        "standard-version": "^9.5.0"
+        "vite-plugin-stylelint": "^3.0.7",
+        "vue-tsc": "^0.39.5"
     },
     "repository": {
         "type": "git",
         "url": "git@github.com:ovchinnikov-lxs/o-components.git"
     },
-    "license": "ISC"
+    "license": "ISC",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/o-components.umd.cjs",
+    "module": "./dist/o-components.js",
+    "exports": {
+        ".": {
+            "import": "./dist/o-components.js",
+            "require": "./dist/o-components.umd.cjs"
+        },
+        "./style": {
+            "import": "./dist/style.css"
+        }
+    }
 }
