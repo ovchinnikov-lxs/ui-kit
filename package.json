@@ -1,5 +1,5 @@
 {
-    "name": "o-components",
+    "name": "@ovchinnikov-lxs/o-components",
     "version": "0.0.2",
     "scripts": {
         "dev": "vite --port 3001",

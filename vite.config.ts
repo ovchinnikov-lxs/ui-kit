@@ -28,7 +28,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, 'src/components/index.js'),
-            name: 'OComponents',
+            name: '@ovchinnikov-lxs/o-components',
             // the proper extensions will be added
             fileName: 'o-components',
         },
