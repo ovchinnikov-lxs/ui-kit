@@ -48,3 +48,29 @@ const classList = computed((): TypeClassList => [
         <slot v-bind="props"></slot>
     </component>
 </template>
+
+<style lang="scss">
+@import "src/assets/style/shared/mixins";
+
+.OButton {
+    @include reset-button;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-appearance: none;
+    transition: all .3s ease;
+
+    &.--is-disabled,
+    &.--is-loading {
+        pointer-events: none;
+    }
+
+    &.--is-interactive {
+        cursor: pointer;
+    }
+}
+</style>
