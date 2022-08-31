@@ -1,10 +1,7 @@
 # o-components
 
-Это библиотека компонентов без стилей, только функционал
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+#### Это библиотека компонентов без стилей, только функционал
+Работает на Vue 3, только для Vue 3 проектов
 
 ## Project Setup
 
@@ -24,21 +21,7 @@ npm run dev
 npm run build
 ```
 
-### Lint/Fix with ESLint
-
-```sh
-npm run el:check
-npm run el:fix
-```
-
-### Lint/Fix with StyleLint
-
-```sh
-npm run sl:check
-npm run sl:fix
-```
-
-### Or all in one
+### Lint/Fix with ESLint and StyleLint
 
 ```sh
 npm run lint:check
