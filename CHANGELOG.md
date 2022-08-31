@@ -1,6 +1,17 @@
-# Changelog
+# CHANGELOG
+### [0.0.3](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.2...v0.0.3) (2022-08-31)
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### Features
+
+* **composables:** Добавил vueuse как зависимость ([2b0673c](https://github.com/ovchinnikov-lxs/o-components/commit/2b0673c732d862bb3ea6e67701bf241904bf9514))
+* **lib:** Переделал на сборку библиотеки компонентов ([f49aeb6](https://github.com/ovchinnikov-lxs/o-components/commit/f49aeb6a52f1755f4d1d1d0baf6d5669fa01f178))
+
+
+### Refactor works
+
+* **build:** Переименовал пакет и добавил .npmignore ([c4b7e00](https://github.com/ovchinnikov-lxs/o-components/commit/c4b7e007660a22b041256085e0b9408d26cb97f4))
+* **OButton:** Добавил стили кнопке ([d8405e0](https://github.com/ovchinnikov-lxs/o-components/commit/d8405e057a0d68d5dc754bb8c90b12c6c13456f3))
 
 ### [0.0.2](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.1...v0.0.2) (2022-08-30)
 
