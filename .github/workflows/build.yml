@@ -1,9 +1,10 @@
-    name: Lint
-
+    name: Build
     on:
         pull_request:
         push:
-
+            branches:
+                - master
+                - develop
     jobs:
         lint:
             runs-on: ubuntu-latest
@@ -16,4 +17,4 @@
                   with:
                       node-version: ${{ matrix.node-version }}
                 - run: npm ci
-                - run: npm run lint:check
+                - run: npm run build
