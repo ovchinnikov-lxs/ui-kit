@@ -17,6 +17,7 @@
         "bump": "standard-version"
     },
     "dependencies": {
+        "@vueuse/core": "^9.1.1",
         "vue": "^3.2.37"
     },
     "devDependencies": {
