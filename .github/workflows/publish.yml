@@ -1,4 +1,4 @@
-    name: Deploy
+    name: Publish
 
     on:
         push:
@@ -54,7 +54,7 @@
                 - run: npm run bump
                 - run: git push && git push --tags
 
-        deploy:
+        publish:
             needs:
                 - lint
                 - test_build
@@ -76,6 +76,7 @@
                 - run: npm run build
                 - run: npm cache verify
                 - run: npm publish
+                - run: echo ${{ secrets.GITHUB_TOKEN }}
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

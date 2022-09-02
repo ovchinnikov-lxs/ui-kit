@@ -5,7 +5,7 @@
 
 <img src="https://github.com/ovchinnikov-lxs/o-components/workflows/Testing/badge.svg?branch=develop"/><br/>
 <img src="https://github.com/ovchinnikov-lxs/o-components/workflows/Testing/badge.svg?branch=master"/><br/>
-<img src="https://github.com/ovchinnikov-lxs/o-components/workflows/Deploy/badge.svg?branch=master"/><br/>
+<img src="https://github.com/ovchinnikov-lxs/o-components/workflows/Publish/badge.svg?branch=master"/><br/>
 
 ## Project Setup
 
