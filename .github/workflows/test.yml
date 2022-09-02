@@ -1,39 +1,32 @@
-    name: Testing
+name: Testing 🔨
 
-    on:
-        pull_request:
-            branches:
-                - develop
-                - master
-        push:
-            branches:
-                - develop
+on:
+    pull_request:
+        branches:
+            - develop
+            - master
+    push:
+        branches:
+            - develop
 
-    jobs:
-        lint:
-            runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [16.x]
-            steps:
-                - uses: actions/checkout@v3
-                - uses: actions/setup-node@v3
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                - run: npm ci
-                - run: npm run lint:check
+jobs:
+    lint-and-test-build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [16.x]
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v3
 
-        test_build:
-            needs:
-                - lint
-            runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [16.x]
-            steps:
-                - uses: actions/checkout@v3
-                - uses: actions/setup-node@v3
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                - run: npm ci
-                - run: npm run build
+            - name: Install dependents 🔧
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+              run: npm ci
+
+            - name: Run Test 🔨
+              run: npm run lint:check
+
+            - name: Build 👷
+              run: npm run build
