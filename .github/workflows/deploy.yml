@@ -43,8 +43,10 @@
                 matrix:
                     node-version: [16.x]
             steps:
-                - run: |
-                    echo $GITHUB_REPOSITORY
-                    git --version
-                    echo $GITHUB_CONTEXT
-                    echo ${{ github.repositoryUrl }}
+                - uses: actions/checkout@v2
+                - uses: actions/setup-node@v1
+                  with:
+                      node-version: ${{ matrix.node-version }}
+                - run: npm ci
+                - run: git status
+                - run: git config --global user.name
