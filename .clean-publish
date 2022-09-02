@@ -1,0 +1,24 @@
+{
+    "packageManager": "npm",
+    "fields": [
+        "devDependencies",
+        "scripts"
+    ],
+    "files": [
+        ".idea",
+        ".github",
+        "node_modules",
+        ".browserslistrc",
+        ".clean-publish",
+        ".editorconfig",
+        ".eslintignore",
+        ".eslintrc",
+        ".gitignore",
+        ".stylelintignore",
+        ".stylelintrc",
+        "tsconfig.config.json",
+        "tsconfig.json",
+        "package-lock.json",
+        "simple-git-hooks.js",
+    ]
+}

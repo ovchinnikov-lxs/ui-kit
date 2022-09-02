@@ -1,8 +1,9 @@
-    name: CI
+    name: Deploy
 
     on:
-        pull_request:
         push:
+            branches:
+                - master
 
     jobs:
         lint:
@@ -19,6 +20,8 @@
                 - run: npm run lint:check
 
         test_build:
+            needs:
+                - lint
             runs-on: ubuntu-latest
             strategy:
                 matrix:
@@ -31,18 +34,13 @@
                 - run: npm ci
                 - run: npm run build
 
-        test_deploy:
+        bump_tag:
+            needs:
+                - lint
+                - test_build
             runs-on: ubuntu-latest
             strategy:
                 matrix:
-                    node-version: [ 16.x ]
+                    node-version: [16.x]
             steps:
-                - uses: actions/checkout@v2
-                - uses: actions/setup-node@v1
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                - run: npm ci
-                - run: npm run build
-                - run: |
-                    cd dist
-                    ls
+                - run: git --version
