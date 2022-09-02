@@ -1,4 +1,6 @@
 # CHANGELOG
+### 0.0.4 (2022-09-02)
+
 ### [0.0.3](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.2...v0.0.3) (2022-08-31)
 
 
