@@ -3,6 +3,9 @@
 #### Это библиотека компонентов без стилей, только функционал
 Работает на Vue 3, только для Vue 3 проектов
 
+#### Статус CI:
+<img src="https://github.com/adv4000/o-components/workflows/CI/badge.svg?branch=master"/><br/>
+
 ## Project Setup
 
 ```sh
