@@ -1,48 +1,48 @@
-name: Publish 🚀
+    name: Publish 🚀
 
-on:
-    push:
-        branches:
-            - master
+    on:
+        push:
+            branches:
+                - master
 
-jobs:
-    lint-and-test-build:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [16.x]
-        steps:
-            - name: Checkout 🛎️
-              uses: actions/checkout@v3
+    jobs:
+        lint-and-test-build:
+            runs-on: ubuntu-latest
+            strategy:
+                matrix:
+                    node-version: [16.x]
+            steps:
+                - name: Checkout 🛎️
+                  uses: actions/checkout@v3
 
-            - name: Install dependents 🔧
-              uses: actions/setup-node@v3
-              with:
-                  node-version: ${{ matrix.node-version }}
-              run: npm ci
+                - name: Install dependents 🔧
+                  uses: actions/setup-node@v3
+                  with:
+                      node-version: ${{ matrix.node-version }}
+                  run: npm ci
 
-            - name: Run Test 🔨
-              run: npm run lint:check
+                - name: Run Test 🔨
+                  run: npm run lint:check
 
-            - name: Build 👷
-              run: npm run build
+                - name: Build 👷
+                  run: npm run build
 
-            - name: Bump Tag 🏷
-              run: |
-                  git config --global user.email "${{ github.event.pusher.email }}"
-                  git config --global user.name "${{ github.event.pusher.name }}"
+                - name: Bump Tag 🏷
+                  run: |
+                      git config --global user.email "${{ github.event.pusher.email }}"
+                      git config --global user.name "${{ github.event.pusher.name }}"
 
-                  npm run bump
+                      npm run bump
 
-                  git push && git push --tags
+                      git push && git push --tags
 
-            - name: Publish 🚀
-              with:
-                  registry-url: https://npm.pkg.github.com/
-              run: |
-                  npm cache verify
-                  npm publish
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                - name: Publish 🚀
+                  with:
+                      registry-url: https://npm.pkg.github.com/
+                  run: |
+                      npm cache verify
+                      npm publish
+                  env:
+                      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
