@@ -1,4 +1,11 @@
 # CHANGELOG
+### 0.0.8 (2022-09-02)
+
+
+### Bug Fixes
+
+* **publish:** Поправил публикацию пакета ([fb2be10](https://github.com/ovchinnikov-lxs/o-components/commit/fb2be10d0867d6d5fd0916f01f58776e657b8c5f))
+
 ### 0.0.7 (2022-09-02)
 
 ### 0.0.6 (2022-09-02)
