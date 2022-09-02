@@ -46,4 +46,5 @@
                 - run: |
                     echo $GITHUB_REPOSITORY
                     git --version
+                    echo ${{ github.context }}
                     echo ${{ github.repositoryUrl }}
