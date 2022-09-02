@@ -44,5 +44,5 @@
                     node-version: [16.x]
             steps:
                 - run: echo $GITHUB_REPOSITORY
-                - run: echo git config user.name
-                - run: echo git config user.email
+                - run: git config user.name
+                - run: git config user.email
