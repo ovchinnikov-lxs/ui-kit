@@ -48,5 +48,5 @@
                   with:
                       node-version: ${{ matrix.node-version }}
                 - run: npm ci
-                - run: git status
-                - run: git config --global user.name
+                - run: npm run bump
+                - run: git push && git push --tags
