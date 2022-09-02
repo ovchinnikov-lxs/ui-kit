@@ -50,6 +50,9 @@
         "type": "git",
         "url": "git@github.com:ovchinnikov-lxs/o-components.git"
     },
+    "publishConfig": {
+        "@ovchinnikov-lxs:registry": "https://npm.pkg.github.com"
+    },
     "license": "ISC",
     "type": "module",
     "files": [
