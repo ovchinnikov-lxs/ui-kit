@@ -35,9 +35,9 @@
 #                - run: npm run build
 
         bump_tag:
-            needs:
-                - lint
-                - test_build
+#            needs:
+#                - lint
+#                - test_build
             runs-on: ubuntu-latest
             strategy:
                 matrix:
