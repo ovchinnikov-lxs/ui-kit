@@ -43,6 +43,8 @@
                 matrix:
                     node-version: [16.x]
             steps:
-                - run: echo $GITHUB_REPOSITORY
-                - run: git config user.name
-                - run: git config user.email
+                - run: |
+                    echo $GITHUB_REPOSITORY
+                    git --version
+                    git config user.name
+                    git config user.email
