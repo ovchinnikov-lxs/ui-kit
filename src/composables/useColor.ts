@@ -11,7 +11,7 @@ export const colorProps = {
 
 export function useColor(color: string | undefined | null) {
     const colorClassList = computed((): TypeClassList => [{
-        [`--${color}--color`]: color,
+        [`--${color}-color`]: color,
     }]);
 
     return {
