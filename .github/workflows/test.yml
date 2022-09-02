@@ -5,9 +5,6 @@
             branches:
                 - develop
                 - master
-        push:
-            branches:
-                - develop
 
     jobs:
         lint-and-test-build:
