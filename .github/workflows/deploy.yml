@@ -43,4 +43,4 @@
                 matrix:
                     node-version: [16.x]
             steps:
-                - run: echo ${{ env.GITHUB_ACTION_REPOSITORY }}
+                - run: echo ${{ env }}
