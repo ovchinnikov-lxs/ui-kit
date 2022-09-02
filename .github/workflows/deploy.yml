@@ -46,5 +46,7 @@
                 - run: |
                     echo $GITHUB_REPOSITORY
                     git --version
+                    git config --global user.name "test"
+                    git config --global user.email "test email"
                     git config --global user.name
                     git config --global user.email
