@@ -48,5 +48,8 @@
                   with:
                       node-version: ${{ matrix.node-version }}
                 - run: npm ci
+                - run: |
+                    git config --global user.email "${{ github.event.pusher.email }}"
+                    git config --global user.name "${{ github.event.pusher.name }}"
                 - run: npm run bump
                 - run: git push && git push --tags
