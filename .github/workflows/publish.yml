@@ -6,77 +6,44 @@
                 - master
 
     jobs:
-        lint:
+        lint-and-test-build:
             runs-on: ubuntu-latest
             strategy:
                 matrix:
                     node-version: [16.x]
             steps:
-                - uses: actions/checkout@v3
-                - uses: actions/setup-node@v3
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                - run: npm ci
-                - run: npm run lint:check
+                - name: Checkout 🛎️
+                  uses: actions/checkout@v3
 
-        test_build:
-            needs:
-                - lint
-            runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [16.x]
-            steps:
-                - uses: actions/checkout@v3
                 - uses: actions/setup-node@v3
                   with:
                       node-version: ${{ matrix.node-version }}
-                - run: npm ci
-                - run: npm run build
 
-        bump_tag:
-            needs:
-                - lint
-                - test_build
-            runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [16.x]
-            steps:
-                - uses: actions/checkout@v3
-                - uses: actions/setup-node@v3
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                - run: npm ci
-                - run: |
-                    git config --global user.email "${{ github.event.pusher.email }}"
-                    git config --global user.name "${{ github.event.pusher.name }}"
-                - run: npm run bump
-                - run: git push && git push --tags
+                - name: Install dependents 🔧
+                  run: npm ci
 
-        publish:
-            needs:
-                - lint
-                - test_build
-                - bump_tag
-            permissions:
-                packages: write
-                contents: read
-            runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [16.x]
-            steps:
-                - uses: actions/checkout@v3
-                - uses: actions/setup-node@v3
+                - name: Run Test 🔨
+                  run: npm run lint:check
+
+                - name: Build 👷
+                  run: npm run build
+
+                - name: Bump Tag 🏷
+                  run: |
+                      git config --global user.email "${{ github.event.pusher.email }}"
+                      git config --global user.name "${{ github.event.pusher.name }}"
+
+                      npm run bump
+
+                      git push && git push --tags
+
+                - name: Publish 🚀
                   with:
-                      node-version: ${{ matrix.node-version }}
                       registry-url: https://npm.pkg.github.com/
-                - run: npm ci
-                - run: npm run build
-                - run: npm cache verify
-                - run: echo ${{ secrets.GITHUB_TOKEN }}
-                - run: npm publish
+                  run: |
+                      npm cache verify
+                      npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
