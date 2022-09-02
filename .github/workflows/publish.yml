@@ -75,8 +75,8 @@
                 - run: npm ci
                 - run: npm run build
                 - run: npm cache verify
-                - run: npm publish
                 - run: echo ${{ secrets.GITHUB_TOKEN }}
+                - run: npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
