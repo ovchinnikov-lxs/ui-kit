@@ -1,4 +1,11 @@
 # CHANGELOG
+### 0.0.19 (2022-09-03)
+
+
+### 🔥 Bug Fixes
+
+* **ci:** поправил permissions ([70604e5](https://github.com/ovchinnikov-lxs/o-components/commit/70604e52ffbca57a907732a03ba0d082876ac0e0))
+
 ### 0.0.18 (2022-09-03)
 
 
