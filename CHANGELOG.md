@@ -1,4 +1,11 @@
 # CHANGELOG
+### [0.0.23](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.22...v0.0.23) (2022-09-03)
+
+
+### 🌈 Features
+
+* **OPreloader:** Добавил OPreloader в сборку ([9ff6c66](https://github.com/ovchinnikov-lxs/o-components/commit/9ff6c663273e167969bc3a195ba8d87fa911a4eb))
+
 ### [0.0.22](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.21...v0.0.22) (2022-09-03)
 
 
