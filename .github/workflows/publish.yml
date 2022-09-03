@@ -39,6 +39,8 @@
                       git push && git push --tags
 
         publish:
+            needs:
+                - bump_tag
             name: Publish 🚀
             runs-on: ubuntu-latest
             strategy:
