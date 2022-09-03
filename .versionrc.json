@@ -1,9 +1,9 @@
 {
     "header": "# CHANGELOG",
     "types": [
-        {"type": "feat", "section": "Features"},
-        {"type": "fix", "section": "Bug Fixes"},
-        {"type": "refactor", "section": "Refactor works"},
+        {"type": "feat", "section": "🌈 Features"},
+        {"type": "fix", "section": "🔥 Bug Fixes"},
+        {"type": "refactor", "section": "☔️ Refactor works"},
         {"type": "chore", "hidden": true},
         {"type": "docs", "hidden": true},
         {"type": "style", "hidden": true},

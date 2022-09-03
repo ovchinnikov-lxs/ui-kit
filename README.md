@@ -1,10 +1,11 @@
 # o-components
 
-#### Это библиотека компонентов без стилей, только функционал
-Работает на Vue 3, только для Vue 3 проектов
+Это библиотека компонентов без стилей, только функционал
+#### Работает на Vue 3, только для Vue 3 проектов
 
+Develop Test
 <img src="https://github.com/ovchinnikov-lxs/o-components/workflows/Testing/badge.svg?branch=develop"/><br/>
-<img src="https://github.com/ovchinnikov-lxs/o-components/workflows/Testing/badge.svg?branch=master"/><br/>
+Master Publish
 <img src="https://github.com/ovchinnikov-lxs/o-components/workflows/Publish/badge.svg?branch=master"/><br/>
 
 ## Project Setup
