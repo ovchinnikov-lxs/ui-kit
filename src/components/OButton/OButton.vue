@@ -15,6 +15,7 @@ import { styleProps, useStyle } from '~/composables/useStyle';
 
 console.log('test feat');
 console.log('test fix');
+console.log('test refactor');
 
 const props = defineProps({
     ...routableProps,
