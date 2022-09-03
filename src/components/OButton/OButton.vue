@@ -13,7 +13,6 @@ import { colorProps, useColor } from '~/composables/useColor';
 import { stateProps, useState } from '~/composables/useState';
 import { styleProps, useStyle } from '~/composables/useStyle';
 
-console.log('test feat');
 console.log('test fix');
 console.log('test refactor');
 
