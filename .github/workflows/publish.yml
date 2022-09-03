@@ -6,38 +6,7 @@
                 - master
 
     jobs:
-#        lint:
-#            runs-on: ubuntu-latest
-#            strategy:
-#                matrix:
-#                    node-version: [16.x]
-#            steps:
-#                - uses: actions/checkout@v2
-#                - uses: actions/setup-node@v1
-#                  with:
-#                      node-version: ${{ matrix.node-version }}
-#                - run: npm ci
-#                - run: npm run lint:check
-#
-#        test_build:
-#            needs:
-#                - lint
-#            runs-on: ubuntu-latest
-#            strategy:
-#                matrix:
-#                    node-version: [16.x]
-#            steps:
-#                - uses: actions/checkout@v2
-#                - uses: actions/setup-node@v1
-#                  with:
-#                      node-version: ${{ matrix.node-version }}
-#                - run: npm ci
-#                - run: npm run build
-
         publish:
-#            needs:
-#                - lint
-#                - test_build
             permissions:
                 packages: write
                 contents: write
@@ -60,4 +29,4 @@
                 - run: npm cache verify
                 - run: git push --follow-tags origin master && npm publish
                   env:
-                      NODE_AUTH_TOKEN: ${{ secrets.MY_TOKEN }}
+                      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
