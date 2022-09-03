@@ -1,4 +1,11 @@
 # CHANGELOG
+### 0.0.17 (2022-09-03)
+
+
+### ☔️ Refactor works
+
+* **OButton:** test refactor ([76f93ce](https://github.com/ovchinnikov-lxs/o-components/commit/76f93ce86f2acf935956e3d6792f2b315685b7c3))
+
 ### 0.0.16 (2022-09-03)
 
 ### 0.0.15 (2022-09-03)
