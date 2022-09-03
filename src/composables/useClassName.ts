@@ -7,16 +7,16 @@ export const DEFAULT_PREFIX = 'O';
 
 export const classNameProps = {
     classPrefix: {
-        type: String as PropType<string>,
-        required: true,
+        type: [String, null] as PropType<string | null>,
+        default: null,
     },
 };
 
-export function useClassName(classPrefix: string | undefined) {
+export function useClassName(classPrefix: string | null | undefined) {
     const getClassName = computed(() => (className: string): TypeClassList => [
         {
             [`${DEFAULT_PREFIX}${className}`]: DEFAULT_PREFIX,
-            [`${classPrefix}${className}`]: classPrefix,
+            [`${classPrefix}${className}`]: Boolean(classPrefix),
         },
     ]);
 
