@@ -24,9 +24,11 @@
                 - run: |
                       git config --global user.email "${{ github.event.pusher.email }}"
                       git config --global user.name "${{ github.event.pusher.name }}"
+                - run: git log
                 - run: npm run bump
-                - run: npm run build
-                - run: npm cache verify
-                - run: git push --follow-tags origin master && npm publish
-                  env:
-                      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                - run: cat CHANGELOG.md
+#                - run: npm run build
+#                - run: npm cache verify
+#                - run: git push --follow-tags origin master && npm publish
+#                  env:
+#                      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
