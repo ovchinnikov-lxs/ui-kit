@@ -35,8 +35,6 @@
                 - run: npm run build
 
         publish:
-            env:
-                NODE_AUTH_TOKEN: ${{ secrets.MY_TOKEN }}
             needs:
                 - lint
                 - test_build
@@ -58,7 +56,8 @@
                       git config --global user.email "${{ github.event.pusher.email }}"
                       git config --global user.name "${{ github.event.pusher.name }}"
                 - run: npm run bump
-                - run: git push && git push --tags
                 - run: npm run build
                 - run: npm cache verify
-                - run: npm publish
+                - run: git push --follow-tags origin master && npm publish
+                  env:
+                      NODE_AUTH_TOKEN: ${{ secrets.MY_TOKEN }}
