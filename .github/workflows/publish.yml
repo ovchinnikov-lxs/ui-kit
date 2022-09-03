@@ -7,7 +7,7 @@
 
     jobs:
         bump_tag:
-            name: Lint and Test Build and Bump tag 🔨x 👷 x 🏷
+            name: Lint/Build/Bump tag 🔨x 👷 x 🏷
             runs-on: ubuntu-latest
             strategy:
                 matrix:
@@ -37,15 +37,6 @@
                       npm run bump
 
                       git push && git push --tags
-
-                - name: Publish 🚀
-                  with:
-                      registry-url: https://npm.pkg.github.com/
-                  run: |
-                      npm cache verify
-                      npm publish
-                  env:
-                      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         publish:
             name: Publish 🚀
