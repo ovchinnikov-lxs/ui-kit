@@ -1,4 +1,11 @@
 # CHANGELOG
+### 0.0.18 (2022-09-03)
+
+
+### 🔥 Bug Fixes
+
+* **ci:** Вернул все как раньше было ([a6a6eda](https://github.com/ovchinnikov-lxs/o-components/commit/a6a6eda488b21bf8fe4c4e37bc6bcec6f6b66880))
+
 ### 0.0.17 (2022-09-03)
 
 
