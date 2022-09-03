@@ -14,6 +14,7 @@ import { stateProps, useState } from '~/composables/useState';
 import { styleProps, useStyle } from '~/composables/useStyle';
 
 console.log('test feat');
+console.log('test fix');
 
 const props = defineProps({
     ...routableProps,
