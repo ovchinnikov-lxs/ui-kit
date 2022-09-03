@@ -6,12 +6,15 @@ import ComponentWrapper from '/test/components/ComponentWrapper/ComponentWrapper
 
 // Library Components
 import OButton from '~/components/OButton/OButton.vue';
+import OPreloader from '~/components/OPreloader/OPreloader.vue';
 
 // UiComponents
 import UiButton from '/test/components/ui/UiButton/UiButton.vue';
+import UiPreloader from '/test/components/ui/UiPreloader/UiPreloader.vue';
 
 const components = [
     'OButton',
+    'OPreloader',
 ];
 
 function onRouterClick(e) {
@@ -53,6 +56,17 @@ function onRouterClick(e) {
                         <UiButton>Submit</UiButton>
                     </template>
                 </ComponentWrapper>
+
+                <ComponentWrapper name="OPreloader">
+                    <template #instance>
+                        <OPreloader>Submit</OPreloader>
+                    </template>
+
+                    <template #secondary>
+                        <UiPreloader></UiPreloader>
+                    </template>
+                </ComponentWrapper>
+
             </section>
         </div>
     </div>
