@@ -35,6 +35,8 @@
                 - run: npm run build
 
         publish:
+            env:
+                NODE_AUTH_TOKEN: ${{ secrets.MY_TOKEN }}
             needs:
                 - lint
                 - test_build
@@ -60,6 +62,3 @@
                 - run: npm run build
                 - run: npm cache verify
                 - run: npm publish
-                  env:
-                      NODE_AUTH_TOKEN: ${{ secrets.MY_TOKEN }}
-
