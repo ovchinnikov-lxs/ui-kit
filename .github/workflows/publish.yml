@@ -29,7 +29,7 @@
                 - name: Build 👷
                   run: npm run build
 
-                - name: Bump Tag and Publish 🚀
+                - name: Bump Tag 🚀
                   run: |
                       git config --global user.email "${{ github.event.pusher.email }}"
                       git config --global user.name "${{ github.event.pusher.name }}"
@@ -37,7 +37,10 @@
                       npm run bump
 
                       git push --follow-tags origin master
+
+                - run: |
                       npm cache verify
                       npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
