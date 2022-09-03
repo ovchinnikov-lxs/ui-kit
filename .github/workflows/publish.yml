@@ -29,40 +29,15 @@
                 - name: Build 👷
                   run: npm run build
 
-                - name: Bump Tag 🏷
+                - name: Bump Tag and Publish 🚀
                   run: |
                       git config --global user.email "${{ github.event.pusher.email }}"
                       git config --global user.name "${{ github.event.pusher.name }}"
 
                       npm run bump
 
-                      git push && git push --tags
-
-        publish:
-            needs:
-                - bump_tag
-            name: Publish 🚀
-            runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [16.x]
-            steps:
-                - name: Checkout 🛎️
-                  uses: actions/checkout@v3
-
-                - name: Install NPM 🔧
-                  uses: actions/setup-node@v3
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                      registry-url: https://npm.pkg.github.com/
-
-                - name: Publish 🚀
-                  run: |
-                      npm ci
-                      npm run build
+                      git push --follow-tags origin master
                       npm cache verify
                       npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
