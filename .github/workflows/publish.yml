@@ -7,7 +7,7 @@
 
     jobs:
         bump_tag:
-            name: Lint/Build/Bump tag 🔨x 👷 x 🏷
+            name: 🔨x 👷 x 🏷 => 🚀
             runs-on: ubuntu-latest
             strategy:
                 matrix:
@@ -19,6 +19,7 @@
                 - uses: actions/setup-node@v3
                   with:
                       node-version: ${{ matrix.node-version }}
+                      registry-url: https://npm.pkg.github.com/
 
                 - name: Install dependents 🔧
                   run: npm ci
