@@ -23,8 +23,11 @@
                 - name: Install dependents 🔧
                   run: npm ci
 
-                - name: Run Test 🔨
+                - name: Run Lint 👠
                   run: npm run lint:check
+
+                - name: Run Tests 🔨
+                  run: npm run test
 
                 - name: Build 👷
                   run: npm run build
