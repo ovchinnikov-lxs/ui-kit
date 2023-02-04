@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, useAttrs } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, useAttrs } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
 
 // Composable
@@ -55,7 +55,7 @@ const props = defineProps({
 const attrs = useAttrs();
 const emit = defineEmits(['origin-loaded', 'preview-loaded']);
 
-let observer = null;
+let observer: { actions: any; object: any; } | null = null;
 const el = ref(null);
 const id = Math.floor(Math.random() * 1000000);
 
@@ -77,7 +77,7 @@ function getObserver() {
         entries.forEach(entry => {
             const { isIntersecting, target } = entry;
 
-            if (isIntersecting) {
+            if (isIntersecting && window.OLazyObserver) {
                 Object.values(window.OLazyObserver.actions)
                     .forEach(action => {
                         action(target);
@@ -92,6 +92,20 @@ function getObserver() {
     };
 
     return window.OLazyObserver;
+}
+
+function clearObserver() {
+    if (!props.lazy || !observer) {
+        return false;
+    }
+
+    delete observer.actions[id];
+    observer.object.unobserve(el.value);
+
+    if (!Object.keys(observer.actions).length) {
+        observer.object.disconnect();
+        window.OLazyObserver = null;
+    }
 }
 
 async function loadPreview() {
@@ -158,6 +172,9 @@ onMounted(() => {
     onInit();
 });
 
+onBeforeUnmount(() => {
+    clearObserver();
+});
 
 const { getClassName } = useClassName(props);
 const classList = computed((): TypeClassList => [

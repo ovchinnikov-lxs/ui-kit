@@ -7,6 +7,6 @@ declare global {
             actions: {
                 [key: string | number]: (e: Element) => void
             }
-        };
+        } | null;
     }
 }
