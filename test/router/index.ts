@@ -21,7 +21,7 @@ const router = createRouter({
                 if (el.length) {
                     document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
                 }
-            }, 300);
+            }, savedPosition ? 300 : 0);
         } else if (savedPosition) {
             return savedPosition;
         } else {

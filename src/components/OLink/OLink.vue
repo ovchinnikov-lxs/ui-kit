@@ -26,11 +26,11 @@ const { colorClassList } = useColor(props);
 const { stateClassList } = useState(props);
 
 const classList = computed((): TypeClassList => [
-    ...getClassName.value('Link'),
-    ...routableClassList.value,
-    ...sizeClassList.value,
-    ...colorClassList.value,
-    ...stateClassList.value,
+    getClassName.value('Link'),
+    routableClassList.value,
+    sizeClassList.value,
+    colorClassList.value,
+    stateClassList.value,
 ]);
 
 </script>
