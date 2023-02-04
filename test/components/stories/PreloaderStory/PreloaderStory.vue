@@ -11,7 +11,7 @@ const size= ref<TypeSize>('medium');
 </script>
 
 <template>
-    <ComponentWrapper name="OPreloader"  class="PreloaderStory">
+    <ComponentWrapper name="OPreloader">
         <template #control>
             <div>
                 sizes

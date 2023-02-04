@@ -10,7 +10,7 @@ const color = ref('primary');
 const size = ref<TypeSize>('medium');
 </script>
 <template>
-    <ComponentWrapper name="OLink"  class="ButtonStory">
+    <ComponentWrapper name="OLink">
         <template #control>
             <div>
                 <b> current Size: {{ size }}</b>

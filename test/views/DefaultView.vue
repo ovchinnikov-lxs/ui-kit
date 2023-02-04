@@ -1,22 +1,23 @@
 <script setup lang="ts">
 // Common
-import { RouterLink } from 'vue-router';
-
 import { computed, defineAsyncComponent } from 'vue';
 
-function onRouterClick(e) {
-    const el = document.querySelector(e.target.hash);
+function onRouterClick(id) {
+    const el = document.querySelector(`#${id}`);
+
     window.scrollTo({
-        top: el.getBoundingClientRect().top - 56,
+        top: el.getBoundingClientRect().top,
         behavior: 'smooth',
     });
 }
 
-const components = {
-    Button: 'OButton',
-    Link: 'OLink',
-    Preloader: 'OPreloader',
-};
+const components = [
+    'Button',
+    'Link',
+    'FormCell',
+    'Collapse',
+    'Preloader',
+];
 
 const getComponent = computed(() => key => defineAsyncComponent(() => import(`../components/stories/${key}Story/${key}Story.vue`)));
 
@@ -31,22 +32,19 @@ const getComponent = computed(() => key => defineAsyncComponent(() => import(`..
 
                 <ul>
                     <li v-for="item in components" :key="item">
-                        <RouterLink
-                            :to="{ hash: `#${item}` }"
-                            @click="onRouterClick"
-                        >
-                            {{ item }}
-                        </RouterLink>
+                        <div  @click="onRouterClick(item)">
+                            O{{ item }}
+                        </div>
                     </li>
                 </ul>
             </aside>
 
             <section :class="$style.section">
                 <component
-                    v-for="(value, key) in components"
-                    :key="key"
+                    v-for="(value) in components"
+                    :key="value"
                     :id="value"
-                    :is="getComponent(key)"
+                    :is="getComponent(value)"
                 />
             </section>
         </div>
@@ -65,6 +63,10 @@ const getComponent = computed(() => key => defineAsyncComponent(() => import(`..
     position: sticky;
     top: 56px;
     height: fit-content;
+
+    li > * {
+        cursor: pointer;
+    }
 }
 
 .section {

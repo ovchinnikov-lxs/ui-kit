@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 
 // Types
 import type { TypeClassList } from '~/assets/utils/types';
@@ -9,7 +10,6 @@ import { routableProps, useRoutable } from '~/composables/useRoutable';
 import { sizeProps, useSize } from '~/composables/useSize';
 import { colorProps, useColor } from '~/composables/useColor';
 import { stateProps, useState } from '~/composables/useState';
-import { computed } from 'vue';
 
 const props = defineProps({
     ...routableProps,
