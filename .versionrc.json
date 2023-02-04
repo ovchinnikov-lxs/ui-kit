@@ -5,7 +5,7 @@
         {"type": "fix", "section": "🔥 Bug Fixes"},
         {"type": "refactor", "section": "☔️ Refactor works"},
         {"type": "chore", "hidden": true},
-        {"type": "docs", "hidden": true},
+        {"type": "docs", "section":  "📜 DOCS UPDATE"},
         {"type": "style", "hidden": true},
         {"type": "perf", "hidden": true},
         {"type": "test", "hidden": true}

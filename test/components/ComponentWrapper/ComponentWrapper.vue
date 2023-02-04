@@ -18,22 +18,17 @@ defineProps({
             </h3>
 
             <div :class="$style.control">
-                This should be a control panel
+                <slot name="control"></slot>
             </div>
 
             <main :class="$style.container">
 
                 <section :class="$style.section">
-                    <slot name="instance">
+                    <slot name="component">
 
                     </slot>
                 </section>
 
-                <section :class="$style.section">
-                    <slot name="secondary">
-
-                    </slot>
-                </section>
             </main>
 
         </div>

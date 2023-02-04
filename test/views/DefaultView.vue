@@ -1,21 +1,9 @@
 <script setup lang="ts">
 // Common
 import { RouterLink } from 'vue-router';
-// Components
-import ComponentWrapper from '/test/components/ComponentWrapper/ComponentWrapper.vue';
 
-// Library Components
-import OButton from '~/components/OButton/OButton.vue';
-import OPreloader from '~/components/OPreloader/OPreloader.vue';
-
-// UiComponents
-import UiButton from '/test/components/ui/UiButton/UiButton.vue';
-import UiPreloader from '/test/components/ui/UiPreloader/UiPreloader.vue';
-
-const components = [
-    'OButton',
-    'OPreloader',
-];
+import ButtonStory from '../components/ui/UiButton/ButtonStory.vue';
+import PreloaderStory from '../components/ui/UiPreloader/PreloaderStory.vue';
 
 function onRouterClick(e) {
     const el = document.querySelector(e.target.hash);
@@ -24,6 +12,11 @@ function onRouterClick(e) {
         behavior: 'smooth',
     });
 }
+
+const components = {
+    BUTTON: 'OButton',
+    PRELOADER: 'OPreloader',
+};
 
 </script>
 
@@ -47,26 +40,8 @@ function onRouterClick(e) {
             </aside>
 
             <section :class="$style.section">
-                <ComponentWrapper name="OButton">
-                    <template #instance>
-                        <OButton>Submit</OButton>
-                    </template>
-
-                    <template #secondary>
-                        <UiButton>Submit</UiButton>
-                    </template>
-                </ComponentWrapper>
-
-                <ComponentWrapper name="OPreloader">
-                    <template #instance>
-                        <OPreloader>Submit</OPreloader>
-                    </template>
-
-                    <template #secondary>
-                        <UiPreloader></UiPreloader>
-                    </template>
-                </ComponentWrapper>
-
+                <ButtonStory :name="components.BUTTON"/>
+                <PreloaderStory :name="components.PRELOADER"/>
             </section>
         </div>
     </div>

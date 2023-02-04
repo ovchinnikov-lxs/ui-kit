@@ -24,9 +24,9 @@ body {
 }
 
 :root {
-    --ui-primary-color: #ff4d4d;
-    --ui-secondary-color: #b33636;
-    --ui-additional-color: #ffd3d3;
+    --ui-primary-color: #689fef;
+    --ui-secondary-color: #9cc3de;
+    --ui-additional-color: #40dbef;
     --ui-white-color: #ffff;
     --ui-black-color: #242e42;
 }
