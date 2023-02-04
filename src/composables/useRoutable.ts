@@ -1,6 +1,6 @@
 import type { PropType } from 'vue';
 import { computed, useAttrs } from 'vue';
-import type { TypeClassList } from '~/models';
+import type { TypeClassList } from '~/assets/utils/types';
 
 export type TypeTag = 'button' | 'a' | 'n-link' | 'nuxt-link' | 'span';
 

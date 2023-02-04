@@ -1,5 +1,5 @@
 import { computed } from 'vue';
-import type { TypeClassList } from '~/models';
+import type { TypeClassList } from '~/assets/utils/types';
 
 export interface IStyleProps {
     outline?: boolean;

@@ -1,7 +1,7 @@
 import { computed } from 'vue';
 import type { PropType } from 'vue';
 
-import type { TypeClassList } from '~/models';
+import type { TypeClassList } from '~/assets/utils/types';
 
 export interface IclassNameProps {
     classPrefix?: string | null | undefined;

@@ -3,7 +3,7 @@
 import { computed } from 'vue';
 
 // Types
-import type { TypeClassList } from '~/models';
+import type { TypeClassList } from '~/assets/utils/types';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
