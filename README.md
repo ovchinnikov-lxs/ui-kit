@@ -52,7 +52,7 @@ import { OButton } from '@ovchinnikov-lxs/o-components';
  - 🛠 `OTabs`
  - 🛠 `OCheckbox`
  - 🛠 `OIcon`
- - 🛠 `OImage`
+ - ✅ `OImage`
  - 🛠 `OPlate`
  - 🛠 `OTooltip`
  - ✅ `OCollapse`
