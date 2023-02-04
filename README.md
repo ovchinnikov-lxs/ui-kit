@@ -44,7 +44,7 @@ import { OButton } from '@ovchinnikov-lxs/o-components';
 ✅ - готов  
 🛠 - в разработке
  - ✅ `OButton` 
- - 🛠 `OLink`
+ - ✅ `OLink`
  - 🛠 `OFormCell`
  - 🛠 `OInput`
  - 🛠 `ORichText`
