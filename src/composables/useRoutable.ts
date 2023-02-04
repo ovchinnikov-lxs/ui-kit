@@ -2,7 +2,7 @@ import type { PropType } from 'vue';
 import { computed, useAttrs } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
 
-export type TypeTag = 'button' | 'a' | 'n-link' | 'nuxt-link' | 'span';
+export type TypeTag = 'button' | 'a' | 'RouterLink' | 'NuxtLink' | 'span';
 
 export interface ITagProps {
     tag: TypeTag;
@@ -26,7 +26,7 @@ export function useRoutable(tagProps: ITagProps) {
 
     const componentTag = computed((): TypeTag => {
         if (attrs.to) {
-            return 'n-link';
+            return 'RouterLink';
         } else if (attrs.href) {
             return 'a';
         } else if (tagProps.tag) {
