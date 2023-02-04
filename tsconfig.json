@@ -6,6 +6,9 @@
         "src/**/*",
         "src/**/*.vue"
     ],
+    "exclude": [
+        "node_modules"
+    ],
     "compilerOptions": {
         "strict": true,
         "baseUrl": ".",
@@ -18,6 +21,7 @@
         "types": [
             "jest",
             "node",
+            "vite/client"
         ],
     },
     "references": [

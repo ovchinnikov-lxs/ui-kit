@@ -3,7 +3,7 @@ import type { PropType } from 'vue';
 
 import type { TypeClassList } from '~/assets/utils/types';
 
-export interface IclassNameProps {
+export interface IClassNameProps {
     classPrefix?: string | null | undefined;
 }
 
@@ -16,7 +16,7 @@ export const classNameProps = {
     },
 };
 
-export function useClassName(classNameProps: IclassNameProps) {
+export function useClassName(classNameProps: IClassNameProps) {
     const getClassName = computed(() => (className: string): TypeClassList => [
         {
             [`${DEFAULT_PREFIX}${className}`]: DEFAULT_PREFIX,
