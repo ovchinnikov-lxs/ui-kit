@@ -1,4 +1,16 @@
 # CHANGELOG
+### [0.0.27](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.26...v0.0.27) (2023-02-04)
+
+
+### 🌈 Features
+
+* **OImage:** Добавил новый компонент ([bb09177](https://github.com/ovchinnikov-lxs/o-components/commit/bb091772ce1691c0f29d871c7657086943845e98))
+
+
+### 📜 DOCS UPDATE
+
+* **readme:** Обновил список компонентов ([db377fe](https://github.com/ovchinnikov-lxs/o-components/commit/db377fe0e70ad27053c7355f8ce877335871bb23))
+
 ### [0.0.26](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.25...v0.0.26) (2023-02-04)
 
 
