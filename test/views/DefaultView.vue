@@ -16,6 +16,7 @@ const components = [
     'Link',
     'FormCell',
     'Collapse',
+    'Image',
     'Preloader',
 ];
 
@@ -61,8 +62,14 @@ const getComponent = computed(() => key => defineAsyncComponent(() => import(`..
 
 .aside {
     position: sticky;
-    top: 56px;
+    top: 112px;
     height: fit-content;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
 
     li > * {
         cursor: pointer;
