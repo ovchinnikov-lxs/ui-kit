@@ -1,4 +1,12 @@
 # CHANGELOG
+### [0.0.26](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.25...v0.0.26) (2023-02-04)
+
+
+### 🌈 Features
+
+* **OCollapse:** Новый компонент ([6633803](https://github.com/ovchinnikov-lxs/o-components/commit/66338037e9dbcf3bbc344482b61b39417504f7a8))
+* **OFormCell:** Новый компонент ([1c3b864](https://github.com/ovchinnikov-lxs/o-components/commit/1c3b86437fa0986dfc31a49b56c1ed9dcb748979))
+
 ### [0.0.25](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.24...v0.0.25) (2023-02-04)
 
 
