@@ -6,19 +6,12 @@ import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
 import OPreloader from '../../../../src/components/OPreloader/OPreloader.vue';
 import type { TypeSize } from '../../../../src/assets/utils/types';
 
-defineProps({
-    name: {
-        type: String,
-        required: true,
-    },
-});
-
 const size= ref<TypeSize>('medium');
 
 </script>
 
 <template>
-    <ComponentWrapper :name="name"  class="PreloaderStory">
+    <ComponentWrapper name="OPreloader"  class="PreloaderStory">
         <template #control>
             <div>
                 sizes

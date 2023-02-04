@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import { defineProps, ref } from 'vue';
+import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
 import OButton from '../../../../src/components/OButton/OButton.vue';
 import type { TypeSize } from '../../../../src/assets/utils/types';
-
-defineProps({
-    name: {
-        type: String,
-        required: true,
-    },
-});
 
 const color = ref('primary');
 const rounded = ref(false);
@@ -19,7 +12,7 @@ const size = ref<TypeSize>('medium');
 </script>
 
 <template>
-    <ComponentWrapper :name="name"  class="ButtonStory">
+    <ComponentWrapper name="OButton"  class="ButtonStory">
         <template #control>
             <div>
                 <label>
@@ -71,8 +64,6 @@ const size = ref<TypeSize>('medium');
                 </label>
 
             </div>
-
-            <div>...и многое другое, чекай код</div>
 
         </template>
 

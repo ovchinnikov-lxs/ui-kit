@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <div :id="name" class="ComponentWrapper">
+    <div class="ComponentWrapper">
         <div :class="$style.wrapper">
 
             <h3 :class="$style.title">
@@ -19,6 +19,7 @@ defineProps({
 
             <div :class="$style.control">
                 <slot name="control"></slot>
+                <i style=" display: block; margin-top: 16px;">...и многое другое, чекай код</i>
             </div>
 
             <main :class="$style.container">

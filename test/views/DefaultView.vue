@@ -2,8 +2,7 @@
 // Common
 import { RouterLink } from 'vue-router';
 
-import ButtonStory from '../components/stories/ButtonStory/ButtonStory.vue';
-import PreloaderStory from '../components/stories/PreloaderStory/PreloaderStory.vue';
+import { computed, defineAsyncComponent } from 'vue';
 
 function onRouterClick(e) {
     const el = document.querySelector(e.target.hash);
@@ -14,9 +13,12 @@ function onRouterClick(e) {
 }
 
 const components = {
-    BUTTON: 'OButton',
-    PRELOADER: 'OPreloader',
+    Button: 'OButton',
+    Link: 'OLink',
+    Preloader: 'OPreloader',
 };
+
+const getComponent = computed(() => key => defineAsyncComponent(() => import(`../components/stories/${key}Story/${key}Story.vue`)));
 
 </script>
 
@@ -40,8 +42,12 @@ const components = {
             </aside>
 
             <section :class="$style.section">
-                <ButtonStory :name="components.BUTTON"/>
-                <PreloaderStory :name="components.PRELOADER"/>
+                <component
+                    v-for="(value, key) in components"
+                    :key="key"
+                    :id="value"
+                    :is="getComponent(key)"
+                />
             </section>
         </div>
     </div>
