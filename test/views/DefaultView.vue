@@ -1,21 +1,8 @@
 <script setup lang="ts">
 // Common
 import { RouterLink } from 'vue-router';
-// Components
-import ComponentWrapper from '/test/components/ComponentWrapper/ComponentWrapper.vue';
 
-// Library Components
-import OButton from '~/components/OButton/OButton.vue';
-import OPreloader from '~/components/OPreloader/OPreloader.vue';
-
-// UiComponents
-import UiButton from '/test/components/ui/UiButton/UiButton.vue';
-import UiPreloader from '/test/components/ui/UiPreloader/UiPreloader.vue';
-
-const components = [
-    'OButton',
-    'OPreloader',
-];
+import { computed, defineAsyncComponent } from 'vue';
 
 function onRouterClick(e) {
     const el = document.querySelector(e.target.hash);
@@ -24,6 +11,14 @@ function onRouterClick(e) {
         behavior: 'smooth',
     });
 }
+
+const components = {
+    Button: 'OButton',
+    Link: 'OLink',
+    Preloader: 'OPreloader',
+};
+
+const getComponent = computed(() => key => defineAsyncComponent(() => import(`../components/stories/${key}Story/${key}Story.vue`)));
 
 </script>
 
@@ -47,26 +42,12 @@ function onRouterClick(e) {
             </aside>
 
             <section :class="$style.section">
-                <ComponentWrapper name="OButton">
-                    <template #instance>
-                        <OButton>Submit</OButton>
-                    </template>
-
-                    <template #secondary>
-                        <UiButton>Submit</UiButton>
-                    </template>
-                </ComponentWrapper>
-
-                <ComponentWrapper name="OPreloader">
-                    <template #instance>
-                        <OPreloader>Submit</OPreloader>
-                    </template>
-
-                    <template #secondary>
-                        <UiPreloader></UiPreloader>
-                    </template>
-                </ComponentWrapper>
-
+                <component
+                    v-for="(value, key) in components"
+                    :key="key"
+                    :id="value"
+                    :is="getComponent(key)"
+                />
             </section>
         </div>
     </div>

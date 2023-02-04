@@ -9,6 +9,15 @@ import stylelintPlugin from 'vite-plugin-stylelint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                  @import "~/assets/style/shared/_mixins.scss";
+                `,
+            },
+        },
+    },
     plugins: [
         vue(),
         checker({

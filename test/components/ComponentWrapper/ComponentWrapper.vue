@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <div :id="name" class="ComponentWrapper">
+    <div class="ComponentWrapper">
         <div :class="$style.wrapper">
 
             <h3 :class="$style.title">
@@ -18,22 +18,18 @@ defineProps({
             </h3>
 
             <div :class="$style.control">
-                This should be a control panel
+                <slot name="control"></slot>
+                <i style=" display: block; margin-top: 16px;">...и многое другое, чекай код</i>
             </div>
 
             <main :class="$style.container">
 
                 <section :class="$style.section">
-                    <slot name="instance">
+                    <slot name="component">
 
                     </slot>
                 </section>
 
-                <section :class="$style.section">
-                    <slot name="secondary">
-
-                    </slot>
-                </section>
             </main>
 
         </div>

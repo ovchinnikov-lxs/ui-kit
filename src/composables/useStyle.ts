@@ -1,9 +1,10 @@
 import { computed } from 'vue';
-import type { TypeClassList } from '~/models';
+import type { TypeClassList } from '~/assets/utils/types';
 
 export interface IStyleProps {
     outline?: boolean;
     rounded?: boolean;
+    icon?: boolean;
 }
 
 export const styleProps = {
@@ -16,6 +17,11 @@ export const styleProps = {
         type: Boolean,
         default: false,
     },
+
+    icon: {
+        type: Boolean,
+        default: false,
+    },
 };
 
 export function useStyle(styleProps: IStyleProps) {
@@ -23,6 +29,7 @@ export function useStyle(styleProps: IStyleProps) {
         '--is-solid': !styleProps.outline,
         '--is-outline': styleProps.outline,
         '--is-rounded': styleProps.rounded,
+        '--is-icon': styleProps.icon,
     }]);
 
     return {

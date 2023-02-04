@@ -1,7 +1,11 @@
 import type { PropType } from 'vue';
 import { computed } from 'vue';
 
-import type { TypeClassList, TypeSize } from '~/models';
+import type { TypeClassList, TypeSize } from '~/assets/utils/types';
+
+export interface ISizeProps {
+    size?: TypeSize;
+}
 
 export const sizeProps = {
     size: {
@@ -18,9 +22,9 @@ export const sizeProps = {
     },
 };
 
-export function useSize(size: TypeSize) {
+export function useSize(sizeProps: ISizeProps) {
     const sizeClassList = computed((): TypeClassList => [{
-        [`--${size}-size`]: size,
+        [`--${sizeProps.size}-size`]: sizeProps.size,
     }]);
 
     return {

@@ -3,7 +3,7 @@
 import { computed } from 'vue';
 
 // Types
-import type { TypeClassList } from '~/models';
+import type { TypeClassList } from '~/assets/utils/types';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
@@ -22,10 +22,10 @@ const props = defineProps({
     ...styleProps,
 });
 
-const { getClassName } = useClassName(props.classPrefix);
-const { componentTag, routableClassList } = useRoutable(props.tag);
-const { sizeClassList } = useSize(props.size);
-const { colorClassList } = useColor(props.color);
+const { getClassName } = useClassName(props);
+const { componentTag, routableClassList } = useRoutable(props);
+const { sizeClassList } = useSize(props);
+const { colorClassList } = useColor(props);
 const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 

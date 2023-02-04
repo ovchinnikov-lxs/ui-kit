@@ -1,7 +1,10 @@
 import { computed } from 'vue';
 import type { PropType } from 'vue';
-import type { TypeClassList } from '~/models';
+import type { TypeClassList } from '~/assets/utils/types';
 
+export interface IColorProps {
+    color?: string | undefined | null;
+}
 export const colorProps = {
     color: {
         type: [String, null] as PropType<string | null>,
@@ -9,9 +12,9 @@ export const colorProps = {
     },
 };
 
-export function useColor(color: string | undefined | null) {
+export function useColor(colorProps: IColorProps) {
     const colorClassList = computed((): TypeClassList => [{
-        [`--${color}-color`]: color,
+        [`--${colorProps.color}-color`]: colorProps.color,
     }]);
 
     return {

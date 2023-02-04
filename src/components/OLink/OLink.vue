@@ -1,64 +1,72 @@
 <script setup lang="ts">
-// Common
-import { computed } from 'vue';
 
 // Types
 import type { TypeClassList } from '~/assets/utils/types';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
+import { routableProps, useRoutable } from '~/composables/useRoutable';
 import { sizeProps, useSize } from '~/composables/useSize';
 import { colorProps, useColor } from '~/composables/useColor';
 import { stateProps, useState } from '~/composables/useState';
-import { styleProps, useStyle } from '~/composables/useStyle';
+import { computed } from 'vue';
 
 const props = defineProps({
+    ...routableProps,
     ...classNameProps,
     ...sizeProps,
     ...colorProps,
     ...stateProps,
-    ...styleProps,
 });
 
 const { getClassName } = useClassName(props);
+const { componentTag, routableClassList } = useRoutable(props);
 const { sizeClassList } = useSize(props);
 const { colorClassList } = useColor(props);
 const { stateClassList } = useState(props);
-const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    ...getClassName.value('Preloader'),
+    ...getClassName.value('Link'),
+    ...routableClassList.value,
     ...sizeClassList.value,
     ...colorClassList.value,
     ...stateClassList.value,
-    ...styleClassList.value,
 ]);
+
 </script>
 
 <template>
-    <div :class="classList">
-        <div :class="getClassName('Preloader__wrapper')">
-
-            <div :class="getClassName('Preloader__el')">
-                <slot></slot>
-            </div>
-        </div>
-    </div>
+    <component
+        :is="componentTag"
+        v-bind="$attrs"
+        :class="classList"
+    >
+        <slot v-bind="props"></slot>
+    </component>
 </template>
 
 <style lang="scss">
-.OPreloader {
-    &__wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
+@import "src/assets/style/shared/mixins";
+
+.OLink {
+    @include reset-button;
+
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    text-decoration: none;
+    transition: all .3s ease;
+    cursor: pointer;
+    user-select: none;
+    -webkit-appearance: none;
+
+    &.--is-disabled,
+    &.--is-loading {
+        pointer-events: none;
     }
 
-    &__el {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0);
+    &.--is-interactive {
+        cursor: pointer;
     }
 }
 </style>
