@@ -1,4 +1,19 @@
 # CHANGELOG
+### [0.0.24](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.23...v0.0.24) (2023-02-04)
+
+
+### 🌈 Features
+
+* **browserslist:** Добавил конфиг ([d83ea69](https://github.com/ovchinnikov-lxs/o-components/commit/d83ea69b8f79db9a5394859010b86dee9b44e705))
+* **config:** Добавил конфиги ts и babel ([2c0e0ec](https://github.com/ovchinnikov-lxs/o-components/commit/2c0e0ec92fb76a7eb240583f4cd8f17b7f56ade8))
+* **tests:** Добавил тестирование jest ([fb6e874](https://github.com/ovchinnikov-lxs/o-components/commit/fb6e874094406ca012ecb4c3cc3ca4cdb9c28223))
+* **ts-config:** Добавил свой конфиг ([5c4ba0a](https://github.com/ovchinnikov-lxs/o-components/commit/5c4ba0ad08c134eea2f9ecbf4b3556ebc437f6b6))
+
+
+### ☔️ Refactor works
+
+* **actions:** Добавил тестирование в actions ([1345c08](https://github.com/ovchinnikov-lxs/o-components/commit/1345c0896dda560331fd757e3cbbff64a00f75c5))
+
 ### [0.0.23](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.22...v0.0.23) (2022-09-03)
 
 
