@@ -14,8 +14,8 @@ export const routableProps = {
         validator: (v: TypeTag): boolean => [
             'button',
             'a',
-            'n-link',
-            'nuxt-link',
+            'NuxtLink',
+            'RouterLink',
             'span',
         ].includes(v),
     },
@@ -38,8 +38,8 @@ export function useRoutable(tagProps: ITagProps) {
 
     const routableClassList = computed((): TypeClassList => {
         const interactiveTags = [
-            'nuxt-link',
-            'n-link',
+            'NuxtLink',
+            'RouterLink',
             'a',
             'button',
         ];

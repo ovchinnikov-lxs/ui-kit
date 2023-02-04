@@ -12,7 +12,7 @@ const size = ref<TypeSize>('medium');
 </script>
 
 <template>
-    <ComponentWrapper name="OButton"  class="ButtonStory">
+    <ComponentWrapper name="OButton">
         <template #control>
             <div>
                 <label>

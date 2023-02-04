@@ -7,7 +7,7 @@ export interface IStateProps {
     interesting?: boolean;
     required?: boolean;
     disabled?: boolean;
-    error?: string | number | null | undefined;
+    error?: string | number | null | undefined | boolean;
     loading?: boolean;
 }
 
@@ -33,7 +33,7 @@ export const stateProps = {
     },
 
     error: {
-        type: [String, Number, null] as PropType<string | number | null>,
+        type: [String, Number, null, Boolean] as PropType<string | number | null | boolean>,
         default: null,
     },
 
