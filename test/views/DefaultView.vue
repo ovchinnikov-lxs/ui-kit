@@ -2,8 +2,8 @@
 // Common
 import { RouterLink } from 'vue-router';
 
-import ButtonStory from '../components/ui/UiButton/ButtonStory.vue';
-import PreloaderStory from '../components/ui/UiPreloader/PreloaderStory.vue';
+import ButtonStory from '../components/stories/ButtonStory/ButtonStory.vue';
+import PreloaderStory from '../components/stories/PreloaderStory/PreloaderStory.vue';
 
 function onRouterClick(e) {
     const el = document.querySelector(e.target.hash);
