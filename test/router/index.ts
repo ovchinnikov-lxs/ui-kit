@@ -14,6 +14,20 @@ const router = createRouter({
             component: DefaultView,
         },
     ],
+    async scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            setTimeout(() => {
+                const el = window.location.href.split('#')[1];
+                if (el.length) {
+                    document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, savedPosition ? 300 : 0);
+        } else if (savedPosition) {
+            return savedPosition;
+        } else {
+            document.getElementById('app')?.scrollIntoView({ behavior: 'smooth' });
+        }
+    },
 });
 
 export default router;

@@ -26,10 +26,10 @@ const { colorClassList } = useColor(props);
 const { sizeClassList } = useSize(props);
 
 const classList = computed((): TypeClassList => [
-    ...getClassName.value('FormCell'),
-    ...stateClassList.value,
-    ...colorClassList.value,
-    ...sizeClassList.value,
+    getClassName.value('FormCell'),
+    stateClassList.value,
+    colorClassList.value,
+    sizeClassList.value,
 ]);
 
 </script>

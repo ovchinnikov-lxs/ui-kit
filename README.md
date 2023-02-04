@@ -41,12 +41,12 @@ import { OButton } from '@ovchinnikov-lxs/o-components';
 ```
 
 ### Список компонентов
-✅ - готов  
-🛠 - в разработке
+ ✅ - готов  
+ 🛠 - в разработке
  - ✅ `OButton` 
  - ✅ `OLink`
  - ✅ `OFormCell`
- - 🛠 `OInput`
+ - ✅ `OInput`
  - 🛠 `ORichText`
  - 🛠 `OSelect`
  - 🛠 `OTabs`

@@ -1,27 +1,19 @@
 <script setup lang="ts">
 // Common
-import { computed, defineAsyncComponent } from 'vue';
-
-function onRouterClick(id) {
-    const el = document.querySelector(`#${id}`);
-
-    window.scrollTo({
-        top: el.getBoundingClientRect().top,
-        behavior: 'smooth',
-    });
-}
+import { defineAsyncComponent } from 'vue';
 
 const components = [
     'Button',
     'Link',
     'FormCell',
+    'Input',
     'Collapse',
     'Image',
     'Preloader',
-];
-
-const getComponent = computed(() => key => defineAsyncComponent(() => import(`../components/stories/${key}Story/${key}Story.vue`)));
-
+].map(name => ({
+    name,
+    component: defineAsyncComponent(() => import(`../components/stories/${name}Story/${name}Story.vue`)),
+}));
 </script>
 
 <template>
@@ -31,21 +23,21 @@ const getComponent = computed(() => key => defineAsyncComponent(() => import(`..
             <aside :class="$style.aside">
                 <h5>Components List</h5>
 
-                <ul>
+                <ul :class="$style.nav">
                     <li v-for="item in components" :key="item">
-                        <div  @click="onRouterClick(item)">
-                            O{{ item }}
-                        </div>
+                        <RouterLink :to="{ hash: `#${item.name}` }" :class="[$style.button, { [$style['--is-active']]: $route.hash === `#${item.name}` }]">
+                            O{{ item.name }}
+                        </RouterLink>
                     </li>
                 </ul>
             </aside>
 
             <section :class="$style.section">
                 <component
-                    v-for="(value) in components"
-                    :key="value"
-                    :id="value"
-                    :is="getComponent(value)"
+                    v-for="item in components"
+                    :key="item.name"
+                    :id="item.name"
+                    :is="item.component"
                 />
             </section>
         </div>
@@ -64,15 +56,26 @@ const getComponent = computed(() => key => defineAsyncComponent(() => import(`..
     position: sticky;
     top: 112px;
     height: fit-content;
+}
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        row-gap: 16px;
+.nav {
+    @include reset-list;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.button {
+    color: var(--ui-primary-color);
+    cursor: pointer;
+
+    &.--is-active {
+        color: var(--ui-additional-color);
     }
 
-    li > * {
-        cursor: pointer;
+    @include hover {
+        opacity: .8;
     }
 }
 

@@ -30,12 +30,12 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    ...getClassName.value('Button'),
-    ...routableClassList.value,
-    ...sizeClassList.value,
-    ...colorClassList.value,
-    ...stateClassList.value,
-    ...styleClassList.value,
+    getClassName.value('Button'),
+    routableClassList.value,
+    sizeClassList.value,
+    colorClassList.value,
+    stateClassList.value,
+    styleClassList.value,
 ]);
 </script>
 

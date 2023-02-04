@@ -27,11 +27,11 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    ...getClassName.value('Preloader'),
-    ...sizeClassList.value,
-    ...colorClassList.value,
-    ...stateClassList.value,
-    ...styleClassList.value,
+    getClassName.value('Preloader'),
+    sizeClassList.value,
+    colorClassList.value,
+    stateClassList.value,
+    styleClassList.value,
 ]);
 </script>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, useAttrs } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, useAttrs, useSlots } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
+import type { IOLazyObserver } from '../../../global';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
@@ -53,9 +54,10 @@ const props = defineProps({
 });
 
 const attrs = useAttrs();
+const slots = useSlots();
 const emit = defineEmits(['origin-loaded', 'preview-loaded']);
 
-let observer = null;
+let observer: IOLazyObserver | null = null;
 const el = ref(null);
 const id = Math.floor(Math.random() * 1000000);
 
@@ -77,7 +79,7 @@ function getObserver() {
         entries.forEach(entry => {
             const { isIntersecting, target } = entry;
 
-            if (isIntersecting) {
+            if (isIntersecting && window.OLazyObserver) {
                 Object.values(window.OLazyObserver.actions)
                     .forEach(action => {
                         action(target);
@@ -92,6 +94,20 @@ function getObserver() {
     };
 
     return window.OLazyObserver;
+}
+
+function clearObserver() {
+    if (!props.lazy || !observer || !el.value) {
+        return false;
+    }
+
+    delete observer.actions[id];
+    observer.object.unobserve(el.value);
+
+    if (!Object.keys(observer.actions).length) {
+        observer.object.disconnect();
+        window.OLazyObserver = null;
+    }
 }
 
 async function loadPreview() {
@@ -158,6 +174,9 @@ onMounted(() => {
     onInit();
 });
 
+onBeforeUnmount(() => {
+    clearObserver();
+});
 
 const { getClassName } = useClassName(props);
 const classList = computed((): TypeClassList => [
@@ -166,7 +185,7 @@ const classList = computed((): TypeClassList => [
     `--object-fit-${props.objectFit}`,
     `--transition-${props.transition}`,
     {
-        '--has-preview': Boolean(props.preview),
+        '--has-preview': Boolean(props.preview) || Boolean(slots.preview),
         '--loaded': loaded.value,
     },
 ]);
@@ -184,7 +203,12 @@ const originClassList = computed((): TypeClassList => [{
 <template>
     <div ref="el" :class="classList">
         <div :class="getClassName('Image__wrapper')">
-            <img v-if="preview"
+
+            <div v-if="$slots.preview" :class="getClassName('Image__preview')">
+                <slot  name="preview"></slot>
+            </div>
+
+            <img v-else-if="preview"
                  :src="preview"
                  v-bind="$attrs"
                  draggable="false"
@@ -192,10 +216,7 @@ const originClassList = computed((): TypeClassList => [{
                  :class="getClassName('Image__preview')"
             >
 
-            <transition
-                :name="initialLoaded ? 'none' : 'o-image'"
-                mode="out-in"
-            >
+            <transition :name="initialLoaded ? 'none' : 'o-image'" mode="out-in">
                 <img v-if="!lazy || (lazy && loaded) || initialLoaded"
                      v-bind="originAttrs"
                      draggable="false"
@@ -211,6 +232,8 @@ const originClassList = computed((): TypeClassList => [{
 $zoom-diff: 1.05;
 
 .OImage {
+    $image: &;
+
     &__wrapper {
         position: relative;
         overflow: hidden;
@@ -222,6 +245,8 @@ $zoom-diff: 1.05;
     &__preview {
         position: relative;
         z-index: 1;
+        width: 100%;
+        height: 100%;
     }
 
     &__origin {
@@ -262,7 +287,7 @@ $zoom-diff: 1.05;
     }
 
     &.--has-preview {
-        .OImage {
+        #{$image} {
             &__origin {
                 position: absolute;
                 top: 0;
@@ -274,11 +299,11 @@ $zoom-diff: 1.05;
     }
 
     &.--transition-fade {
-        .OImage {
+        #{$image} {
             opacity: 1;
 
             &__origin {
-                &.o-image-enter,
+                &.o-image-enter-from,
                 &.o-image-leave-to,
                 &.swiper-lazy {
                     opacity: 0;
@@ -292,7 +317,7 @@ $zoom-diff: 1.05;
     }
 
     &.--transition-zoom-in {
-        .OImage {
+        #{$image} {
             &__preview {
                 transform: translate3d(0, 0, 0) scale($zoom-diff);
             }
@@ -301,7 +326,7 @@ $zoom-diff: 1.05;
                 opacity: 1;
                 transform: translate3d(0, 0, 0) scale($zoom-diff);
 
-                &.o-image-enter,
+                &.o-image-enter-from,
                 &.o-image-leave-to,
                 &.swiper-lazy {
                     opacity: 0;
@@ -317,7 +342,7 @@ $zoom-diff: 1.05;
     }
 
     &.--transition-zoom-out {
-        .OImage {
+        #{$image} {
             &__preview {
                 transform: translate3d(0, 0, 0) scale($zoom-diff);
             }
@@ -326,7 +351,7 @@ $zoom-diff: 1.05;
                 opacity: 1;
                 transform: translate3d(0, 0, 0) scale(1);
 
-                &.o-image-enter,
+                &.o-image-enter-from,
                 &.o-image-leave-to,
                 &.swiper-lazy {
                     opacity: 0;
