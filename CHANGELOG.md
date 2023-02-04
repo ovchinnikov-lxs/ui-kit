@@ -1,4 +1,29 @@
 # CHANGELOG
+### [0.0.28](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.27...v0.0.28) (2023-02-04)
+
+
+### ☔️ Refactor works
+
+* **classList:** Убрал спред в classList ([7dd48b8](https://github.com/ovchinnikov-lxs/o-components/commit/7dd48b8cedfa95fe64703916a8ff2081bdbed06f))
+
+
+### 📜 DOCS UPDATE
+
+* **page:** Поправил страницу с компонентами ([2d73689](https://github.com/ovchinnikov-lxs/o-components/commit/2d73689a7ce170b60472c52a20ba74aad777f3b0))
+* **theme:** Добавил прослушку системной темы ([8fdf445](https://github.com/ovchinnikov-lxs/o-components/commit/8fdf445e8cfcc32231dcc9a01be59083c8b24df1))
+
+
+### 🌈 Features
+
+* **OImage:** Добавил слот для превью ([87ffc17](https://github.com/ovchinnikov-lxs/o-components/commit/87ffc17072a0998f27cda39e22333decb0251436))
+* **OInput:** Новый компонент ([7722211](https://github.com/ovchinnikov-lxs/o-components/commit/77222113e85105932af601c99d430be648f383a1))
+
+
+### 🔥 Bug Fixes
+
+* **OImage:** Добавил destroy ([87b86f2](https://github.com/ovchinnikov-lxs/o-components/commit/87b86f2cdc62bdbe0a550868af501c7aac59472b))
+* **OImage:** Добавил в сборку и добавил интерфейс обзервера ([b3cee28](https://github.com/ovchinnikov-lxs/o-components/commit/b3cee283ab7219403acb24303143a46f32a0e92c))
+
 ### [0.0.27](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.26...v0.0.27) (2023-02-04)
 
 
