@@ -1,3 +1,3 @@
 module.exports = {
-    'pre-commit': './node_modules/.bin/nano-staged --config ./nano-staged.json',
+    'pre-commit': 'npx lint-staged --concurrent 2 --quiet',
 };
