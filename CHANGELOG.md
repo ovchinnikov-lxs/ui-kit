@@ -1,4 +1,31 @@
 # CHANGELOG
+### [0.0.25](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.24...v0.0.25) (2023-02-04)
+
+
+### ☔️ Refactor works
+
+* **utils:** Вынес в /assets/utils интерфейсы и типы ([8ebb734](https://github.com/ovchinnikov-lxs/o-components/commit/8ebb734867f883619ffaf37aacc0242916b69ca8))
+
+
+### 🔥 Bug Fixes
+
+* **composable:** Поправил реактивность для classList ([8629f84](https://github.com/ovchinnikov-lxs/o-components/commit/8629f8443238f717c1653999a191096cf5e4105f))
+* **useRoutable:** Поправил тэг ссылки ([3b5a2e4](https://github.com/ovchinnikov-lxs/o-components/commit/3b5a2e4c82eaae0a08c9fa4a2d34d17347141d2a))
+
+
+### 🌈 Features
+
+* **OLink:** Добавил компонент ссылки ([93894a9](https://github.com/ovchinnikov-lxs/o-components/commit/93894a913632341d747078820bcaf5884d267767))
+
+
+### 📜 DOCS UPDATE
+
+* **components:** Изменил обертку и добавил тестовые пропсы для кнопки ([d32c628](https://github.com/ovchinnikov-lxs/o-components/commit/d32c628df3dca9644111d6f5cd561d3a48bc65a3))
+* **components:** Убрал лишний пропс ([4dd5e0e](https://github.com/ovchinnikov-lxs/o-components/commit/4dd5e0e8c40a9d00de73299f5f326606b1130bf6))
+* **PreloaderStory:** Убрал неиспользуемый модуль ([5ba44bf](https://github.com/ovchinnikov-lxs/o-components/commit/5ba44bf2db8e953ae3fafe2b8e65879030e23171))
+* **preloader:** Добавил размеры прелоадеру ([2a0902c](https://github.com/ovchinnikov-lxs/o-components/commit/2a0902cbfd75a1a3b7a3a3265a26ea61b6db066f))
+* **story:** Убрал ui компоненты ([aa93bbc](https://github.com/ovchinnikov-lxs/o-components/commit/aa93bbc12cb3770de35d718453a8f4447ef20bcb))
+
 ### [0.0.24](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.23...v0.0.24) (2023-02-04)
 
 
