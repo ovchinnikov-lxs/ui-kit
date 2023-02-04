@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Components
-import OButton from '~/components/OButton/OButton.vue';
+import OButton from '../../../../src/components/OButton/OButton.vue';
 
 </script>
 

@@ -1,14 +1,10 @@
 <script setup lang="ts">
 // Components
-import OPreloader from '~/components/OPreloader/OPreloader.vue';
+import OPreloader from '../../../../src/components/OPreloader/OPreloader.vue';
 </script>
 
-
 <template>
-    <OPreloader
-        class-prefix="Ui"
-        v-bind="$attrs"
-    >
+    <OPreloader class-prefix="Ui" v-bind="$attrs">
         <slot>
             <img src="test/static/favicon.svg" alt="fav">
         </slot>
@@ -17,8 +13,33 @@ import OPreloader from '~/components/OPreloader/OPreloader.vue';
 
 <style lang="scss">
 .UiPreloader {
+    $preloader: &;
+
+    &.--medium-size {
+        #{$preloader} {
+            &__el {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &.--large-size {
+        #{$preloader} {
+            &__el {
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+
     &__el {
         animation: scale 1s infinite;
+
+        & > * {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     @keyframes scale {

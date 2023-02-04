@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { defineProps, ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
@@ -11,13 +11,38 @@ defineProps({
         required: true,
     },
 });
+
+const size= ref('medium');
+
 </script>
 
 <template>
     <ComponentWrapper :name="name"  class="PreloaderStory">
-        <template #control>Control</template>
+        <template #control>
+            <div>
+                sizes
+
+                <label>
+                    <input type="radio"
+                           id="medium"
+                           value="medium"
+                           v-model="size"
+                    >
+                    medium
+                </label>
+
+                <label>
+                    <input type="radio"
+                           id="large"
+                           value="large"
+                           v-model="size"
+                    >
+                    large
+                </label>
+            </div>
+        </template>
         <template #component>
-            <UiPreloader/>
+            <UiPreloader :size="size"/>
         </template>
     </ComponentWrapper>
 </template>
