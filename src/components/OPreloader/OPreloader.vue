@@ -20,9 +20,9 @@ const props = defineProps({
     ...styleProps,
 });
 
-const { getClassName } = useClassName(props.classPrefix);
-const { sizeClassList } = useSize(props.size);
-const { colorClassList } = useColor(props.color);
+const { getClassName } = useClassName(props);
+const { sizeClassList } = useSize(props);
+const { colorClassList } = useColor(props);
 const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 

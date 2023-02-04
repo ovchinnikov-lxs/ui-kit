@@ -4,6 +4,9 @@ import type { TypeClassList } from '~/models';
 
 export type TypeTag = 'button' | 'a' | 'n-link' | 'nuxt-link' | 'span';
 
+export interface ITagProps {
+    tag: TypeTag;
+}
 export const routableProps = {
     tag: {
         type: String as PropType<TypeTag>,
@@ -18,7 +21,7 @@ export const routableProps = {
     },
 };
 
-export function useRoutable(tag: TypeTag) {
+export function useRoutable(tagProps: ITagProps) {
     const attrs = useAttrs();
 
     const componentTag = computed((): TypeTag => {
@@ -26,8 +29,8 @@ export function useRoutable(tag: TypeTag) {
             return 'n-link';
         } else if (attrs.href) {
             return 'a';
-        } else if (tag) {
-            return tag;
+        } else if (tagProps.tag) {
+            return tagProps.tag;
         } else {
             return 'button';
         }
