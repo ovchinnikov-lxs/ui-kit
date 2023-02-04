@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, onMounted } from 'vue';
+import { defineProps } from 'vue';
 
 defineProps({
     name: {

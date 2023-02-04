@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, useAttrs, useSlots } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
+import type { IOLazyObserver } from '../../../global';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
@@ -56,7 +57,7 @@ const attrs = useAttrs();
 const slots = useSlots();
 const emit = defineEmits(['origin-loaded', 'preview-loaded']);
 
-let observer: { actions: any; object: any; } | null = null;
+let observer: IOLazyObserver | null = null;
 const el = ref(null);
 const id = Math.floor(Math.random() * 1000000);
 
@@ -96,7 +97,7 @@ function getObserver() {
 }
 
 function clearObserver() {
-    if (!props.lazy || !observer) {
+    if (!props.lazy || !observer || !el.value) {
         return false;
     }
 
