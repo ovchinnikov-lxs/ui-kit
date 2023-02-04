@@ -1,4 +1,11 @@
 # CHANGELOG
+### [0.0.29](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.28...v0.0.29) (2023-02-04)
+
+
+### 🌈 Features
+
+* **ORichText:** Добавил textarea ([03b33fc](https://github.com/ovchinnikov-lxs/o-components/commit/03b33fc596107f1761e187fa66ebf824be3e3cc1))
+
 ### [0.0.28](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.27...v0.0.28) (2023-02-04)
 
 
