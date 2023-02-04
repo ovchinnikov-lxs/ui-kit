@@ -26,7 +26,7 @@ body {
 :root {
     --ui-primary-color: #689fef;
     --ui-secondary-color: #9cc3de;
-    --ui-additional-color: #40dbef;
+    --ui-additional-color: #0046c9;
     --ui-white-color: #ffff;
     --ui-black-color: #242e42;
 }
