@@ -2,10 +2,12 @@
     "extends": "@vue/tsconfig/tsconfig.web.json",
     "include": [
         "env.d.ts",
+        "global.d.ts",
         "src/**/*",
         "src/**/*.vue"
     ],
     "compilerOptions": {
+        "strict": true,
         "baseUrl": ".",
         "paths": {
             "~/*": [
@@ -13,8 +15,10 @@
             ]
         },
         "declaration": true,
-        "types": ["jest", "node"]
-
+        "types": [
+            "jest",
+            "node",
+        ],
     },
     "references": [
         {

@@ -1,0 +1,344 @@
+<script setup lang="ts">
+import { computed, onMounted, ref, useAttrs } from 'vue';
+import type { TypeClassList } from '~/assets/utils/types';
+
+// Composable
+import { classNameProps, useClassName } from '~/composables/useClassName';
+import { imageLoader } from '~/assets/utils/helpers/image-helpers';
+
+const props = defineProps({
+    ...classNameProps,
+
+    preview: {
+        type: String,
+        default: '',
+    },
+
+    origin: {
+        type: String,
+        required: true,
+    },
+
+    lazy: {
+        type: Boolean,
+        default: true,
+    },
+
+    swiperLazy: {
+        type: Boolean,
+        default: false,
+    },
+
+    objectFit: {
+        type: String,
+        default: 'cover',
+        validator: (v: string) => [
+            'contain',
+            'cover',
+            'fill',
+            'none',
+            'scale-down',
+        ].includes(v),
+    },
+
+    transition: {
+        type: String,
+        default: 'fade',
+        validator: (v: string) => [
+            'fade',
+            'zoom-in',
+            'zoom-out',
+        ].includes(v),
+    },
+});
+
+const attrs = useAttrs();
+const emit = defineEmits(['origin-loaded', 'preview-loaded']);
+
+let observer = null;
+const el = ref(null);
+const id = Math.floor(Math.random() * 1000000);
+
+const loaded = ref(false);
+const loading = ref(false);
+const initialLoaded = ref(Boolean(imageLoader.getImage(props.origin)));
+
+function getObserver() {
+    if (window.OLazyObserver) {
+        return window.OLazyObserver;
+    }
+
+    const options = {
+        rootMargin: '0px',
+        threshold: 0.1,
+    };
+
+    const callback = (entries: Array<IntersectionObserverEntry>) => {
+        entries.forEach(entry => {
+            const { isIntersecting, target } = entry;
+
+            if (isIntersecting) {
+                Object.values(window.OLazyObserver.actions)
+                    .forEach(action => {
+                        action(target);
+                    });
+            }
+        });
+    };
+
+    window.OLazyObserver = {
+        object: new IntersectionObserver(callback, options),
+        actions: {},
+    };
+
+    return window.OLazyObserver;
+}
+
+async function loadPreview() {
+    if (!attrs['preview-loaded']) {
+        return false;
+    }
+
+    try {
+        await imageLoader.loadImage(props.preview);
+
+        emit('preview-loaded');
+    } catch (e) {
+        console.error('O_IMAGE:LOAD_PREVIEW', e);
+    }
+}
+
+async function loadImage(target: Element) {
+    try {
+        const isEqual = target.isEqualNode(el.value);
+
+        if (loading.value || loaded.value || !isEqual) {
+            return false;
+        }
+
+        loading.value = true;
+
+        await imageLoader.loadImage(props.origin);
+
+        loaded.value = true;
+
+        if (attrs['origin-loaded']) {
+            emit('origin-loaded');
+        }
+    } catch (e) {
+        console.error('O_IMAGE:LOAD_IMAGE', e);
+    }
+}
+
+function onInit() {
+    if (!props.lazy) {
+        return false;
+    }
+
+    if (initialLoaded.value) {
+        return false;
+    }
+
+    observer = getObserver();
+
+    if (!observer) {
+        return false;
+    }
+
+    observer.actions[id] = loadImage;
+
+    if (el.value) {
+        observer.object.observe(el.value);
+    }
+
+    loadPreview();
+}
+
+onMounted(() => {
+    onInit();
+});
+
+
+const { getClassName } = useClassName(props);
+const classList = computed((): TypeClassList => [
+    getClassName.value('Image'),
+
+    `--object-fit-${props.objectFit}`,
+    `--transition-${props.transition}`,
+    {
+        '--has-preview': Boolean(props.preview),
+        '--loaded': loaded.value,
+    },
+]);
+
+const originAttrs = computed(() => ({
+    ...attrs,
+    ...!props.swiperLazy && { src: props.origin },
+    ...props.swiperLazy && { 'data-src': props.origin },
+}));
+const originClassList = computed((): TypeClassList => [{
+    'swiper-lazy': props.swiperLazy,
+}]);
+</script>
+
+<template>
+    <div ref="el" :class="classList">
+        <div :class="getClassName('Image__wrapper')">
+            <img v-if="preview"
+                 :src="preview"
+                 v-bind="$attrs"
+                 draggable="false"
+                 alt=""
+                 :class="getClassName('Image__preview')"
+            >
+
+            <transition
+                :name="initialLoaded ? 'none' : 'o-image'"
+                mode="out-in"
+            >
+                <img v-if="!lazy || (lazy && loaded) || initialLoaded"
+                     v-bind="originAttrs"
+                     draggable="false"
+                     alt=""
+                     :class="[getClassName('Image__origin'), originClassList]"
+                >
+            </transition>
+        </div>
+    </div>
+</template>
+
+<style lang="scss">
+$zoom-diff: 1.05;
+
+.OImage {
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__preview {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__origin {
+        position: relative;
+        z-index: 2;
+        transition: all .3s ease;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -webkit-user-drag: none;
+    }
+
+    &.--object-fit-contain {
+        img {
+            object-fit: contain;
+        }
+    }
+
+    &.--object-fit-cover {
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &.--object-fit-fill {
+        img {
+            object-fit: fill;
+        }
+    }
+
+    &.--object-fit-scale-down {
+        img {
+            object-fit: scale-down;
+        }
+    }
+
+    &.--has-preview {
+        .OImage {
+            &__origin {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &.--transition-fade {
+        .OImage {
+            opacity: 1;
+
+            &__origin {
+                &.o-image-enter,
+                &.o-image-leave-to,
+                &.swiper-lazy {
+                    opacity: 0;
+                }
+
+                &.swiper-lazy-loaded {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.--transition-zoom-in {
+        .OImage {
+            &__preview {
+                transform: translate3d(0, 0, 0) scale($zoom-diff);
+            }
+
+            &__origin {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale($zoom-diff);
+
+                &.o-image-enter,
+                &.o-image-leave-to,
+                &.swiper-lazy {
+                    opacity: 0;
+                    transform: translate3d(0, 0, 0) scale(1);
+                }
+
+                &.swiper-lazy-loaded {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0) scale($zoom-diff);
+                }
+            }
+        }
+    }
+
+    &.--transition-zoom-out {
+        .OImage {
+            &__preview {
+                transform: translate3d(0, 0, 0) scale($zoom-diff);
+            }
+
+            &__origin {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+
+                &.o-image-enter,
+                &.o-image-leave-to,
+                &.swiper-lazy {
+                    opacity: 0;
+                    transform: translate3d(0, 0, 0) scale($zoom-diff);
+                }
+
+                &.swiper-lazy-loaded {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0) scale(1);
+                }
+            }
+        }
+    }
+}
+</style>
