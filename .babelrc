@@ -1,0 +1,3 @@
+{
+    "extends": "@idalite-frontend/babel-config"
+}

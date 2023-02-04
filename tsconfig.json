@@ -13,6 +13,8 @@
             ]
         },
         "declaration": true,
+        "types": ["jest", "node"]
+
     },
     "references": [
         {
