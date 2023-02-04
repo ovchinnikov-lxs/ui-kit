@@ -126,10 +126,6 @@ module.exports = {
             'error',
             'always',
         ],
-        'func-call-spacing': [
-            'error',
-            'never',
-        ],
         'func-name-matching': 'error',
         'func-style': [
             'error',

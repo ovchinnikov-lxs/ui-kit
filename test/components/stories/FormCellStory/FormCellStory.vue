@@ -5,6 +5,7 @@ import type { TypeSize } from '../../../../src/assets/utils/types';
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
 import OFormCell from '../../../../src/components/OFormCell/OFormCell.vue';
+import OInput from '../../../../src/components/OInput/OInput.vue';
 
 const size = ref<TypeSize>('medium');
 const error = ref(false);
@@ -47,11 +48,12 @@ const error = ref(false);
                 color="primary"
                 :error="error ? 'This is Field error' : null"
                 :size="size"
+                class="form-cell"
             >
                 <template #label>label</template>
 
                 <template #default>
-                    this is body
+                    <OInput/>
                 </template>
 
                 <template #info>info content</template>
@@ -63,6 +65,10 @@ const error = ref(false);
 </template>
 
 <style lang="scss">
+.form-cell {
+    width: 100%;
+}
+
 .UiFormCell {
     $cell: &;
 

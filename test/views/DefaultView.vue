@@ -6,6 +6,7 @@ const components = [
     'Button',
     'Link',
     'FormCell',
+    'Input',
     'Collapse',
     'Image',
     'Preloader',
