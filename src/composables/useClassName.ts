@@ -3,7 +3,7 @@ import type { PropType } from 'vue';
 
 import type { TypeClassList } from '~/assets/utils/types';
 
-console.log('test1');
+console.log('test11');
 export interface IClassNameProps {
     classPrefix?: string | null | undefined;
 }
