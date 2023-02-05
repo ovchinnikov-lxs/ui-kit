@@ -9,6 +9,7 @@ const components = [
     'Input',
     'RichText',
     'Popover',
+    'Select',
     'Collapse',
     'Image',
     'Preloader',
@@ -57,6 +58,7 @@ const components = [
 .aside {
     position: sticky;
     top: 112px;
+    flex-shrink: 0;
     height: fit-content;
 }
 
@@ -84,8 +86,7 @@ const components = [
 .section {
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    flex-grow: 1;
     row-gap: 56px;
-    margin-left: auto;
 }
 </style>

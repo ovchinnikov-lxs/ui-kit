@@ -47,11 +47,13 @@ import { OButton } from '@ovchinnikov-lxs/o-components';
  - ✅ `OLink`
  - ✅ `OFormCell`
  - ✅ `OInput`
+ - 🛠 `OFileInput`
+ - 🛠 `OImageInput`
  - ✅ `ORichText`
  - 🛠 `OCheckbox`
  - 🛠 `ORadio`
  - ✅ `OPopover`
- - 🛠 `OSelect`
+ - ✅ `OSelect`
  - 🛠 `OTooltip`
  - 🛠 `OIcon`
  - 🛠 `OTabs`
