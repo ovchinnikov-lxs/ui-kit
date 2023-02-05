@@ -14,22 +14,16 @@
                 matrix:
                     node-version: [19.x]
             steps:
-                - name: Checkout  🛎
-                  uses: actions/checkout@v3
+                - uses: actions/checkout@v3
 
-                - name: Setup node 👨‍💻
                 - uses: actions/setup-node@v3
                   with:
                       node-version: ${{ matrix.node-version }}
                       registry-url: https://npm.pkg.github.com/
 
-                - name: Install dependents 🔧
-                  run: npm ci
-
-                - name: Build 👷
-                  run: npm run build
-
-                - name: Publish 🛫
-                  run: npm cache verify && npm publish
+                - run: npm ci
+                - run: npm run build
+                - run: npm cache verify
+                - run: npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
