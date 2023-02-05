@@ -55,7 +55,7 @@ import { OButton } from '@ovchinnikov-lxs/o-components';
  - ✅ `OPopover`
  - ✅ `OSelect`
  - 🛠 `OTooltip`
- - 🛠 `OIcon`
+ - ✅ `OIcon`
  - 🛠 `OTabs`
  - ✅ `OImage`
  - 🛠 `OPlate`

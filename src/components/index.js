@@ -7,6 +7,7 @@ import OPopover from './OPopover/OPopover.vue';
 import OSelect from './OSelect/OSelect.vue';
 import OSelectHeader from './OSelect/OSelectHeader.vue';
 import OSelectOptions from './OSelect/OSelectOptions.vue';
+import OIcon from './OIcon/OIcon.vue';
 import OImage from './OImage/OImage.vue';
 import OCollapse from './OCollapse/OCollapse.vue';
 import OPreloader from './OPreloader/OPreloader.vue';
@@ -21,6 +22,7 @@ export {
     OSelect,
     OSelectHeader,
     OSelectOptions,
+    OIcon,
     OImage,
     OCollapse,
     OPreloader,

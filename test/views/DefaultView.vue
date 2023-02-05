@@ -11,6 +11,7 @@ const components = [
     'Popover',
     'Select',
     'Collapse',
+    'Icon',
     'Image',
     'Preloader',
 ].map(name => ({
