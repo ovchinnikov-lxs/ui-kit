@@ -1,4 +1,16 @@
 # CHANGELOG
+## [1.2.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.1.0...v1.2.0) (2023-02-05)
+
+
+### 🔥 Bug Fixes
+
+* **useSize:** Добавил custom размер ([a3a1b29](https://github.com/ovchinnikov-lxs/o-components/commit/a3a1b29a84a70e5be1ffcf5bf604d33123998077))
+
+
+### 🌈 Features
+
+* **OIcon:** Добавил новый компонент ([cb080da](https://github.com/ovchinnikov-lxs/o-components/commit/cb080da11f5e81057965e3ea60a1c28a823b3758))
+
 ## [1.1.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.0.1...v1.1.0) (2023-02-05)
 
 
