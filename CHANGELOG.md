@@ -1,4 +1,11 @@
 # CHANGELOG
+### [1.0.1](https://github.com/ovchinnikov-lxs/o-components/compare/v1.0.0...v1.0.1) (2023-02-05)
+
+
+### 🔥 Bug Fixes
+
+* **OPopover:** Перенес компонент в отдельную директорию ([36d7836](https://github.com/ovchinnikov-lxs/o-components/commit/36d7836d0208734bec108bfb0fa08c03d2d608ae))
+
 ## [1.0.0](https://github.com/ovchinnikov-lxs/o-components/compare/v0.3.0...v1.0.0) (2023-02-05)
 
 
