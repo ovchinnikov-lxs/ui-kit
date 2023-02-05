@@ -1,6 +1,6 @@
 {
     "name": "@ovchinnikov-lxs/o-components",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "scripts": {
         "dev": "vite --port 3001",
         "build": "run-p type:check build-only",
