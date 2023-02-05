@@ -1,4 +1,15 @@
 # CHANGELOG
+## [0.1.0](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.36...v0.1.0) (2023-02-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **log:** changes
+
+### 🌈 Features
+
+* **log:** changes ([5b40b95](https://github.com/ovchinnikov-lxs/o-components/commit/5b40b95dcab0c33ec29fcb55360cc62b6621789c))
+
 ### [0.0.36](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.35...v0.0.36) (2023-02-05)
 
 
