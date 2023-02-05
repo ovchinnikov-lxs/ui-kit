@@ -1,4 +1,6 @@
 # CHANGELOG
+### [0.0.32](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.31...v0.0.32) (2023-02-05)
+
 ### [0.0.31](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.30...v0.0.31) (2023-02-05)
 
 ### [0.0.30](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.29...v0.0.30) (2023-02-05)
