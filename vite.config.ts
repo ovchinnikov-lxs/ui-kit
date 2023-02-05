@@ -42,7 +42,7 @@ export default defineConfig({
         cssCodeSplit: true,
         lib: {
             entry: resolve(__dirname, 'src/components/main.ts'),
-            name: '@ovchinnikov-lxs/o-components',
+            name: 'o-components',
             formats: ['es', 'cjs', 'umd'],
             fileName: format => `o-components.${format}.js`,
         },
