@@ -42,7 +42,7 @@ export default defineConfig({
         cssCodeSplit: true,
         lib: {
             entry: resolve(__dirname, 'src/components/main.ts'),
-            name: 'ocomponents',
+            name: 'OComponents',
             formats: ['es', 'cjs', 'umd'],
             fileName: format => `o-components.${format}.js`,
         },
@@ -54,9 +54,10 @@ export default defineConfig({
 
             output: {
                 assetFileNames: (assetInfo): string => {
-                    if (assetInfo.name === 'main.css') {
+                    if (assetInfo.name?.includes('main.css')) {
                         return 'o-components.css';
                     }
+
                     return assetInfo?.name || '';
                 },
                 exports: 'named',
