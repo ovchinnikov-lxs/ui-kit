@@ -1,4 +1,11 @@
 # CHANGELOG
+## [1.1.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.0.1...v1.1.0) (2023-02-05)
+
+
+### 🌈 Features
+
+* **OSelect:** Новый компонент ([29d0ab8](https://github.com/ovchinnikov-lxs/o-components/commit/29d0ab8dddaea7487307c48e73e541f3e6ab745a))
+
 ### [1.0.1](https://github.com/ovchinnikov-lxs/o-components/compare/v1.0.0...v1.0.1) (2023-02-05)
 
 
