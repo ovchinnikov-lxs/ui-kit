@@ -13,23 +13,24 @@
             runs-on: ubuntu-latest
             strategy:
                 matrix:
-                    node-version: [16.x]
+                    node-version: [19.x]
             steps:
+                - name: Checkout  🛎
                 - uses: actions/checkout@v3
-                  with:
-                    ref: ${{ github.event.push.head.sha }}
-                    fetch-depth: 0
+
                 - uses: actions/setup-node@v3
                   with:
                       node-version: ${{ matrix.node-version }}
                       registry-url: https://npm.pkg.github.com/
-                - run: npm ci
-                - run: |
-                      git config --global user.email "${{ github.event.pusher.email }}"
-                      git config --global user.name "${{ github.event.pusher.name }}"
-                - run: npm run bump
+
+                - name: Install dependents 🔧
+                  run: npm ci
+
+                - name: Build 👷
                 - run: npm run build
+
+                - name: Publish 🛫
                 - run: npm cache verify
-                - run: git push --follow-tags origin master && npm publish
+                - run: npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
