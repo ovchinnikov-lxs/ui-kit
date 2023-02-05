@@ -1,4 +1,11 @@
 # CHANGELOG
+## [1.4.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.3.0...v1.4.0) (2023-02-05)
+
+
+### 🌈 Features
+
+* **build:** Переделал билд ([1d7541e](https://github.com/ovchinnikov-lxs/o-components/commit/1d7541e237035a30d6170d945453de572125d0d4))
+
 ## [1.3.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.2.0...v1.3.0) (2023-02-05)
 
 
