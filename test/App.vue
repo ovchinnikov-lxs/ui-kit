@@ -68,6 +68,7 @@ onMounted(() => {
 <style lang="scss" module>
 body {
     margin: 0;
+    font-family: Verdana, sans-serif;
 }
 
 :root {
@@ -85,7 +86,6 @@ body {
     height: 100%;
     min-height: 100vh;
     background-color: var(--ui-white-color);
-    font-family: Verdana, sans-serif;
     color: var(--ui-black-color);
 }
 

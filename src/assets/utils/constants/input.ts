@@ -1,8 +1,8 @@
-const typesDict = {
+const TYPES_DICT = {
     NUMERIC: 'numeric',
     STRING: 'string',
 };
 
 export {
-    typesDict,
+    TYPES_DICT,
 };
