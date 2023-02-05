@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OPopover from '../../../../src/components/OPopover.vue';
+import OPopover from '../../../../src/components/OPopover/OPopover.vue';
 
 const isOpened = ref(true);
 const position = ref('top');
