@@ -1,16 +1,15 @@
     name: Publish
 
     on:
-        push:
-            branches:
-                - master
+        release:
+            types: [ created ]
 
     jobs:
         publish:
+            runs-on: ubuntu-latest
             permissions:
                 packages: write
                 contents: write
-            runs-on: ubuntu-latest
             strategy:
                 matrix:
                     node-version: [19.x]
@@ -27,10 +26,9 @@
                   run: npm ci
 
                 - name: Build 👷
-                - run: npm run build
+                  run: npm run build
 
                 - name: Publish 🛫
-                - run: npm cache verify
-                - run: npm publish
+                  run: npm cache verify && npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
