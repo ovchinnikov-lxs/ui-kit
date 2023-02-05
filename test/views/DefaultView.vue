@@ -8,6 +8,7 @@ const components = [
     'FormCell',
     'Input',
     'RichText',
+    'Popover',
     'Collapse',
     'Image',
     'Preloader',

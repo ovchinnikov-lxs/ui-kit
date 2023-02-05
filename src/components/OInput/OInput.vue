@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue';
 import type { PropType } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
-import { typesDict } from '~/assets/utils/constants/input';
+import { TYPES_DICT } from '~/assets/utils/constants/input';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
@@ -27,9 +27,9 @@ const props = defineProps({
 
     valueType: {
         type: String,
-        default: typesDict.STRING,
+        default: TYPES_DICT.STRING,
         validator: (val: string) => Object
-            .values(typesDict)
+            .values(TYPES_DICT)
             .includes(val),
     },
 });
@@ -79,7 +79,7 @@ function setValue(value: TypeValue) {
             break;
     }
 
-    if (props.valueType === typesDict.NUMERIC) {
+    if (props.valueType === TYPES_DICT.NUMERIC) {
         if (newVal) {
             newVal = Number(newVal);
         }
