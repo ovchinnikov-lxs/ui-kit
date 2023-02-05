@@ -1,4 +1,16 @@
 # CHANGELOG
+## [1.3.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.2.0...v1.3.0) (2023-02-05)
+
+
+### 📜 DOCS UPDATE
+
+* **README:** Обновил текст ([c0bce8b](https://github.com/ovchinnikov-lxs/o-components/commit/c0bce8bd547c06defd40ada350e3347362f76bb4))
+
+
+### 🌈 Features
+
+* **useClassName:** Пробуем передавать composables ([0ce7e80](https://github.com/ovchinnikov-lxs/o-components/commit/0ce7e80a888fd4c28518557b73f43d24a073b674))
+
 ## [1.2.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.1.0...v1.2.0) (2023-02-05)
 
 
