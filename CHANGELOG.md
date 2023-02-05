@@ -1,4 +1,11 @@
 # CHANGELOG
+### [0.0.36](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.35...v0.0.36) (2023-02-05)
+
+
+### 🔥 Bug Fixes
+
+* **scss:** Убрал лишний миксин ([8b53b24](https://github.com/ovchinnikov-lxs/o-components/commit/8b53b24fa4364a8b58f97c4cc715b6ddb2926312))
+
 ### [0.0.35](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.34...v0.0.35) (2023-02-05)
 
 ### [0.0.34](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.33...v0.0.34) (2023-02-05)
