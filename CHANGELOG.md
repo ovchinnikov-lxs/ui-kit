@@ -1,4 +1,11 @@
 # CHANGELOG
+### [0.0.30](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.29...v0.0.30) (2023-02-05)
+
+
+### 🌈 Features
+
+* **OPopover:** Новый компонент ([deba9a6](https://github.com/ovchinnikov-lxs/o-components/commit/deba9a6903693c1ac5055892c2319c376f2d5071))
+
 ### [0.0.29](https://github.com/ovchinnikov-lxs/o-components/compare/v0.0.28...v0.0.29) (2023-02-04)
 
 
