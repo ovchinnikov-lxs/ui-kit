@@ -1,4 +1,15 @@
 # CHANGELOG
+## [1.0.0](https://github.com/ovchinnikov-lxs/o-components/compare/v0.3.0...v1.0.0) (2023-02-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **major:** Переходим в мажорную версию
+
+### 🌈 Features
+
+* **major:** Переходим в мажорную версию ([98b5cab](https://github.com/ovchinnikov-lxs/o-components/commit/98b5cabc954ddd6f3817bad60d9e1be5cb6b80d6))
+
 ## [0.3.0](https://github.com/ovchinnikov-lxs/o-components/compare/v0.2.0...v0.3.0) (2023-02-05)
 
 
