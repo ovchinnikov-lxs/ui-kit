@@ -12,6 +12,8 @@ import OImage from './OImage/OImage.vue';
 import OCollapse from './OCollapse/OCollapse.vue';
 import OPreloader from './OPreloader/OPreloader.vue';
 
+import { useClassName } from '../composables/useClassName';
+
 export {
     OButton,
     OLink,
@@ -26,4 +28,5 @@ export {
     OImage,
     OCollapse,
     OPreloader,
+    useClassName,
 };
