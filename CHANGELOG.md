@@ -1,4 +1,11 @@
 # CHANGELOG
+### [1.4.3](https://github.com/ovchinnikov-lxs/o-components/compare/v1.4.2...v1.4.3) (2023-02-05)
+
+
+### 🔥 Bug Fixes
+
+* **build:** Поправил название файла и местоположение css ([082d296](https://github.com/ovchinnikov-lxs/o-components/commit/082d2968a49ba7037c85034ddb90f504b7382276))
+
 ### [1.4.2](https://github.com/ovchinnikov-lxs/o-components/compare/v1.4.1...v1.4.2) (2023-02-05)
 
 
