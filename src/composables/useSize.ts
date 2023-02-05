@@ -18,6 +18,7 @@ export const sizeProps = {
             'large',
             'x-large',
             'xx-large',
+            'custom',
         ].includes(v),
     },
 };
