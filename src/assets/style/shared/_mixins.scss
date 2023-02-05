@@ -28,3 +28,7 @@
         height: 0;
     }
 }
+
+@mixin log {
+    display: block;
+}
