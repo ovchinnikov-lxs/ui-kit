@@ -1,4 +1,11 @@
 # CHANGELOG
+### [1.4.1](https://github.com/ovchinnikov-lxs/o-components/compare/v1.4.0...v1.4.1) (2023-02-05)
+
+
+### 🔥 Bug Fixes
+
+* **build:** Поправил название либы ([93d1828](https://github.com/ovchinnikov-lxs/o-components/commit/93d18288f99149a2eeecd2bae303c3d79b0b8e50))
+
 ## [1.4.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.3.0...v1.4.0) (2023-02-05)
 
 
