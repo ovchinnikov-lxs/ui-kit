@@ -56,6 +56,7 @@
         "typescript": "^4.9.5",
         "vite": "^3.0.4",
         "vite-plugin-checker": "^0.5.0",
+        "vite-plugin-dts": "^1.7.2",
         "vite-plugin-stylelint": "^3.0.7",
         "vue-tsc": "^0.39.5"
     },
@@ -66,23 +67,25 @@
     "publishConfig": {
         "@ovchinnikov-lxs:registry": "https://npm.pkg.github.com"
     },
-    "license": "ISC",
-    "type": "module",
     "browserslist": [
         "extends @ovchinnikov-lxs/browserslist-config"
     ],
+    "license": "ISC",
+    "type": "module",
     "files": [
         "dist"
     ],
-    "main": "./dist/o-components.umd.cjs",
-    "module": "./dist/o-components.js",
+    "main": "./dist/o-components.umd.js",
+    "module": "./dist/o-components.es.js",
     "exports": {
         ".": {
-            "import": "./dist/o-components.js",
-            "require": "./dist/o-components.umd.cjs"
+            "import": "./dist/o-components.es.js",
+            "require": "./dist/o-components.umd.js"
         },
-        "./style": {
-            "import": "./dist/style.css"
+        "./dist/o-components.css": {
+            "import": "./dist/o-components.css",
+            "require": "./dist/o-components.css"
         }
-    }
+    },
+    "types": "./dist/main.d.ts"
 }

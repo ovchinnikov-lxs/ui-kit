@@ -6,6 +6,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import checker from 'vite-plugin-checker';
 import stylelintPlugin from 'vite-plugin-stylelint';
+import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,6 +21,9 @@ export default defineConfig({
     },
     plugins: [
         vue(),
+        dts({
+            insertTypesEntry: true,
+        }),
         checker({
             typescript: true,
             vueTsc: true,
@@ -35,19 +39,27 @@ export default defineConfig({
         },
     },
     build: {
+        cssCodeSplit: true,
         lib: {
-            entry: resolve(__dirname, 'src/components/index.js'),
+            entry: resolve(__dirname, 'src/components/main.ts'),
             name: '@ovchinnikov-lxs/o-components',
-            // the proper extensions will be added
-            fileName: 'o-components',
+            formats: ['es', 'cjs', 'umd'],
+            fileName: format => `o-components.${format}.js`,
         },
         rollupOptions: {
-            // make sure to externalize deps that shouldn't be bundled
-            // into your library
+            input: {
+                main: resolve(__dirname, 'src/components/main.ts'),
+            },
             external: ['vue'],
+
             output: {
-                // Provide global variables to use in the UMD build
-                // for externalized deps
+                assetFileNames: (assetInfo): string => {
+                    if (assetInfo.name === 'main.css') {
+                        return 'o-components.css';
+                    }
+                    return assetInfo?.name || '';
+                },
+                exports: 'named',
                 globals: {
                     vue: 'Vue',
                 },
