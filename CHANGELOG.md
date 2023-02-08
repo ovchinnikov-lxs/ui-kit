@@ -1,4 +1,11 @@
 # CHANGELOG
+## [1.5.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.4.3...v1.5.0) (2023-02-08)
+
+
+### 🌈 Features
+
+* **OTooltip:** Добавил новый компонент ([212ce8a](https://github.com/ovchinnikov-lxs/o-components/commit/212ce8a8ed207fa1191dd227dc30ac818d9e6ff3))
+
 ### [1.4.3](https://github.com/ovchinnikov-lxs/o-components/compare/v1.4.2...v1.4.3) (2023-02-05)
 
 
