@@ -55,7 +55,7 @@ import { OButton } from '@ovchinnikov-lxs/o-components';
  - [`OSelect`](src%2Fcomponents%2FOSelect%2FOSelect.vue)
    - [`OSelectHeader`](src%2Fcomponents%2FOSelect%2FOSelectHeader.vue)
    - [`OSelectOption`](src%2Fcomponents%2FOSelect%2FOSelectOption.vue)
- - `OTooltip` - 👨‍🔧🛠
+ - [`OTooltip`](src%2Fcomponents%2FOTooltip%2FOTooltip.vue)
  - [`OIcon`](src%2Fcomponents%2FOIcon%2FOIcon.vue)
  - `OTabs` - 👨‍🔧🛠
  - [`OImage`](src%2Fcomponents%2FOImage%2FOImage.vue)

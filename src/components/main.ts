@@ -9,6 +9,7 @@ import {
     OSelect,
     OSelectHeader,
     OSelectOptions,
+    OTooltip,
     OIcon,
     OImage,
     OCollapse,
@@ -26,6 +27,7 @@ export default {
         app.component('OSelect', OSelect);
         app.component('OSelectHeader', OSelectHeader);
         app.component('OSelectOptions', OSelectOptions);
+        app.component('OTooltip', OTooltip);
         app.component('OIcon', OIcon);
         app.component('OImage', OImage);
         app.component('OCollapse', OCollapse);
@@ -43,6 +45,7 @@ export {
     OSelect,
     OSelectHeader,
     OSelectOptions,
+    OTooltip,
     OIcon,
     OImage,
     OCollapse,

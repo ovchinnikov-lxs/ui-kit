@@ -10,6 +10,7 @@ const components = [
     'RichText',
     'Popover',
     'Select',
+    'Tooltip',
     'Collapse',
     'Icon',
     'Image',

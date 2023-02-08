@@ -5,6 +5,7 @@ export { default as OInput } from './OInput/OInput.vue';
 export { default as ORichText } from './ORichText/ORichText.vue';
 export { default as OPopover } from './OPopover/OPopover.vue';
 export { default as OSelect } from './OSelect/OSelect.vue';
+export { default as OTooltip } from './OTooltip/OTooltip.vue';
 export { default as OSelectHeader } from './OSelect/OSelectHeader.vue';
 export { default as OSelectOptions } from './OSelect/OSelectOptions.vue';
 export { default as OIcon } from './OIcon/OIcon.vue';
