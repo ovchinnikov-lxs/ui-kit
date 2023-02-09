@@ -1,4 +1,15 @@
 # CHANGELOG
+## [2.0.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v1.5.0...v2.0.0) (2023-02-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **rename:** Изменение название пакета
+
+### 🌈 Features
+
+* **rename:** Изменение название пакета ([6748806](https://github.com/ovchinnikov-lxs/ui-kit/commit/674880676464b9ef17d85deee58f5b978615104f))
+
 ## [1.5.0](https://github.com/ovchinnikov-lxs/o-components/compare/v1.4.3...v1.5.0) (2023-02-08)
 
 
