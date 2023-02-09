@@ -1,6 +1,6 @@
 export {};
 
-export interface IOLazyObserver {
+export interface IUiLazyObserver {
     object: IntersectionObserver,
     actions: {
         [key: string | number]: (e: Element) => void
@@ -8,6 +8,6 @@ export interface IOLazyObserver {
 }
 declare global {
     interface Window {
-        OLazyObserver: IOLazyObserver | null;
+        UiLazyObserver: IUiLazyObserver | null;
     }
 }

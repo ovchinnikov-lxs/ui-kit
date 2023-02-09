@@ -52,7 +52,7 @@ onMounted(() => {
 <template>
     <main :class="$style.App">
         <header :class="$style.header">
-            <h1>O-COMPONENTS</h1>
+            <h1>Ui-kit</h1>
         </header>
 
         <main :class="$style.container">
@@ -60,7 +60,7 @@ onMounted(() => {
         </main>
 
         <footer :class="$style.footer">
-            {{ new Date().getFullYear() }}&nbsp;&copy; @ovchinnikov-lxs/o-components
+            {{ new Date().getFullYear() }}&nbsp;&copy; @ovchinnikov-lxs/ui-kit
         </footer>
     </main>
 </template>

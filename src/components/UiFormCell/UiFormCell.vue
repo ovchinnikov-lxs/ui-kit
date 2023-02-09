@@ -70,7 +70,7 @@ const classList = computed((): TypeClassList => [
 <style lang="scss">
 @import "src/assets/style/shared/mixins";
 
-.OFormCell {
+.UiFormCell {
     $cell: &;
 
     &:not(.--custom-size) {

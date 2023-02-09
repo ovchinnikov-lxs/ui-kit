@@ -13,9 +13,9 @@ import { styleProps, useStyle } from '~/composables/useStyle';
 import type { IOptionItem } from '~/assets/utils/interfaces';
 
 // Components
-import OPopover from '~/components/OPopover/OPopover.vue';
-import OSelectHeader from '~/components/OSelect/OSelectHeader.vue';
-import OSelectOptions from '~/components/OSelect/OSelectOptions.vue';
+import UiPopover from '~/components/UiPopover/UiPopover.vue';
+import UiSelectHeader from '~/components/UiSelect/UiSelectHeader.vue';
+import UiSelectOptions from '~/components/UiSelect/UiSelectOptions.vue';
 
 type TypeValue = string | number | boolean | Array<string> | null;
 
@@ -226,7 +226,7 @@ onMounted(() => {
 });
 </script>
 <template>
-    <OPopover
+    <UiPopover
         v-model="isOpened"
         :auto-close="!multiple && autoClose"
         :disabled="isDisabled"
@@ -244,7 +244,7 @@ onMounted(() => {
                           :disabled="isDisabled"
                           :error="error"
                     >
-                        <OSelectHeader
+                        <UiSelectHeader
                             :class-prefix="classPrefix"
                             :placeholder="placeholder"
                             :active-options="activeOptions"
@@ -262,7 +262,7 @@ onMounted(() => {
                                   :is-opened="isOpened"
                                   :error="error"
                             />
-                        </OSelectHeader>
+                        </UiSelectHeader>
                     </slot>
                 </div>
 
@@ -312,7 +312,7 @@ onMounted(() => {
                               :size="size"
                               :color="color"
                         >
-                            <OSelectOptions
+                            <UiSelectOptions
                                 :key="option.id"
                                 :class-prefix="classPrefix"
                                 :option-id="option.id"
@@ -334,7 +334,7 @@ onMounted(() => {
                                           :color="color"
                                     />
                                 </template>
-                            </OSelectOptions>
+                            </UiSelectOptions>
                         </slot>
                     </li>
                 </ul>
@@ -344,11 +344,11 @@ onMounted(() => {
                 </div>
             </div>
         </template>
-    </OPopover>
+    </UiPopover>
 </template>
 
 <style lang="scss">
-.OSelect {
+.UiSelect {
     position: relative;
     display: block;
     width: 100%;

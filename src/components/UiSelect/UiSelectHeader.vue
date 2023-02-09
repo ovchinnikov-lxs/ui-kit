@@ -123,7 +123,7 @@ const count = computed(() => props.activeOptions?.length);
 
 
 <style lang="scss">
-.OSelectHeader {
+.UiSelectHeader {
     $header: &;
 
     position: relative;

@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OPreloader from '../../../../src/components/OPreloader/OPreloader.vue';
+import UiPreloader from '../../../../src/components/UiPreloader/UiPreloader.vue';
 import type { TypeSize } from '../../../../src/assets/utils/types';
 
 const size= ref<TypeSize>('medium');
@@ -11,7 +11,7 @@ const size= ref<TypeSize>('medium');
 </script>
 
 <template>
-    <ComponentWrapper name="OPreloader">
+    <ComponentWrapper name="UiPreloader">
         <template #control>
             <div>
                 sizes
@@ -36,9 +36,9 @@ const size= ref<TypeSize>('medium');
             </div>
         </template>
         <template #component>
-            <OPreloader class-prefix="Ui" :size="size">
+            <UiPreloader :size="size">
                 <img src="test/static/favicon.svg" alt="fav">
-            </OPreloader>
+            </UiPreloader>
         </template>
     </ComponentWrapper>
 </template>

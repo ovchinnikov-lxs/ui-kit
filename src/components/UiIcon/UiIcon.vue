@@ -2,8 +2,8 @@
 import { computed } from 'vue';
 import type { PropType } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
-import type { IIconItem } from '~/components/OIcon/helpers';
-import { iconList } from '~/components/OIcon/helpers';
+import type { IIconItem } from '~/components/UiIcon/helpers';
+import { iconList } from '~/components/UiIcon/helpers';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
@@ -76,7 +76,7 @@ const svgIcon = computed(() => {
 </template>
 
 <style lang="scss">
-.OIcon {
+.UiIcon {
     display: inline-block;
 
     svg {

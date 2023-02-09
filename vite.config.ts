@@ -42,9 +42,9 @@ export default defineConfig({
         cssCodeSplit: true,
         lib: {
             entry: resolve(__dirname, 'src/components/main.ts'),
-            name: 'OComponents',
+            name: 'UiKit',
             formats: ['es', 'cjs', 'umd'],
-            fileName: format => `o-components.${format}.js`,
+            fileName: format => `ui-kit.${format}.js`,
         },
         rollupOptions: {
             input: {
@@ -55,7 +55,7 @@ export default defineConfig({
             output: {
                 assetFileNames: (assetInfo): string => {
                     if (assetInfo.name?.includes('main.css')) {
-                        return 'o-components.css';
+                        return 'ui-kit.css';
                     }
 
                     return assetInfo?.name || '';

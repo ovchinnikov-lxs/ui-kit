@@ -4,13 +4,13 @@ import type { TypeSize } from '../../../../src/assets/utils/types';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OLink from '../../../../src/components/OLink/OLink.vue';
+import UiLink from '../../../../src/components/UiLink/UiLink.vue';
 
 const color = ref('primary');
 const size = ref<TypeSize>('medium');
 </script>
 <template>
-    <ComponentWrapper name="OLink">
+    <ComponentWrapper name="UiLink">
         <template #control>
             <div>
                 <b> current Size: {{ size }}</b>
@@ -58,14 +58,13 @@ const size = ref<TypeSize>('medium');
         </template>
 
         <template #component>
-            <OLink
-                class-prefix="Ui"
+            <UiLink
                 :color="color"
                 :size="size"
                 to="/"
             >
                 Link
-            </OLink>
+            </UiLink>
         </template>
     </ComponentWrapper>
 </template>

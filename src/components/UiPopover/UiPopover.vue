@@ -344,7 +344,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss">
-.OPopover {
+.UiPopover {
     display: inline-block;
     user-select: none;
 

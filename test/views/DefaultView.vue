@@ -31,7 +31,7 @@ const components = [
                 <ul :class="$style.nav">
                     <li v-for="item in components" :key="item">
                         <RouterLink :to="{ hash: `#${item.name}` }" :class="[$style.button, { [$style['--is-active']]: $route.hash === `#${item.name}` }]">
-                            O{{ item.name }}
+                            Ui{{ item.name }}
                         </RouterLink>
                     </li>
                 </ul>

@@ -3,14 +3,14 @@ import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OPopover from '../../../../src/components/OPopover/OPopover.vue';
+import UiPopover from '../../../../src/components/UiPopover/UiPopover.vue';
 
 const isOpened = ref(true);
 const position = ref('top');
 </script>
 
 <template>
-    <ComponentWrapper name="OPopover">
+    <ComponentWrapper name="UiPopover">
         <template #control>
             <label>
                 <input type="checkbox" v-model="isOpened">
@@ -62,10 +62,7 @@ const position = ref('top');
 
         </template>
         <template #component>
-            <OPopover class-prefix="Ui"
-                      v-model="isOpened"
-                      :position="position"
-            >
+            <UiPopover v-model="isOpened" :position="position">
                 <template #top>TOP SIDE ELEMENT</template>
 
                 <template #bottom>
@@ -73,7 +70,7 @@ const position = ref('top');
                         BOTTOM SIDE ELEMENT
                     </div>
                 </template>
-            </OPopover>
+            </UiPopover>
         </template>
     </ComponentWrapper>
 </template>

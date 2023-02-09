@@ -1,53 +1,53 @@
 import type { App } from 'vue';
 import {
-    OButton,
-    OLink,
-    OFormCell,
-    OInput,
-    ORichText,
-    OPopover,
-    OSelect,
-    OSelectHeader,
-    OSelectOptions,
-    OTooltip,
-    OIcon,
-    OImage,
-    OCollapse,
-    OPreloader,
+    UiButton,
+    UiLink,
+    UiFormCell,
+    UiInput,
+    UiRichText,
+    UiPopover,
+    UiSelect,
+    UiSelectHeader,
+    UiSelectOptions,
+    UiTooltip,
+    UiIcon,
+    UiImage,
+    UiCollapse,
+    UiPreloader,
 } from '~/components/index';
 
 export default {
     install: (app: App) => {
-        app.component('OButton', OButton);
-        app.component('OLink', OLink);
-        app.component('OFormCell', OFormCell);
-        app.component('OInput', OInput);
-        app.component('ORichText', ORichText);
-        app.component('OPopover', OPopover);
-        app.component('OSelect', OSelect);
-        app.component('OSelectHeader', OSelectHeader);
-        app.component('OSelectOptions', OSelectOptions);
-        app.component('OTooltip', OTooltip);
-        app.component('OIcon', OIcon);
-        app.component('OImage', OImage);
-        app.component('OCollapse', OCollapse);
-        app.component('OPreloader', OPreloader);
+        app.component('UiButton', UiButton);
+        app.component('UiLink', UiLink);
+        app.component('UiFormCell', UiFormCell);
+        app.component('UiInput', UiInput);
+        app.component('UiRichText', UiRichText);
+        app.component('UiPopover', UiPopover);
+        app.component('UiSelect', UiSelect);
+        app.component('UiSelectHeader', UiSelectHeader);
+        app.component('UiSelectOptions', UiSelectOptions);
+        app.component('UiTooltip', UiTooltip);
+        app.component('UiIcon', UiIcon);
+        app.component('UiImage', UiImage);
+        app.component('UiCollapse', UiCollapse);
+        app.component('UiPreloader', UiPreloader);
     },
 };
 
 export {
-    OButton,
-    OLink,
-    OFormCell,
-    OInput,
-    ORichText,
-    OPopover,
-    OSelect,
-    OSelectHeader,
-    OSelectOptions,
-    OTooltip,
-    OIcon,
-    OImage,
-    OCollapse,
-    OPreloader,
+    UiButton,
+    UiLink,
+    UiFormCell,
+    UiInput,
+    UiRichText,
+    UiPopover,
+    UiSelect,
+    UiSelectHeader,
+    UiSelectOptions,
+    UiTooltip,
+    UiIcon,
+    UiImage,
+    UiCollapse,
+    UiPreloader,
 };

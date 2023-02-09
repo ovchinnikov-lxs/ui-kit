@@ -7,7 +7,7 @@ export interface IClassNameProps {
     classPrefix?: string | null | undefined;
 }
 
-export const DEFAULT_PREFIX = 'O';
+export const DEFAULT_PREFIX = 'Ui';
 
 export const classNameProps = {
     classPrefix: {

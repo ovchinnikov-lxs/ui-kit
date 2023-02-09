@@ -1,5 +1,5 @@
 {
-    "name": "@ovchinnikov-lxs/o-components",
+    "name": "@ovchinnikov-lxs/ui-kit",
     "version": "1.5.0",
     "scripts": {
         "dev": "vite --port 3001",
@@ -62,7 +62,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:ovchinnikov-lxs/o-components.git"
+        "url": "git@github.com:ovchinnikov-lxs/ui-kit.git"
     },
     "publishConfig": {
         "@ovchinnikov-lxs:registry": "https://npm.pkg.github.com"
@@ -75,16 +75,16 @@
     "files": [
         "dist"
     ],
-    "main": "./dist/o-components.umd.js",
-    "module": "./dist/o-components.es.js",
+    "main": "./dist/ui-kit.umd.js",
+    "module": "./dist/ui-kit.es.js",
     "exports": {
         ".": {
-            "import": "./dist/o-components.es.js",
-            "require": "./dist/o-components.umd.js"
+            "import": "./dist/ui-kit.es.js",
+            "require": "./dist/ui-kit.umd.js"
         },
-        "./dist/o-components.css": {
-            "import": "./dist/o-components.css",
-            "require": "./dist/o-components.css"
+        "./dist/ui-kit.css": {
+            "import": "./dist/ui-kit.css",
+            "require": "./dist/ui-kit.css"
         }
     },
     "types": "./dist/main.d.ts"

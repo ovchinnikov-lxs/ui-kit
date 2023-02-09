@@ -7,14 +7,12 @@ import type { TypeClassList } from '~/assets/utils/types';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
-import { routableProps, useRoutable } from '~/composables/useRoutable';
 import { sizeProps, useSize } from '~/composables/useSize';
 import { colorProps, useColor } from '~/composables/useColor';
 import { stateProps, useState } from '~/composables/useState';
 import { styleProps, useStyle } from '~/composables/useStyle';
 
 const props = defineProps({
-    ...routableProps,
     ...classNameProps,
     ...sizeProps,
     ...colorProps,
@@ -23,15 +21,13 @@ const props = defineProps({
 });
 
 const { getClassName } = useClassName(props);
-const { componentTag, routableClassList } = useRoutable(props);
 const { sizeClassList } = useSize(props);
 const { colorClassList } = useColor(props);
 const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Button'),
-    routableClassList.value,
+    getClassName.value('Preloader'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -40,37 +36,29 @@ const classList = computed((): TypeClassList => [
 </script>
 
 <template>
-    <component
-        :is="componentTag"
-        v-bind="$attrs"
-        :class="classList"
-    >
-        <slot v-bind="props"></slot>
-    </component>
+    <div :class="classList">
+        <div :class="getClassName('Preloader__wrapper')">
+
+            <div :class="getClassName('Preloader__el')">
+                <slot></slot>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss">
-@import "src/assets/style/shared/mixins";
-
-.OButton {
-    @include reset-button;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-appearance: none;
-    transition: all .3s ease;
-
-    &.--is-disabled,
-    &.--is-loading {
-        pointer-events: none;
+.UiPreloader {
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
-    &.--is-interactive {
-        cursor: pointer;
+    &__el {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
     }
 }
 </style>

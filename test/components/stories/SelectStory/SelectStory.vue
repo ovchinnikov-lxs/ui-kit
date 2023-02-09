@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OSelect from '../../../../src/components/OSelect/OSelect.vue';
+import UiSelect from '../../../../src/components/UiSelect/UiSelect.vue';
 
 const value = ref(null);
 
@@ -15,7 +15,7 @@ function onInput(v) {
 </script>
 
 <template>
-    <ComponentWrapper name="OSelect">
+    <ComponentWrapper name="UiSelect">
         <template #control>
             <component v-for="item in options"
                        :key="item.id"
@@ -26,8 +26,7 @@ function onInput(v) {
         </template>
 
         <template #component>
-            <OSelect
-                class-prefix="Ui"
+            <UiSelect
                 v-model="value"
                 :options="options"
                 color="primary"

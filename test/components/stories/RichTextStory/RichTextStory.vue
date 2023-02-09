@@ -1,16 +1,16 @@
 <script setup lang="ts">
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import ORichText from '../../../../src/components/ORichText/ORichText.vue';
+import UiRichText from '../../../../src/components/UiRichText/UiRichText.vue';
 
 </script>
 <template>
-    <ComponentWrapper name="ORichText">
+    <ComponentWrapper name="UiRichText">
         <template #control>
             Control
         </template>
         <template #component>
-            <ORichText class-prefix="Ui"/>
+            <UiRichText/>
         </template>
     </ComponentWrapper>
 </template>

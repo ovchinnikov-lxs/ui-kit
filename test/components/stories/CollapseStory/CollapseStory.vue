@@ -3,12 +3,12 @@ import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OCollapse from '../../../../src/components/OCollapse/OCollapse.vue';
+import UiCollapse from '../../../../src/components/UiCollapse/UiCollapse.vue';
 
 const isOpened = ref(true);
 </script>
 <template>
-    <ComponentWrapper name="OCollapse">
+    <ComponentWrapper name="UiCollapse">
         <template #control>
             <label>
                 <input type="checkbox" v-model="isOpened">
@@ -17,9 +17,9 @@ const isOpened = ref(true);
         </template>
 
         <template #component>
-            <OCollapse class-prefix="Ui" :is-opened="isOpened">
+            <UiCollapse :is-opened="isOpened">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi cumque, cupiditate debitis dignissimos dolorum eligendi laboriosam laudantium minima non odio officiis quaerat quam qui sint sit, ullam voluptas voluptate?
-            </OCollapse>
+            </UiCollapse>
         </template>
     </ComponentWrapper>
 </template>

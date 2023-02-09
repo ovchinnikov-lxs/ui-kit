@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OButton from '../../../../src/components/OButton/OButton.vue';
+import UiButton from '../../../../src/components/UiButton/UiButton.vue';
 import type { TypeSize } from '../../../../src/assets/utils/types';
 
 const color = ref('primary');
@@ -68,14 +68,13 @@ const size = ref<TypeSize>('medium');
         </template>
 
         <template #component>
-            <OButton
-                class-prefix="Ui"
+            <UiButton
                 :color="color"
                 :size="size"
                 :rounded="rounded"
             >
                 Button
-            </OButton>
+            </UiButton>
         </template>
     </ComponentWrapper>
 </template>

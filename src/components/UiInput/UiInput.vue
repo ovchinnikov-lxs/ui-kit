@@ -143,7 +143,7 @@ function onFocus(e: Event) {
 </template>
 
 <style lang="scss">
-.OInput {
+.UiInput {
     outline: none;
     transition: all .3s ease;
 

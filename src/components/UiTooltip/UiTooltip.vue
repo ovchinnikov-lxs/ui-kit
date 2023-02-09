@@ -255,7 +255,7 @@ watch(isOpened, val => {
 </template>
 
 <style lang="scss">
-.OTooltip {
+.UiTooltip {
     width: fit-content;
     pointer-events: none;
     touch-action: none;

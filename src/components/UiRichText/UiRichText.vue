@@ -90,7 +90,7 @@ function onChange(event: Event) {
 </template>
 
 <style lang="scss">
-.ORichText {
+.UiRichText {
     display: block;
     outline: none;
     -webkit-appearance: none;

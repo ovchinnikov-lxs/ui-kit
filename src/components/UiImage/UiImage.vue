@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, useAttrs, useSlots } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
-import type { IOLazyObserver } from '../../../global';
+import type { IUiLazyObserver } from '../../../global';
 
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
@@ -57,7 +57,7 @@ const attrs = useAttrs();
 const slots = useSlots();
 const emit = defineEmits(['origin-loaded', 'preview-loaded']);
 
-let observer: IOLazyObserver | null = null;
+let observer: IUiLazyObserver | null = null;
 const el = ref(null);
 const id = Math.floor(Math.random() * 1000000);
 
@@ -66,8 +66,8 @@ const loading = ref(false);
 const initialLoaded = ref(Boolean(imageLoader.getImage(props.origin)));
 
 function getObserver() {
-    if (window.OLazyObserver) {
-        return window.OLazyObserver;
+    if (window.UiLazyObserver) {
+        return window.UiLazyObserver;
     }
 
     const options = {
@@ -79,8 +79,8 @@ function getObserver() {
         entries.forEach(entry => {
             const { isIntersecting, target } = entry;
 
-            if (isIntersecting && window.OLazyObserver) {
-                Object.values(window.OLazyObserver.actions)
+            if (isIntersecting && window.UiLazyObserver) {
+                Object.values(window.UiLazyObserver.actions)
                     .forEach(action => {
                         action(target);
                     });
@@ -88,12 +88,12 @@ function getObserver() {
         });
     };
 
-    window.OLazyObserver = {
+    window.UiLazyObserver = {
         object: new IntersectionObserver(callback, options),
         actions: {},
     };
 
-    return window.OLazyObserver;
+    return window.UiLazyObserver;
 }
 
 function clearObserver() {
@@ -106,7 +106,7 @@ function clearObserver() {
 
     if (!Object.keys(observer.actions).length) {
         observer.object.disconnect();
-        window.OLazyObserver = null;
+        window.UiLazyObserver = null;
     }
 }
 
@@ -216,7 +216,7 @@ const originClassList = computed((): TypeClassList => [{
                  :class="getClassName('Image__preview')"
             >
 
-            <transition :name="initialLoaded ? 'none' : 'o-image'" mode="out-in">
+            <transition :name="initialLoaded ? 'none' : 'ui-image'" mode="out-in">
                 <img v-if="!lazy || (lazy && loaded) || initialLoaded"
                      v-bind="originAttrs"
                      draggable="false"
@@ -231,7 +231,7 @@ const originClassList = computed((): TypeClassList => [{
 <style lang="scss">
 $zoom-diff: 1.05;
 
-.OImage {
+.UiImage {
     $image: &;
 
     &__wrapper {
@@ -303,8 +303,8 @@ $zoom-diff: 1.05;
             opacity: 1;
 
             &__origin {
-                &.o-image-enter-from,
-                &.o-image-leave-to,
+                &.ui-image-enter-from,
+                &.ui-image-leave-to,
                 &.swiper-lazy {
                     opacity: 0;
                 }
@@ -326,8 +326,8 @@ $zoom-diff: 1.05;
                 opacity: 1;
                 transform: translate3d(0, 0, 0) scale($zoom-diff);
 
-                &.o-image-enter-from,
-                &.o-image-leave-to,
+                &.ui-image-enter-from,
+                &.ui-image-leave-to,
                 &.swiper-lazy {
                     opacity: 0;
                     transform: translate3d(0, 0, 0) scale(1);
@@ -351,8 +351,8 @@ $zoom-diff: 1.05;
                 opacity: 1;
                 transform: translate3d(0, 0, 0) scale(1);
 
-                &.o-image-enter-from,
-                &.o-image-leave-to,
+                &.ui-image-enter-from,
+                &.ui-image-leave-to,
                 &.swiper-lazy {
                     opacity: 0;
                     transform: translate3d(0, 0, 0) scale($zoom-diff);

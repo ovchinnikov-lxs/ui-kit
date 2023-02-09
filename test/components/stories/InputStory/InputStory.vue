@@ -4,14 +4,14 @@ import type { TypeSize } from '../../../../src/assets/utils/types';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OInput from '../../../../src/components/OInput/OInput.vue';
+import UiInput from '../../../../src/components/UiInput/UiInput.vue';
 
 const value = ref('hello world');
 const size = ref<TypeSize>('medium');
 </script>
 
 <template>
-    <ComponentWrapper name="OInput">
+    <ComponentWrapper name="UiInput">
         <template #control>
             <div>
                 value: {{ value }}
@@ -39,12 +39,11 @@ const size = ref<TypeSize>('medium');
 
         </template>
         <template #component>
-            <OInput
+            <UiInput
                 v-model="value"
                 color="primary"
                 placeholder="Enter the text"
                 :size="size"
-                class-prefix="Ui"
             />
         </template>
     </ComponentWrapper>

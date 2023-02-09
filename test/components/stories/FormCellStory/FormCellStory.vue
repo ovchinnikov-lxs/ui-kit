@@ -4,15 +4,15 @@ import type { TypeSize } from '../../../../src/assets/utils/types';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OFormCell from '../../../../src/components/OFormCell/OFormCell.vue';
-import OInput from '../../../../src/components/OInput/OInput.vue';
+import UiFormCell from '../../../../src/components/UiFormCell/UiFormCell.vue';
+import UiInput from '../../../../src/components/UiInput/UiInput.vue';
 
 const size = ref<TypeSize>('medium');
 const error = ref(false);
 
 </script>
 <template>
-    <ComponentWrapper name="OFormCell">
+    <ComponentWrapper name="UiFormCell">
         <template #control>
             <div>
                 <label>
@@ -43,8 +43,7 @@ const error = ref(false);
         </template>
 
         <template #component>
-            <OFormCell
-                class-prefix="Ui"
+            <UiFormCell
                 color="primary"
                 :error="error ? 'This is Field error' : null"
                 :size="size"
@@ -53,13 +52,13 @@ const error = ref(false);
                 <template #label>label</template>
 
                 <template #default>
-                    <OInput/>
+                    <UiInput/>
                 </template>
 
                 <template #info>info content</template>
 
                 <template #error="props">Error custom: {{ props.error }}</template>
-            </OFormCell>
+            </UiFormCell>
         </template>
     </ComponentWrapper>
 </template>

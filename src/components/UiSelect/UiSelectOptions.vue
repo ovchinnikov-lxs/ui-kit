@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import type { TypeClassList } from '~/assets/utils/types';
+
 // Composable
 import { classNameProps, useClassName } from '~/composables/useClassName';
 import { sizeProps, useSize } from '~/composables/useSize';
 import { colorProps, useColor } from '~/composables/useColor';
 import { stateProps, useState } from '~/composables/useState';
-import { computed } from 'vue';
-import type { TypeClassList } from '~/assets/utils/types';
 
 const props = defineProps({
     ...classNameProps,
@@ -71,7 +72,7 @@ function onClick() {
 </template>
 
 <style lang="scss">
-.OSelectOption {
+.UiSelectOption {
     display: flex;
     align-items: center;
     justify-content: space-between;

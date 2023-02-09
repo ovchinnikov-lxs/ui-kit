@@ -3,13 +3,13 @@ import { ref } from 'vue';
 
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
-import OTooltip from '../../../../src/components/OTooltip/OTooltip.vue';
+import UiTooltip from '../../../../src/components/UiTooltip/UiTooltip.vue';
 
 const isOpened = ref(false);
 const position = ref('top');
 </script>
 <template>
-    <ComponentWrapper name="OTooltip">
+    <ComponentWrapper name="UiTooltip">
         <template #control>
             <label>
                 <input type="checkbox" v-model="isOpened">
@@ -61,10 +61,10 @@ const position = ref('top');
 
         </template>
         <template #component>
-            <OTooltip class-prefix="Ui"
-                      v-model="isOpened"
-                      interactive
-                      :position="position"
+            <UiTooltip class-prefix="Ui"
+                       v-model="isOpened"
+                       interactive
+                       :position="position"
             >
                 <template #header>TOP SIDE ELEMENT</template>
 
@@ -73,7 +73,7 @@ const position = ref('top');
                         BOTTOM SIDE ELEMENT
                     </div>
                 </template>
-            </OTooltip>
+            </UiTooltip>
         </template>
     </ComponentWrapper>
 </template>
