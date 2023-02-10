@@ -5,8 +5,8 @@
             tags:
                 - v*
 
-        jobs:
-        build:
+    jobs:
+        publish:
             runs-on: ubuntu-latest
             permissions:
                 packages: write
