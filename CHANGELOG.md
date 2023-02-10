@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.2...v2.2.3) (2023-02-10)
+
+
+### Bug Fixes
+
+* **publish:** Попытка вернуть публикацию пакета 2 ([3abf875](https://github.com/ovchinnikov-lxs/ui-kit/commit/3abf8750a8d35e4649fcdeaeed221ffd9b25493d))
+
 ## [2.2.2](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.1...v2.2.2) (2023-02-10)
 
 
