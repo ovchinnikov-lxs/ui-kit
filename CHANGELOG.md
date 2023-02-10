@@ -1,4 +1,12 @@
 # CHANGELOG
+## [2.2.10](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.9...v2.2.10) (2023-02-10)
+
+
+### Bug Fixes
+
+* **deps:** Вынес vue-router в devDeps ([97c929b](https://github.com/ovchinnikov-lxs/ui-kit/commit/97c929bbb01e4d9ee069b8b81da8e87483c935b5))
+* **simple-git-hooks:** Поправил хук ([f0b2066](https://github.com/ovchinnikov-lxs/ui-kit/commit/f0b2066121323aa941c6e2459422d09b6f059139))
+
 ## [2.2.9](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.8...v2.2.9) (2023-02-10)
 
 
