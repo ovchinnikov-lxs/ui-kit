@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.1.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.0.0...v2.1.0) (2023-02-10)
+
+
+### Features
+
+* **babel/release:** Поправил .babelrc и пробуем release-please ([656a134](https://github.com/ovchinnikov-lxs/ui-kit/commit/656a134d782eff0d484fbf99dd8cc65a62cf9877))
+
 ## [2.0.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v1.5.0...v2.0.0) (2023-02-09)
 
 
