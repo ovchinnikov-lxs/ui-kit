@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.0...v2.2.1) (2023-02-10)
+
+
+### Bug Fixes
+
+* **publish:** Поправил publish.yml ([110c23b](https://github.com/ovchinnikov-lxs/ui-kit/commit/110c23b0d159d78480f531cffd91b3d1da1c3f2b))
+
 ## [2.2.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.1.0...v2.2.0) (2023-02-10)
 
 
