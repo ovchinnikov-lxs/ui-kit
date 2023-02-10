@@ -1,12 +1,11 @@
     name: Publish
 
     on:
-        workflow_run:
-            workflows: [ release-please ]
-            types:
-                - completed
+        push:
+            tags:
+                - v*
 
-    jobs:
+        jobs:
         build:
             runs-on: ubuntu-latest
             permissions:
@@ -22,7 +21,7 @@
                       node-version: ${{ matrix.node-version }}
                       registry-url: 'https://npm.pkg.github.com'
                 - run: npm ci
-                - run: npm build
+                - run: npm run build
                 - run: npm cache verify
                 - run: npm publish
                   env:
