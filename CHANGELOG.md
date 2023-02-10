@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.9](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.8...v2.2.9) (2023-02-10)
+
+
+### Bug Fixes
+
+* **publish:** Пытаюсь сделать публикацию после того обнвлю релиз ([a095efc](https://github.com/ovchinnikov-lxs/ui-kit/commit/a095efc8e085bf315b6038e1e14f84dff2badcbc))
+
 ## [2.2.8](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.7...v2.2.8) (2023-02-10)
 
 
