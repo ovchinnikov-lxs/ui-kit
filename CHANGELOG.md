@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.1.0...v2.2.0) (2023-02-10)
+
+
+### Features
+
+* **publish:** Пробуем опять публиковать ([6d19b14](https://github.com/ovchinnikov-lxs/ui-kit/commit/6d19b1440120f1b66fcec5561b912ae4375d50c0))
+
 ## [2.1.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.0.0...v2.1.0) (2023-02-10)
 
 
