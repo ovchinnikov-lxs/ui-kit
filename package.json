@@ -86,5 +86,8 @@
             "require": "./dist/ui-kit.css"
         }
     },
-    "types": "./dist/main.d.ts"
+    "types": "./dist/main.d.ts",
+    "simple-git-hooks": {
+        "pre-commit": "npx lint-staged --concurrent 2 --quiet"
+    }
 }
