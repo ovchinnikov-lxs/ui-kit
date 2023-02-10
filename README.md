@@ -2,9 +2,6 @@
 
 #### Vue 3 required
 
-<img src="https://github.com/ovchinnikov-lxs/ui-kit/workflows/Testing/badge.svg?branch=develop"/><br/>
-<img src="https://github.com/ovchinnikov-lxs/ui-kit/workflows/Publish/badge.svg?branch=master"/><br/>
-
 ## Использование
 
 ### Добавить в `.npmrc` токен, и установить зависимости
