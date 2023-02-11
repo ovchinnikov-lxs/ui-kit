@@ -19,10 +19,10 @@
                   with:
                       node-version: ${{ matrix.node-version }}
                       registry-url: 'https://npm.pkg.github.com'
+                      scope: '@ovchinnikov-lxs'
                 - run: npm ci
                 - run: npm run build
                 - run: npm cache verify
-                - run: npm config set "//npm.pkg.github.com/:_authToken" "${{ env.NODE_AUTH_TOKEN }}"
                 - run: npm publish
                   env:
-                      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+                      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
