@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.19](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.18...v2.2.19) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** Переместил определение env переменной ([cf3e831](https://github.com/ovchinnikov-lxs/ui-kit/commit/cf3e8311c65fd4375882b53aab7628d45f0482b3))
+
 ## [2.2.18](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.17...v2.2.18) (2023-02-11)
 
 
