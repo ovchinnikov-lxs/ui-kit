@@ -1,3 +1,7 @@
 {
-    "extends": "@ovchinnikov-lxs/babel-config"
+    "presets": [
+        [
+            "@babel/preset-env"
+        ]
+    ]
 }

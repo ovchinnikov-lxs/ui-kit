@@ -23,9 +23,6 @@
         "vue": "^3.2.37"
     },
     "devDependencies": {
-        "@ovchinnikov-lxs/babel-config": "^1.1.0",
-        "@ovchinnikov-lxs/browserslist-config": "^1.2.1",
-        "@ovchinnikov-lxs/tsconfig": "^0.0.1",
         "@rushstack/eslint-patch": "^1.1.4",
         "@types/animejs": "^3.1.7",
         "@types/jest": "^29.4.0",

@@ -4,8 +4,6 @@
 
 ## Использование
 
-### Добавить в `.npmrc` токен, и установить зависимости
-
 ```sh
 npm install @ovchinnikov-lxs/ui-kit
 ```
