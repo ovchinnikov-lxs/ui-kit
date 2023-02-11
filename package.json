@@ -1,6 +1,6 @@
 {
     "name": "@ovchinnikov-lxs/ui-kit",
-    "version": "2.2.15",
+    "version": "2.2.16",
     "scripts": {
         "dev": "vite --port 3001",
         "build": "run-p type:check build-only",
