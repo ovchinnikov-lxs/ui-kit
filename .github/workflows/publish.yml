@@ -8,8 +8,8 @@
         publish:
             runs-on: ubuntu-latest
             permissions:
+                contents: read
                 packages: write
-                contents: write
             strategy:
                 matrix:
                     node-version: [ 19.x ]
@@ -20,9 +20,11 @@
                       node-version: ${{ matrix.node-version }}
                       registry-url: 'https://npm.pkg.github.com'
                 - run: npm ci
-                - run: npm config set "//npm.pkg.github.com/:_authToken" "${{ env.NODE_AUTH_TOKEN }}"
                 - run: npm run build
                 - run: npm cache verify
+                - run: |
+                     echo @ovchinnikov-lxs:registry=https://npm.pkg.github.com > .npmrc
+                     echo '//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}' >> .npmrc
                 - run: npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
