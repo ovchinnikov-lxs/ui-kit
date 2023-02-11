@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.13](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.12...v2.2.13) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** Поправил публикацию пакета ([eaf32f2](https://github.com/ovchinnikov-lxs/ui-kit/commit/eaf32f26d8015ddc5ff63e73c2577a78aa71c1e1))
+
 ## [2.2.12](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.11...v2.2.12) (2023-02-11)
 
 
