@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.24](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.23...v2.2.24) (2023-02-11)
+
+
+### Bug Fixes
+
+* **package.json:** Убрал лишний конфиг ([ace9467](https://github.com/ovchinnikov-lxs/ui-kit/commit/ace94679c78cb4678c7e1e146af511cbde815c25))
+
 ## [2.2.23](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.22...v2.2.23) (2023-02-11)
 
 
