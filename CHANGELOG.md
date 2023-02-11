@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.21](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.20...v2.2.21) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** ля кажется я понял шо я дурак, пакет то оставил приватным ([fd40701](https://github.com/ovchinnikov-lxs/ui-kit/commit/fd4070107fa35a52284a622ec36a16a2e75f61c7))
+
 ## [2.2.20](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.19...v2.2.20) (2023-02-11)
 
 
