@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.22](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.21...v2.2.22) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** уф, again and again... ([aabdff3](https://github.com/ovchinnikov-lxs/ui-kit/commit/aabdff35f0269dcc8b17b79d0657210d0a325b04))
+
 ## [2.2.21](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.20...v2.2.21) (2023-02-11)
 
 
