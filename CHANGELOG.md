@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.17](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.16...v2.2.17) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** Вернул токен в .npmrc ([643f342](https://github.com/ovchinnikov-lxs/ui-kit/commit/643f34229d20a8ec475813b5017ecd5f00b4c68c))
+
 ## [2.2.16](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.15...v2.2.16) (2023-02-11)
 
 
