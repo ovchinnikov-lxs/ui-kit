@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.16](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.15...v2.2.16) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** Поправил env ([5cc66d3](https://github.com/ovchinnikov-lxs/ui-kit/commit/5cc66d39ce6ce12d41128078ed5430b34b7e9f91))
+
 ## [2.2.15](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.14...v2.2.15) (2023-02-11)
 
 
