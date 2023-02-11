@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.14](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.13...v2.2.14) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** Поменял secrets на env ([2e9d343](https://github.com/ovchinnikov-lxs/ui-kit/commit/2e9d3431783b306092e36eed902388597b6ba041))
+
 ## [2.2.13](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.12...v2.2.13) (2023-02-11)
 
 
