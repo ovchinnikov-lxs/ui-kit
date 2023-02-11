@@ -24,7 +24,7 @@
                 - run: npm cache verify
                 - run: |
                      echo @ovchinnikov-lxs:registry=https://npm.pkg.github.com > .npmrc
-                     echo '//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}' >> .npmrc
+                     echo '//npm.pkg.github.com/:_authToken=${{ env.NODE_AUTH_TOKEN }}' >> .npmrc
                 - run: npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
