@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.11](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.10...v2.2.11) (2023-02-10)
+
+
+### Bug Fixes
+
+* **simple-git-hooks:** заменил lint-staged на nano-staged ([c930484](https://github.com/ovchinnikov-lxs/ui-kit/commit/c9304844a64d977f32fb4523d05c5ec2be61da66))
+
 ## [2.2.10](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.9...v2.2.10) (2023-02-10)
 
 
