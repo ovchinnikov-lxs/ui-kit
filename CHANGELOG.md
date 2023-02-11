@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.12](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.11...v2.2.12) (2023-02-11)
+
+
+### Bug Fixes
+
+* **package:** Убрал не актуальные зависимости ([628f404](https://github.com/ovchinnikov-lxs/ui-kit/commit/628f4047679170abbb133b4db7217d8f1cc8aecf))
+
 ## [2.2.11](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.10...v2.2.11) (2023-02-10)
 
 
