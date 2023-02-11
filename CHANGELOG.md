@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.2.18](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.17...v2.2.18) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** Удалил .npmrc и добавил еще env переменную ([b18389c](https://github.com/ovchinnikov-lxs/ui-kit/commit/b18389c31710341f4fc2b2f20f0d45000b9f41ef))
+
 ## [2.2.17](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.16...v2.2.17) (2023-02-11)
 
 
