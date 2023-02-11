@@ -4,7 +4,13 @@
 
 ## Использование
 
+Добавить в `.npmrc`
 ```sh
+@ovchinnikov-lxs:registry=https://npm.pkg.github.com
+```
+
+```sh
+npm config set "//npm.pkg.github.com/:_authToken" "${{ secrets.GUTHUB_TOKEN }}"
 npm install @ovchinnikov-lxs/ui-kit
 ```
 
