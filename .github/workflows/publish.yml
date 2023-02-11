@@ -22,9 +22,7 @@
                 - run: npm ci
                 - run: npm run build
                 - run: npm cache verify
-                - run: |
-                     echo @ovchinnikov-lxs:registry=https://npm.pkg.github.com > .npmrc
-                     echo '//npm.pkg.github.com/:_authToken=${{ env.NODE_AUTH_TOKEN }}' >> .npmrc
-                     npm publish
+                - run: npm config set "//npm.pkg.github.com/:_authToken" "${{ secrets.GITHUB_TOKEN }}"
+                - run: npm publish
                   env:
                       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
