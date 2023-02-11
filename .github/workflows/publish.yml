@@ -25,4 +25,4 @@
                 - run: npm config set "//npm.pkg.github.com/:_authToken" "${{ env.NODE_AUTH_TOKEN }}"
                 - run: npm publish
                   env:
-                      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
