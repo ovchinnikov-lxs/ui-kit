@@ -36,33 +36,32 @@ import { UiButton } from '@ovchinnikov-lxs/ui-kit';
 
 ```
 
- 👨‍🔧🛠 - в разработке
+ 🛠 - в разработке
 ### Список компонентов
  - [`UiButton`](src%2Fcomponents%2FUiButton%2FUiButton.vue)
  - [`UiLink`](src%2Fcomponents%2FUiLink%2FUiLink.vue)
  - [`UiFormCell`](src%2Fcomponents%2FOFormCell%2FOFormCell.vue)
  - [`UiInput`](src%2Fcomponents%2FUiInput%2FUiInput.vue)
- - `UiFileInput` - 👨‍🔧🛠
- - `UIImageInput` - 👨‍🔧🛠
+ - `UiFileInput` - 🛠
+ - `UIImageInput` - 🛠
  - [`UiRichText`](src%2Fcomponents%2FUiRichText%2FUiRichText.vue)
- - `UiCheckbox` - 👨‍🔧🛠
- - `UiRadio` - 👨‍🔧🛠
+ - `UiCheckbox` - 🛠
+ - `UiRadio` - 🛠
  - [`UiPopover`](src%2Fcomponents%2FUiPopover%2FUiPopover.vue)
  - [`UiSelect`](src%2Fcomponents%2FUiSelect%2FUiSelect.vue)
    - [`UiSelectHeader`](src%2Fcomponents%2FUiSelect%2FUiSelectHeader.vue)
    - [`UiSelectOption`](src%2Fcomponents%2FUiSelect%2FUiSelectOption.vue)
  - [`UiTooltip`](src%2Fcomponents%2FUiTooltip%2FUiTooltip.vue)
  - [`UiIcon`](src%2Fcomponents%2FUiIcon%2FUiIcon.vue)
- - `UiTabs` - 👨‍🔧🛠
+ - `UiTabs` - 🛠
  - [`UiImage`](src%2Fcomponents%2FUiImage%2FUiImage.vue)
- - `UiPlate` - 👨‍🔧🛠
+ - `UiPlate` - 🛠
  - [`UiCollapse`](src%2Fcomponents%2FUiCollapse%2FUiCollapse.vue)
  - [`UiPreloader`](src%2Fcomponents%2FUiPreloader%2FUiPreloader.vue)
 
 ### Возможность использовать на проектах Composables 
-- [useClassName](src%2Fcomposables%2FuseClassName.ts) - 👨‍🔧🛠
-- [useColor](src%2Fcomposables%2FuseColor.ts) - 👨‍🔧🛠
-- [useRoutable](src%2Fcomposables%2FuseRoutable.ts) - 👨‍🔧🛠
-- [useSize](src%2Fcomposables%2FuseSize.ts) - 👨‍🔧🛠
-- [useState](src%2Fcomposables%2FuseState.ts) - 👨‍🔧🛠
-- [useStyle](src%2Fcomposables%2FuseStyle.ts) - 👨‍🔧🛠
+- [useColor](src%2Fcomposables%2FuseColor.ts) - 🛠
+- [useRoutable](src%2Fcomposables%2FuseRoutable.ts) - 🛠
+- [useSize](src%2Fcomposables%2FuseSize.ts) - 🛠
+- [useState](src%2Fcomposables%2FuseState.ts) - 🛠
+- [useStyle](src%2Fcomposables%2FuseStyle.ts) - 🛠
