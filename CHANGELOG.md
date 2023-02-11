@@ -1,4 +1,12 @@
 # CHANGELOG
+## [2.2.15](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.14...v2.2.15) (2023-02-11)
+
+
+### Bug Fixes
+
+* **publish:** Пропбую создать .npmrc при публикации ([acac760](https://github.com/ovchinnikov-lxs/ui-kit/commit/acac760710fa0754c629ada69ae43b6fc44480cf))
+* **readme:** Поправил readme ([7860c9c](https://github.com/ovchinnikov-lxs/ui-kit/commit/7860c9c0766bf9969c44fa0ebd4b20920274ef20))
+
 ## [2.2.14](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.13...v2.2.14) (2023-02-11)
 
 
