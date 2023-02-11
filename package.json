@@ -61,9 +61,6 @@
     "publishConfig": {
         "@ovchinnikov-lxs:registry": "https://npm.pkg.github.com"
     },
-    "browserslist": [
-        "extends @ovchinnikov-lxs/browserslist-config"
-    ],
     "license": "ISC",
     "type": "module",
     "files": [
