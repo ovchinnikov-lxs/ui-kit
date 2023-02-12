@@ -3,6 +3,7 @@ export { default as UiLink } from './UiLink/UiLink.vue';
 export { default as UiFormCell } from './UiFormCell/UiFormCell.vue';
 export { default as UiInput } from './UiInput/UiInput.vue';
 export { default as UiRichText } from './UiRichText/UiRichText.vue';
+export { default as UiRadio } from './UiRadio/UiRadio.vue';
 export { default as UiPopover } from './UiPopover/UiPopover.vue';
 export { default as UiSelect } from './UiSelect/UiSelect.vue';
 export { default as UiTooltip } from './UiTooltip/UiTooltip.vue';

@@ -5,6 +5,7 @@ import {
     UiFormCell,
     UiInput,
     UiRichText,
+    UiRadio,
     UiPopover,
     UiSelect,
     UiSelectHeader,
@@ -23,6 +24,7 @@ export default {
         app.component('UiFormCell', UiFormCell);
         app.component('UiInput', UiInput);
         app.component('UiRichText', UiRichText);
+        app.component('UiRadio', UiRadio);
         app.component('UiPopover', UiPopover);
         app.component('UiSelect', UiSelect);
         app.component('UiSelectHeader', UiSelectHeader);
@@ -41,6 +43,7 @@ export {
     UiFormCell,
     UiInput,
     UiRichText,
+    UiRadio,
     UiPopover,
     UiSelect,
     UiSelectHeader,

@@ -66,6 +66,10 @@ onMounted(() => {
 </template>
 
 <style lang="scss" module>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
