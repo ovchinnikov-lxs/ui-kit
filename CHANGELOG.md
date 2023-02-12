@@ -1,4 +1,17 @@
 # CHANGELOG
+## [2.3.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.25...v2.3.0) (2023-02-12)
+
+
+### Features
+
+* **UiRadio:** Добавил новый компонент ([0ceccda](https://github.com/ovchinnikov-lxs/ui-kit/commit/0ceccda47984cd2892877094abeded1125405503))
+
+
+### Bug Fixes
+
+* **publish:** Убрал scope ([7606705](https://github.com/ovchinnikov-lxs/ui-kit/commit/76067055c687252f378de779bab07b8713968e5e))
+* **readme:** Поправил текст ([9dffb35](https://github.com/ovchinnikov-lxs/ui-kit/commit/9dffb35d2796897959253a8265cb6e23f30e3497))
+
 ## [2.2.25](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.24...v2.2.25) (2023-02-11)
 
 
