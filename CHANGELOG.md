@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.3.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.3.0...v2.3.1) (2023-02-16)
+
+
+### Bug Fixes
+
+* **TypeSize:** Убрал строгие размеры ([656c07d](https://github.com/ovchinnikov-lxs/ui-kit/commit/656c07d3c9e661ea4b61b0bb5d016238e0d3c081))
+
 ## [2.3.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.2.25...v2.3.0) (2023-02-12)
 
 
