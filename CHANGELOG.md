@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.4.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.3.1...v2.4.0) (2023-02-16)
+
+
+### Features
+
+* **UiCheckbox:** Добавил новый компонент ([a958e45](https://github.com/ovchinnikov-lxs/ui-kit/commit/a958e45109e640178b757e45a93329630445170b))
+
 ## [2.3.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.3.0...v2.3.1) (2023-02-16)
 
 
