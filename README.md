@@ -45,7 +45,7 @@ import { UiButton } from '@ovchinnikov-lxs/ui-kit';
  - `UiFileInput` - 🛠
  - `UIImageInput` - 🛠
  - [`UiRichText`](src%2Fcomponents%2FUiRichText%2FUiRichText.vue)
- - `UiCheckbox` - 🛠
+ - [`UiCheckbox`](src%2Fcomponents%2FUiCheckbox%2FUiCheckbox.vue)
  - [`UiRadio`](src%2Fcomponents%2FUiRadio%2FUiRadio.vue)
  - [`UiPopover`](src%2Fcomponents%2FUiPopover%2FUiPopover.vue)
  - [`UiSelect`](src%2Fcomponents%2FUiSelect%2FUiSelect.vue)
