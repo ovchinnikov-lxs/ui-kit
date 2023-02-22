@@ -1,9 +1,8 @@
     name: Testing
 
     on:
-        pull_request:
+        push:
             branches:
-                - develop
                 - master
 
     jobs:
@@ -27,7 +26,4 @@
                   run: npm run lint:check
 
                 - name: Run Tests 🔨
-                  run: npm run test
-
-                - name: Build 👷
-                  run: npm run build
+                  run: npm run unit:test

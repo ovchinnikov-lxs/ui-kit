@@ -13,7 +13,7 @@
         "el:fix": "eslint --ext .vue --ext .ts . --fix",
         "sl:fix": "stylelint \"**/*.{css,scss,vue}\" --fix",
         "lint:fix": "npm run el:fix && npm run sl:fix",
-        "test": "jest"
+        "unit:test": "jest"
     },
     "dependencies": {
         "@vueuse/core": "^9.1.1",
