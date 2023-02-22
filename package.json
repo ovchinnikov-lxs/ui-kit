@@ -59,7 +59,7 @@
         "url": "https://github.com/ovchinnikov-lxs/ui-kit.git"
     },
     "publishConfig": {
-        "@ovchinnikov-lxs:registry": "https://npm.pkg.github.com"
+        "@ovchinnikov-lxs:registry": "https://registry.npmjs.org"
     },
     "license": "ISC",
     "type": "module",
