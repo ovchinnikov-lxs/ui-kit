@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.4.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.4.0...v2.4.1) (2023-02-22)
+
+
+### Bug Fixes
+
+* **publish:** Пробуем публиковать в npm registry ([33d394a](https://github.com/ovchinnikov-lxs/ui-kit/commit/33d394aabb0f4984c81b444b6a3fc53ebb7fc549))
+
 ## [2.4.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.3.1...v2.4.0) (2023-02-16)
 
 
