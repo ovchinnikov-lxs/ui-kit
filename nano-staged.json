@@ -1,4 +1,0 @@
-{
-    "*.{ts,js,vue}": ["eslint --cache"],
-    "*.{scss,vue}": ["stylelint"]
-}
