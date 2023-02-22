@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.4.4](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.4.3...v2.4.4) (2023-02-22)
+
+
+### Bug Fixes
+
+* **rename:** @ovchinnikov-lxs/ui-kit =&gt; @ovchinnikov-lxs-frontend/ui-kit ([e4019ad](https://github.com/ovchinnikov-lxs/ui-kit/commit/e4019add3e094506d4aaae5039ecb7a938e1c22b))
+
 ## [2.4.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.4.2...v2.4.3) (2023-02-22)
 
 
