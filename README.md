@@ -1,43 +1,67 @@
-# UI-kit
+## _UI-kit_ for vue 3 projects
 
-#### Vue 3 required
-
-## Использование
-
-Добавить в `.npmrc`
-```sh
-@ovchinnikov-lxs:registry=https://npm.pkg.github.com
-```
+#### Install
 
 ```sh
-npm config set "//npm.pkg.github.com/:_authToken" "${{ secrets.GUTHUB_TOKEN }}"
-npm install @ovchinnikov-lxs/ui-kit
+npm i @ovchinnikov-lxs-frontend/ui-kit
 ```
 
-Пример: 
-```vue
-<script setup lang="ts">
-// Components
-import { UiButton } from '@ovchinnikov-lxs/ui-kit';
+#### Example of usage:
+1. Import default css styles in `_bundle.sccs`
+    ```scss
+    @import "@ovchinnikov-lxs-frontend/ui-kit/dist/ui-kit.css";
+    ```
+    or `main.ts`
+    ```typescript
+    import '@ovchinnikov-lxs-frontend/ui-kit/dist/ui-kit.css';
+   ```
+2.
+    `components/ui/UiButton/UiButton.vue`
+    ```vue
+    <script setup lang="ts">
+    // Components
+    import { UiButton } from '@ovchinnikov-lxs-frontend/ui-kit';
+    </script>
+    
+    <template>
+        <UiButton v-bind="$attrs">
+            <slot></slot>
+        </UiButton>
+    </template>
+    
+    <style lang="scss">
+    .UiButton {
+        &.--large-size {
+            padding: 16px 32px;
+            font-size: 24px;
+        }
+        
+        &.--red-color {
+            background: red;
+            color: white;
+        }
+    }
+    </style>
+    
+    ```
+    `components/YourComponent.vue`
+    
+    ```vue
+    
+    <script setup lang="ts">
+    import UiButton from '~/components/ui/UiButton/UiButton.vue';
+    </script>
+    
+    <template>
+        <form>
+            ....
+            <UiButton size="large" color="red">submit</UiButton>
+        </form>
+    </template>
+    ```
 
-</script>
-
-<template>
-    <UiButton v-bind="$attrs">
-        <slot></slot>
-    </UiButton>
-</template>
-
-<style lang="scss">
-.UiButton {
-    background: red;
-}
-</style>
-
-```
-
- 🛠 - в разработке
-### Список компонентов
+ 🛠 - in progress
+#### List of the components
  - [`UiButton`](src%2Fcomponents%2FUiButton%2FUiButton.vue)
  - [`UiLink`](src%2Fcomponents%2FUiLink%2FUiLink.vue)
  - [`UiFormCell`](src%2Fcomponents%2FOFormCell%2FOFormCell.vue)
@@ -59,7 +83,7 @@ import { UiButton } from '@ovchinnikov-lxs/ui-kit';
  - [`UiCollapse`](src%2Fcomponents%2FUiCollapse%2FUiCollapse.vue)
  - [`UiPreloader`](src%2Fcomponents%2FUiPreloader%2FUiPreloader.vue)
 
-### Возможность использовать на проектах Composables 
+#### List of the Composables 
 - [useColor](src%2Fcomposables%2FuseColor.ts) - 🛠
 - [useRoutable](src%2Fcomposables%2FuseRoutable.ts) - 🛠
 - [useSize](src%2Fcomposables%2FuseSize.ts) - 🛠

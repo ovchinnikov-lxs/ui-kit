@@ -60,7 +60,7 @@ onMounted(() => {
         </main>
 
         <footer :class="$style.footer">
-            {{ new Date().getFullYear() }}&nbsp;&copy; @ovchinnikov-lxs/ui-kit
+            {{ new Date().getFullYear() }}&nbsp;&copy; @ovchinnikov-lxs-frontend/ui-kit
         </footer>
     </main>
 </template>

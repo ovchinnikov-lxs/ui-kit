@@ -1,5 +1,5 @@
 {
-    "name": "@ovchinnikov-lxs/ui-kit",
+    "name": "@ovchinnikov-lxs-frontend/ui-kit",
     "version": "2.4.3",
     "scripts": {
         "dev": "vite --port 3001",
@@ -59,7 +59,7 @@
         "url": "https://github.com/ovchinnikov-lxs/ui-kit.git"
     },
     "publishConfig": {
-        "@ovchinnikov-lxs:registry": "https://registry.npmjs.org"
+        "@ovchinnikov-lxs-frontend:registry": "https://registry.npmjs.org"
     },
     "license": "ISC",
     "type": "module",
