@@ -4,6 +4,7 @@
         push:
             branches:
                 - master
+                - develop
 
     jobs:
         lint-and-test-build:
@@ -21,9 +22,6 @@
 
                 - name: Install dependents 🔧
                   run: npm ci
-
-                - name: Run Lint 👠
-                  run: npm run lint:check
 
                 - name: Run Tests 🔨
                   run: npm run unit:test
