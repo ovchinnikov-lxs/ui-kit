@@ -67,64 +67,64 @@ const options = [
 </template>
 
 <style lang="scss">
-    .UiRadio {
-        $radio: &;
+.UiRadio {
+    $radio: &;
 
-        &.--medium-size {
-            #{$radio} {
-                &__wrapper {
-                    row-gap: 14px;
-                }
-            }
-
-            .UiRadioItem {
-                &__wrapper {
-                    column-gap: 8px;
-                }
-
-                &__icon {
-                    position: relative;
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        width: 6px;
-                        height: 6px;
-                        border-radius: 50%;
-                        opacity: 0;
-                        transform: translate3d(-50%, -50%, 0) scale(.8);
-                        transition: opacity .3s ease, transform .3s ease;
-                    }
-                }
+    &.--medium-size {
+        #{$radio} {
+            &__wrapper {
+                row-gap: 14px;
             }
         }
 
-        &.--primary-color {
-            .UiRadioItem {
-                $item: &;
+        .UiRadioItem {
+            &__wrapper {
+                column-gap: 8px;
+            }
 
-                &__icon {
-                    border: 1px solid var(--ui-primary-color);
+            &__icon {
+                position: relative;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
 
-                    &:after {
-                        background-color: var(--ui-primary-color);
-                    }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transform: translate3d(-50%, -50%, 0) scale(.8);
+                    transition: opacity .3s ease, transform .3s ease;
                 }
+            }
+        }
+    }
 
-                &.--is-active {
-                    .UiRadioItem__icon {
-                        &:after {
-                            opacity: 1;
-                            transform: translate3d(-50%, -50%, 0) scale(1);
-                        }
+    &.--primary-color {
+        .UiRadioItem {
+            $item: &;
+
+            &__icon {
+                border: 1px solid var(--ui-primary-color);
+
+                &:after {
+                    background-color: var(--ui-primary-color);
+                }
+            }
+
+            &.--is-active {
+                .UiRadioItem__icon {
+                    &:after {
+                        opacity: 1;
+                        transform: translate3d(-50%, -50%, 0) scale(1);
                     }
                 }
             }
         }
     }
+}
 </style>
