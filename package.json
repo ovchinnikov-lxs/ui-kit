@@ -1,6 +1,6 @@
 {
     "name": "@ovchinnikov-lxs-frontend/ui-kit",
-    "version": "2.4.3",
+    "version": "2.4.4",
     "scripts": {
         "dev": "vite --port 3001",
         "build": "run-p type:check build-only",
