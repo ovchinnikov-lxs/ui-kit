@@ -1,4 +1,4 @@
-## _UI-kit_ for vue 3 projects
+## UI-kit for vue 3 projects
 
 #### Install
 
@@ -7,7 +7,8 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
 ```
 
 #### Example of usage:
-1. Import default css styles in `_bundle.sccs`
+1. ###### Import default ui-kit css styles
+    `_bundle.sccs`
     ```scss
     @import "@ovchinnikov-lxs-frontend/ui-kit/dist/ui-kit.css";
     ```
@@ -15,7 +16,7 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
     ```typescript
     import '@ovchinnikov-lxs-frontend/ui-kit/dist/ui-kit.css';
    ```
-2.
+2. ###### Create a component in your project and add styles from your style guide based on the component props  
     `components/ui/UiButton/UiButton.vue`
     ```vue
     <script setup lang="ts">
@@ -44,6 +45,7 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
     </style>
     
     ```
+3. ###### Use in project
     `components/YourComponent.vue`
     
     ```vue
@@ -82,10 +84,3 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
  - `UiPlate` - 🛠
  - [`UiCollapse`](src%2Fcomponents%2FUiCollapse%2FUiCollapse.vue)
  - [`UiPreloader`](src%2Fcomponents%2FUiPreloader%2FUiPreloader.vue)
-
-#### List of the Composables 
-- [useColor](src%2Fcomposables%2FuseColor.ts) - 🛠
-- [useRoutable](src%2Fcomposables%2FuseRoutable.ts) - 🛠
-- [useSize](src%2Fcomposables%2FuseSize.ts) - 🛠
-- [useState](src%2Fcomposables%2FuseState.ts) - 🛠
-- [useStyle](src%2Fcomposables%2FuseStyle.ts) - 🛠
