@@ -1,52 +1,5 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import { onMounted, ref } from 'vue';
-
-const colorSet = {
-    light: {
-        primary: '#689fef',
-        secondary: '#9cc3de',
-        additional: '#0046c9',
-        white: '#ffffff',
-        black: '#242e42',
-    },
-    dark: {
-        primary: '#138a2f',
-        secondary: '#4b5969',
-        additional: '#e4ff00',
-        white: '#242e42',
-        black: '#c0c0c0',
-    },
-};
-
-const theme = ref<'light' | 'dark'>('light');
-
-function setTheme() {
-    const palette = colorSet[theme.value];
-
-    Object.keys(palette).forEach(color => {
-        document.documentElement.style.setProperty(`--ui-${color}-color`, palette[color]);
-    });
-}
-
-function initTheme() {
-    theme.value = window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light';
-    setTheme();
-
-    window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', ({ matches }) => {
-            theme.value = matches
-                ? 'dark'
-                : 'light';
-            setTheme();
-        });
-}
-
-onMounted(() => {
-    initTheme();
-});
 </script>
 
 <template>
@@ -81,6 +34,14 @@ body {
     --ui-additional-color: #0046c9;
     --ui-white-color: #fff;
     --ui-black-color: #242e42;
+
+    @media (prefers-color-scheme: dark) {
+        --ui-primary-color: #138a2f;
+        --ui-secondary-color: #4b5969;
+        --ui-additional-color: #e4ff00;
+        --ui-white-color: #242e42;
+        --ui-black-color: #c0c0c0;
+    }
 }
 
 .App {
