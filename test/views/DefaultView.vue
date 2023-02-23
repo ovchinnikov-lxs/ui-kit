@@ -16,6 +16,7 @@ const components = [
     'Collapse',
     'Icon',
     'Image',
+    'Plate',
     'Preloader',
 ].map(name => ({
     name,

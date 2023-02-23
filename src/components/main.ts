@@ -13,6 +13,7 @@ import {
     UiSelectOptions,
     UiTooltip,
     UiIcon,
+    UiPlate,
     UiImage,
     UiCollapse,
     UiPreloader,
@@ -33,6 +34,7 @@ export default {
         app.component('UiSelectOptions', UiSelectOptions);
         app.component('UiTooltip', UiTooltip);
         app.component('UiIcon', UiIcon);
+        app.component('UiPlate', UiPlate);
         app.component('UiImage', UiImage);
         app.component('UiCollapse', UiCollapse);
         app.component('UiPreloader', UiPreloader);
@@ -53,6 +55,7 @@ export {
     UiSelectOptions,
     UiTooltip,
     UiIcon,
+    UiPlate,
     UiImage,
     UiCollapse,
     UiPreloader,

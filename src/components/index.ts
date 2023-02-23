@@ -11,6 +11,7 @@ export { default as UiTooltip } from './UiTooltip/UiTooltip.vue';
 export { default as UiSelectHeader } from './UiSelect/UiSelectHeader.vue';
 export { default as UiSelectOptions } from './UiSelect/UiSelectOptions.vue';
 export { default as UiIcon } from './UiIcon/UiIcon.vue';
+export { default as UiPlate } from './UiPlate/UiPlate.vue';
 export { default as UiImage } from './UiImage/UiImage.vue';
 export { default as UiCollapse } from './UiCollapse/UiCollapse.vue';
 export { default as UiPreloader } from './UiPreloader/UiPreloader.vue';

@@ -81,6 +81,6 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
  - [`UiIcon`](src%2Fcomponents%2FUiIcon%2FUiIcon.vue)
  - `UiTabs` - 🛠
  - [`UiImage`](src%2Fcomponents%2FUiImage%2FUiImage.vue)
- - `UiPlate` - 🛠
+ - [`UiPlate`](src%2Fcomponents%2FUiPlate%2FUiPlate.vue)
  - [`UiCollapse`](src%2Fcomponents%2FUiCollapse%2FUiCollapse.vue)
  - [`UiPreloader`](src%2Fcomponents%2FUiPreloader%2FUiPreloader.vue)
