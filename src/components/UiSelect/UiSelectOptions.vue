@@ -42,7 +42,6 @@ const { colorClassList } = useColor(props);
 const { stateClassList } = useState(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('SelectOption'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -58,7 +57,7 @@ function onClick() {
 </script>
 
 <template>
-    <div :class="classList" @click="onClick">
+    <div :class="[getClassName('SelectOption'), classList]" @click="onClick">
         <slot>
             <span :class="getClassName('SelectOption__label')">
                 {{ optionName }}

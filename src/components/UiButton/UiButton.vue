@@ -30,7 +30,6 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Button'),
     routableClassList.value,
     sizeClassList.value,
     colorClassList.value,
@@ -43,7 +42,7 @@ const classList = computed((): TypeClassList => [
     <component
         :is="componentTag"
         v-bind="$attrs"
-        :class="classList"
+        :class="[getClassName('Button'), classList]"
     >
         <slot v-bind="props"></slot>
     </component>

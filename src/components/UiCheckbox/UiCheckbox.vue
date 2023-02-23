@@ -44,7 +44,6 @@ function onClick() {
 }
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Checkbox'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -57,7 +56,7 @@ const classList = computed((): TypeClassList => [
 </script>
 
 <template>
-    <div :class="classList">
+    <div :class="[getClassName('Checkbox'), classList]">
         <div :class="getClassName('Checkbox__wrapper')">
             <button
                 type="button"

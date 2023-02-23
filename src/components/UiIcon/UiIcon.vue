@@ -38,7 +38,6 @@ const { getClassName } = useClassName(props);
 const { sizeClassList } = useSize(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Icon'),
     sizeClassList.value,
 ]);
 
@@ -63,7 +62,7 @@ const svgIcon = computed(() => {
 </script>
 
 <template>
-    <component :is="tag" :class="classList">
+    <component :is="tag" :class="[getClassName('Icon'), classList]">
         <slot v-if="$slots['sprite-component']"
               name="sprite-component"
               :view-box="viewBox"

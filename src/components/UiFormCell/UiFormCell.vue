@@ -26,7 +26,6 @@ const { colorClassList } = useColor(props);
 const { sizeClassList } = useSize(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('FormCell'),
     stateClassList.value,
     colorClassList.value,
     sizeClassList.value,
@@ -35,7 +34,7 @@ const classList = computed((): TypeClassList => [
 </script>
 
 <template>
-    <div :class="classList">
+    <div :class="[getClassName('FormCell'), classList]">
         <div :class="getClassName('FormCell__wrapper')">
 
             <label

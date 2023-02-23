@@ -41,7 +41,6 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Input'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -131,7 +130,7 @@ function onFocus(e: Event) {
     <input
         v-bind="$attrs"
         :value="actualValue"
-        :class="classList"
+        :class="[getClassName('Input'), classList]"
         :disabled="disabled"
         @input="onInput"
         @paste="onInput"

@@ -68,7 +68,6 @@ watch(() => props.modelValue, val => actualValue.value = val, { immediate: true 
 
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Radio'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -83,7 +82,7 @@ function onClick(id: ValueType) {
 </script>
 
 <template>
-    <div :class="classList">
+    <div :class="[getClassName('Radio'), classList]">
         <ul :class="getClassName('Radio__wrapper')">
             <li v-for="(item, index) in options"
                 :key="index"

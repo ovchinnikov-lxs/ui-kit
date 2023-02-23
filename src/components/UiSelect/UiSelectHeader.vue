@@ -46,7 +46,6 @@ const { colorClassList } = useColor(props);
 const { stateClassList } = useState(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('SelectHeader'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -95,7 +94,7 @@ const count = computed(() => props.activeOptions?.length);
 </script>
 
 <template>
-    <div :class="classList">
+    <div :class="[getClassName('SelectHeader'), classList]">
         <div :class="getClassName('SelectHeader__wrapper')">
             <div ref="values" :class="getClassName('SelectHeader__values')">
                 <span ref="valuesInner">

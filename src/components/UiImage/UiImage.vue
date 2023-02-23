@@ -180,8 +180,6 @@ onBeforeUnmount(() => {
 
 const { getClassName } = useClassName(props);
 const classList = computed((): TypeClassList => [
-    getClassName.value('Image'),
-
     `--object-fit-${props.objectFit}`,
     `--transition-${props.transition}`,
     {
@@ -201,7 +199,7 @@ const originClassList = computed((): TypeClassList => [{
 </script>
 
 <template>
-    <div ref="el" :class="classList">
+    <div ref="el" :class="[getClassName('Image'), classList]">
         <div :class="getClassName('Image__wrapper')">
 
             <div v-if="$slots.preview" :class="getClassName('Image__preview')">

@@ -27,7 +27,6 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Preloader'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -36,7 +35,7 @@ const classList = computed((): TypeClassList => [
 </script>
 
 <template>
-    <div :class="classList">
+    <div :class="[getClassName('Preloader'), classList]">
         <div :class="getClassName('Preloader__wrapper')">
 
             <div :class="getClassName('Preloader__el')">

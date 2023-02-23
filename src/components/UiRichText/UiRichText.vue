@@ -42,7 +42,6 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('RichText'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -81,7 +80,7 @@ function onChange(event: Event) {
     <!--   todo: Все таки tiptap -->
     <textarea
         :value="actualValue"
-        :class="classList"
+        :class="[getClassName('RichText'), classList]"
         v-bind="$attrs"
         @input="onInput"
         @change="onChange"

@@ -94,7 +94,6 @@ const alignClassList = computed((): TypeClassList => [
 ]);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('Popover'),
     sizeClassList.value,
     colorClassList.value,
     stateClassList.value,
@@ -316,7 +315,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <div ref="containerEl" :class="classList">
+    <div ref="containerEl" :class="[getClassName('Popover'), classList]">
         <div ref="topEl"
              :class="getClassName('Popover__top')"
              @click.prevent.stop="onToggle"

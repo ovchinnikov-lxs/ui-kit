@@ -226,7 +226,7 @@ watch(isOpened, val => {
 </script>
 
 <template>
-    <div :class="[getClassName('Tooltip') ,classList]"
+    <div :class="[getClassName('Tooltip'), classList]"
          @mouseenter="onToggle(true)"
          @mouseleave="onToggle(false)"
     >

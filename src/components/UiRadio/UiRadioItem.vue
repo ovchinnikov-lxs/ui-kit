@@ -15,7 +15,6 @@ const { getClassName } = useClassName(props);
 const { stateClassList } = useState(props);
 
 const classList = computed((): TypeClassList => [
-    getClassName.value('RadioItem'),
     stateClassList.value,
 ]);
 
@@ -26,7 +25,7 @@ defineEmits<{
 </script>
 
 <template>
-    <div :class="classList" @click="$emit('click')">
+    <div :class="[getClassName('RadioItem'), classList]" @click="$emit('click')">
         <div :class="getClassName('RadioItem__wrapper')">
             <div :class="getClassName('RadioItem__icon')"></div>
 
