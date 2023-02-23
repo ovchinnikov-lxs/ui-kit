@@ -1,5 +1,6 @@
 ## UI-kit for vue 3 projects
-
+[![Versions](https://img.shields.io/npm/v/@ovchinnikov-lxs-frontend/ui-kit.svg)](https://www.npmjs.com/package/@ovchinnikov-lxs-frontend/ui-kit)
+[![Downloads](https://img.shields.io/npm/dt/@ovchinnikov-lxs-frontend/ui-kit.svg)](https://www.npmjs.com/package/@ovchinnikov-lxs-frontend/ui-kit)
 #### Install
 
 ```sh
