@@ -1,4 +1,23 @@
 # CHANGELOG
+## [2.5.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.4.4...v2.5.0) (2023-02-23)
+
+
+### Features
+
+* **UiPlate:** Новый компонент ([e4d3050](https://github.com/ovchinnikov-lxs/ui-kit/commit/e4d305084d6e609b4f5703f7df7eadc4c1df84e7))
+
+
+### Bug Fixes
+
+* **actions:** Добавил тестирование на пуш develop ([a72d9fa](https://github.com/ovchinnikov-lxs/ui-kit/commit/a72d9facceb2676cc29d64dbd61f8089300a8c28))
+* **deps:** Обновил зависимости ([ca4e135](https://github.com/ovchinnikov-lxs/ui-kit/commit/ca4e1356f0f4c70d6e73aad4e5141d26c8862842))
+* **lint:** Поправил ошибку линтера ([0ccbfce](https://github.com/ovchinnikov-lxs/ui-kit/commit/0ccbfce2df83ddacc6ddfa2350d0d8ba933f19f6))
+* **pre-commit:** Заменил simple-git-hooks на husky ([d7c0b71](https://github.com/ovchinnikov-lxs/ui-kit/commit/d7c0b7160ef31f70f62655434026743d803b730d))
+* **README:** Подправил инструкцию ([3fef443](https://github.com/ovchinnikov-lxs/ui-kit/commit/3fef443a7933e71e5754971b2865b30704200c42))
+* **reformat:** Поправил файлы ([497a26b](https://github.com/ovchinnikov-lxs/ui-kit/commit/497a26b3616c4e9194ea8fa24b50e5c590e7cb28))
+* **stylelint:** Добавил в игнор coverage ([c66b0aa](https://github.com/ovchinnikov-lxs/ui-kit/commit/c66b0aad5f832d195430f993e3acfdaf16e196b2))
+* **unit-tests:** Поправил тест ([0de4c84](https://github.com/ovchinnikov-lxs/ui-kit/commit/0de4c84ce9adcdbbe009e27fbb0126fd0c3f291c))
+
 ## [2.4.4](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.4.3...v2.4.4) (2023-02-22)
 
 
