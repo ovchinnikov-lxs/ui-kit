@@ -1,7 +1,7 @@
 interface IImageData {
-    image: HTMLImageElement
-    width: number
-    height: number
+    image: HTMLImageElement;
+    width: number;
+    height: number;
 }
 
 class ImageLoaderClass {
@@ -21,7 +21,7 @@ class ImageLoaderClass {
         return this.images[src] || false;
     }
 
-    async loadImage(src :string) {
+    async loadImage(src: string) {
         return new Promise((resolve, reject) => {
             const image = new Image();
 

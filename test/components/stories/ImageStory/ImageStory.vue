@@ -8,7 +8,9 @@ import UiImage from '../../../../src/components/UiImage/UiImage.vue';
 <template>
     <ComponentWrapper name="UiImage">
         <template #component>
-            <UiImage origin="https://images.unsplash.com/photo-1675446340536-46f629dcb858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80">
+            <UiImage
+                origin="https://images.unsplash.com/photo-1675446340536-46f629dcb858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80"
+            >
                 <template #preview>
                     <div class="preview">
                     </div>

@@ -18,7 +18,7 @@ type ValueType = null | boolean | string;
 interface IOptionItem {
     id: ValueType;
     name: string;
-    disabled?: null | boolean
+    disabled?: null | boolean;
 }
 
 const props = defineProps({

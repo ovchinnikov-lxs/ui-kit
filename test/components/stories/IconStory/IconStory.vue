@@ -16,7 +16,9 @@ import UiIcon from '../../../../src/components/UiIcon/UiIcon.vue';
                 <UiIcon name="chevron" size="large">
                     <template #sprite-component="props">
                         <svg :viewBox="props.viewBox">
-                            <path d="M13.75 20.8615L26.389 8.22112L28.3346 10.1654L13.75 24.75L4.9995 15.9995L6.94375 14.0552L13.75 20.8615Z" />
+                            <path
+                                d="M13.75 20.8615L26.389 8.22112L28.3346 10.1654L13.75 24.75L4.9995 15.9995L6.94375 14.0552L13.75 20.8615Z"
+                            />
                         </svg>
                     </template>
                 </UiIcon>

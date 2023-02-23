@@ -15,7 +15,7 @@ import UiRichText from '../../../../src/components/UiRichText/UiRichText.vue';
     </ComponentWrapper>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 .UiRichText {
     $text: &;
 

@@ -18,7 +18,9 @@ const isOpened = ref(true);
 
         <template #component>
             <UiCollapse :is-opened="isOpened">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi cumque, cupiditate debitis dignissimos dolorum eligendi laboriosam laudantium minima non odio officiis quaerat quam qui sint sit, ullam voluptas voluptate?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi cumque, cupiditate debitis
+                dignissimos dolorum eligendi laboriosam laudantium minima non odio officiis quaerat quam qui sint sit,
+                ullam voluptas voluptate?
             </UiCollapse>
         </template>
     </ComponentWrapper>

@@ -6,7 +6,7 @@ import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
 import UiPreloader from '../../../../src/components/UiPreloader/UiPreloader.vue';
 import type { TypeSize } from '../../../../src/assets/utils/types';
 
-const size= ref<TypeSize>('medium');
+const size = ref<TypeSize>('medium');
 
 </script>
 

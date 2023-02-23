@@ -6,6 +6,7 @@ export interface IUiLazyObserver {
         [key: string | number]: (e: Element) => void
     }
 }
+
 declare global {
     interface Window {
         UiLazyObserver: IUiLazyObserver | null;

@@ -1,27 +1,27 @@
-    name: Testing
+name: Testing
 
-    on:
-        push:
-            branches:
-                - master
-                - develop
+on:
+    push:
+        branches:
+            - master
+            - develop
 
-    jobs:
-        lint-and-test-build:
-            runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [19.x]
-            steps:
-                - name: Checkout 🛎️
-                  uses: actions/checkout@v3
+jobs:
+    lint-and-test-build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [ 19.x ]
+        steps:
+            -   name: Checkout 🛎️
+                uses: actions/checkout@v3
 
-                - uses: actions/setup-node@v3
-                  with:
-                      node-version: ${{ matrix.node-version }}
+            -   uses: actions/setup-node@v3
+                with:
+                    node-version: ${{ matrix.node-version }}
 
-                - name: Install dependents 🔧
-                  run: npm ci
+            -   name: Install dependents 🔧
+                run: npm ci
 
-                - name: Run Tests 🔨
-                  run: npm run unit:test
+            -   name: Run Tests 🔨
+                run: npm run unit:test

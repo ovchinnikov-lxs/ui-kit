@@ -10,7 +10,7 @@ const value = ref(false);
 
 <template>
     <ComponentWrapper name="UiCheckbox">
-        <template #control>value: {{value}} </template>
+        <template #control>value: {{ value }}</template>
 
         <template #component>
             <UiCheckbox v-model="value">

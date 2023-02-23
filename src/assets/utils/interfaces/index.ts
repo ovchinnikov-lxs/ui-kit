@@ -1,6 +1,6 @@
 interface IOptionItem {
     id: string | number;
-    name: string
+    name: string;
     disabled: boolean;
 }
 

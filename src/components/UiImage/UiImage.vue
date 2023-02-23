@@ -205,7 +205,7 @@ const originClassList = computed((): TypeClassList => [{
         <div :class="getClassName('Image__wrapper')">
 
             <div v-if="$slots.preview" :class="getClassName('Image__preview')">
-                <slot  name="preview"></slot>
+                <slot name="preview"></slot>
             </div>
 
             <img v-else-if="preview"

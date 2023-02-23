@@ -5,6 +5,7 @@ import type { TypeClassList } from '~/assets/utils/types';
 export interface IColorProps {
     color?: string | undefined | null;
 }
+
 export const colorProps = {
     color: {
         type: [String, null] as PropType<string | null>,

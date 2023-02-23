@@ -7,6 +7,7 @@ export type TypeTag = 'button' | 'a' | 'RouterLink' | 'NuxtLink' | 'span';
 export interface ITagProps {
     tag: TypeTag;
 }
+
 export const routableProps = {
     tag: {
         type: String as PropType<TypeTag>,
