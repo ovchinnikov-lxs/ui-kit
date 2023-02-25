@@ -2,6 +2,7 @@ export { default as UiButton } from './UiButton/UiButton.vue';
 export { default as UiLink } from './UiLink/UiLink.vue';
 export { default as UiFormCell } from './UiFormCell/UiFormCell.vue';
 export { default as UiInput } from './UiInput/UiInput.vue';
+export { default as UiFileInput } from './UiFileInput/UiFileInput.vue';
 export { default as UiRichText } from './UiRichText/UiRichText.vue';
 export { default as UiCheckbox } from './UiCheckbox/UiCheckbox.vue';
 export { default as UiRadio } from './UiRadio/UiRadio.vue';

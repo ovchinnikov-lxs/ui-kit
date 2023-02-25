@@ -4,6 +4,7 @@ import {
     UiLink,
     UiFormCell,
     UiInput,
+    UiFileInput,
     UiRichText,
     UiCheckbox,
     UiRadio,
@@ -25,6 +26,7 @@ export default {
         app.component('UiLink', UiLink);
         app.component('UiFormCell', UiFormCell);
         app.component('UiInput', UiInput);
+        app.component('UiFileInput', UiFileInput);
         app.component('UiRichText', UiRichText);
         app.component('UiCheckbox', UiRichText);
         app.component('UiRadio', UiRadio);
@@ -46,6 +48,7 @@ export {
     UiLink,
     UiFormCell,
     UiInput,
+    UiFileInput,
     UiRichText,
     UiCheckbox,
     UiRadio,

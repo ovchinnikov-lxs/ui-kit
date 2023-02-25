@@ -63,14 +63,14 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
     </template>
     ```
 
- 🛠 - in progress
 #### List of the components
+🛠 - in progress  
+🚧 - experimental
  - [`UiButton`](src%2Fcomponents%2FUiButton%2FUiButton.vue)
  - [`UiLink`](src%2Fcomponents%2FUiLink%2FUiLink.vue)
  - [`UiFormCell`](src%2Fcomponents%2FOFormCell%2FOFormCell.vue)
  - [`UiInput`](src%2Fcomponents%2FUiInput%2FUiInput.vue)
- - `UiFileInput` - 🛠
- - `UIImageInput` - 🛠
+ - [`UiFileInput`](src%2Fcomponents%2FUiFileInput%2FUiFileInput.vue) - 🚧
  - [`UiRichText`](src%2Fcomponents%2FUiRichText%2FUiRichText.vue)
  - [`UiCheckbox`](src%2Fcomponents%2FUiCheckbox%2FUiCheckbox.vue)
  - [`UiRadio`](src%2Fcomponents%2FUiRadio%2FUiRadio.vue)

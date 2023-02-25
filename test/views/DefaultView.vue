@@ -7,6 +7,7 @@ const components = [
     'Link',
     'FormCell',
     'Input',
+    'FileInput',
     'RichText',
     'Checkbox',
     'Radio',

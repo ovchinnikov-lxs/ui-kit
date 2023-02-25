@@ -17,7 +17,7 @@ const props = defineProps({
 
     origin: {
         type: String,
-        required: true,
+        default: '',
     },
 
     lazy: {
@@ -120,7 +120,7 @@ async function loadPreview() {
 
         emit('preview-loaded');
     } catch (e) {
-        console.error('O_IMAGE:LOAD_PREVIEW', e);
+        console.error('UI_IMAGE:LOAD_PREVIEW', e);
     }
 }
 
@@ -142,7 +142,7 @@ async function loadImage(target: Element) {
             emit('origin-loaded');
         }
     } catch (e) {
-        console.error('O_IMAGE:LOAD_IMAGE', e);
+        console.error('UI_IMAGE:LOAD_IMAGE', e);
     }
 }
 

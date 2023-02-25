@@ -9,6 +9,7 @@ import UiImage from '../../../../src/components/UiImage/UiImage.vue';
     <ComponentWrapper name="UiImage">
         <template #component>
             <UiImage
+                class="ImageStory__image"
                 origin="https://images.unsplash.com/photo-1675446340536-46f629dcb858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80"
             >
                 <template #preview>
@@ -21,9 +22,11 @@ import UiImage from '../../../../src/components/UiImage/UiImage.vue';
 </template>
 
 <style lang="scss">
-.UiImage {
-    width: 500px;
-    height: 500px;
+.ImageStory {
+    &__image {
+        width: 500px;
+        height: 500px;
+    }
 }
 
 .preview {
