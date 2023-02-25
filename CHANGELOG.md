@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.6.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.5.0...v2.6.0) (2023-02-25)
+
+
+### Features
+
+* **UiFileInput:** Новый компонент ([5f13725](https://github.com/ovchinnikov-lxs/ui-kit/commit/5f13725509ec73283412902a63180a2c6d8230d3))
+
 ## [2.5.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.4.4...v2.5.0) (2023-02-23)
 
 
