@@ -67,4 +67,6 @@ export default defineConfig({
             },
         },
     },
+
+    optimizeDeps: { exclude: ['swiper/vue', 'swiper/types'] },
 });

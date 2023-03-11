@@ -109,6 +109,10 @@ const size = ref<TypeSize>('medium');
         background-color: var(--ui-primary-color);
         color: var(--ui-white-color);
 
+        &.--is-disabled {
+            opacity: .4;
+        }
+
         @include hover {
             opacity: .8;
         }

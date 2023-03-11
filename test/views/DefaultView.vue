@@ -16,6 +16,7 @@ const components = [
     'Tooltip',
     'Collapse',
     'Icon',
+    'Swiper',
     'Image',
     'Plate',
     'Preloader',

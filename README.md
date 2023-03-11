@@ -1,4 +1,4 @@
-## UI-kit for vue 3 projects
+## UI-kit for my vue 3 projects
 [![Versions](https://img.shields.io/npm/v/@ovchinnikov-lxs-frontend/ui-kit.svg)](https://www.npmjs.com/package/@ovchinnikov-lxs-frontend/ui-kit)
 [![Downloads](https://img.shields.io/npm/dt/@ovchinnikov-lxs-frontend/ui-kit.svg)](https://www.npmjs.com/package/@ovchinnikov-lxs-frontend/ui-kit)
 #### Install
@@ -80,7 +80,7 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
    - [`UiSelectOption`](src%2Fcomponents%2FUiSelect%2FUiSelectOption.vue)
  - [`UiTooltip`](src%2Fcomponents%2FUiTooltip%2FUiTooltip.vue)
  - [`UiIcon`](src%2Fcomponents%2FUiIcon%2FUiIcon.vue)
- - `UiTabs` - 🛠
+ - [`UiSwiper`](src%2Fcomponents%2FUiSwiper%2FUiSwiper.vue) - 🚧
  - [`UiImage`](src%2Fcomponents%2FUiImage%2FUiImage.vue)
  - [`UiPlate`](src%2Fcomponents%2FUiPlate%2FUiPlate.vue)
  - [`UiCollapse`](src%2Fcomponents%2FUiCollapse%2FUiCollapse.vue)

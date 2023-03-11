@@ -16,8 +16,8 @@ async function onInput(val) {
     console.log('onInput: ', val);
     // await nextTick();
     // Response from server
-    // imageValue.value = 'https://img.idalite.ru/insecure/q:85/rs:fit:1920:0/g:ce/bl:0/c:0/plain/s3://idalite-media/static/sites/blocks/content/images/image_1.jpg@jpg';
-    // fileValue.value = 'https://img.idalite.ru/insecure/q:85/rs:fit:1920:0/g:ce/bl:0/c:0/plain/s3://idalite-media/static/sites/blocks/content/images/image_1.jpg@jpg';
+    // imageValue.value = 'https://plus.unsplash.com/premium_photo-1666788168266-8857d533a634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2621&q=80';
+    // fileValue.value = 'https://plus.unsplash.com/premium_photo-1666788168266-8857d533a634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2621&q=80';
 }
 
 function onRemove(val) {
