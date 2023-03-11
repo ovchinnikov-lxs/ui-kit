@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.7.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.6.0...v2.7.0) (2023-03-11)
+
+
+### Features
+
+* **UiSwiper:** Новый компонент ([ff8bdd1](https://github.com/ovchinnikov-lxs/ui-kit/commit/ff8bdd19c08909e76011f64a17c1c210624eb395))
+
 ## [2.6.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.5.0...v2.6.0) (2023-02-25)
 
 
