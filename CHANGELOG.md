@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.8.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.7.0...v2.8.0) (2023-03-14)
+
+
+### Features
+
+* **UiToggle:** Новый компонент ([513140e](https://github.com/ovchinnikov-lxs/ui-kit/commit/513140e4daf3dcf087886b68273a0785ffff8a6f))
+
 ## [2.7.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.6.0...v2.7.0) (2023-03-11)
 
 
