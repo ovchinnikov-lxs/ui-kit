@@ -93,6 +93,10 @@ const classList = computed((): TypeClassList => [
     display: flex;
     align-items: center;
 
+    &__label {
+        cursor: pointer;
+    }
+
     &__button {
         @include reset-button;
 
