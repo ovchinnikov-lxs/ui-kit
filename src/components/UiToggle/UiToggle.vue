@@ -95,6 +95,7 @@ const classList = computed((): TypeClassList => [
 
     &__label {
         cursor: pointer;
+        user-select: none;
     }
 
     &__button {
