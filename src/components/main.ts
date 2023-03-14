@@ -7,6 +7,7 @@ import {
     UiFileInput,
     UiRichText,
     UiCheckbox,
+    UiToggle,
     UiRadio,
     UiPopover,
     UiSelect,
@@ -28,7 +29,8 @@ export default {
         app.component('UiInput', UiInput);
         app.component('UiFileInput', UiFileInput);
         app.component('UiRichText', UiRichText);
-        app.component('UiCheckbox', UiRichText);
+        app.component('UiCheckbox', UiCheckbox);
+        app.component('UiToggle', UiToggle);
         app.component('UiRadio', UiRadio);
         app.component('UiPopover', UiPopover);
         app.component('UiSelect', UiSelect);
@@ -51,6 +53,7 @@ export {
     UiFileInput,
     UiRichText,
     UiCheckbox,
+    UiToggle,
     UiRadio,
     UiPopover,
     UiSelect,

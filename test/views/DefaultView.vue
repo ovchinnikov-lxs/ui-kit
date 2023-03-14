@@ -10,6 +10,7 @@ const components = [
     'FileInput',
     'RichText',
     'Checkbox',
+    'Toggle',
     'Radio',
     'Popover',
     'Select',

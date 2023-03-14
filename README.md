@@ -73,6 +73,7 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
  - [`UiFileInput`](src%2Fcomponents%2FUiFileInput%2FUiFileInput.vue) - 🚧
  - [`UiRichText`](src%2Fcomponents%2FUiRichText%2FUiRichText.vue)
  - [`UiCheckbox`](src%2Fcomponents%2FUiCheckbox%2FUiCheckbox.vue)
+ - [`UiToggle`](src%2Fcomponents%2FUiToggle%2FUiToggle.vue) - 🚧
  - [`UiRadio`](src%2Fcomponents%2FUiRadio%2FUiRadio.vue)
  - [`UiPopover`](src%2Fcomponents%2FUiPopover%2FUiPopover.vue)
  - [`UiSelect`](src%2Fcomponents%2FUiSelect%2FUiSelect.vue)
