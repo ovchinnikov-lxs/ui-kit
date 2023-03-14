@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.8.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.0...v2.8.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* **UiToggle:** Поправил стиль лейблов ([548b439](https://github.com/ovchinnikov-lxs/ui-kit/commit/548b439a54c85df17598344534b4ba3f82b48e2f))
+
 ## [2.8.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.7.0...v2.8.0) (2023-03-14)
 
 
