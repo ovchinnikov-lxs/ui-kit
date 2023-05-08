@@ -19,7 +19,7 @@ defineProps({
 
             <div :class="$style.control">
                 <slot name="control"></slot>
-                <i style=" display: block; margin-top: 16px;">...и многое другое, чекай код</i>
+                <i style=" display: block; margin-top: 16px;">...и многое другое</i>
             </div>
 
             <main :class="$style.container">
