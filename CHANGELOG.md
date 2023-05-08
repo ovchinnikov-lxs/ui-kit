@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.8.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.2...v2.8.3) (2023-05-08)
+
+
+### Bug Fixes
+
+* **docs:** поправил тескт ([1fcefbb](https://github.com/ovchinnikov-lxs/ui-kit/commit/1fcefbbcff81dcdaf98751ce7c1afe20a4c5654f))
+
 ## [2.8.2](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.1...v2.8.2) (2023-05-08)
 
 
