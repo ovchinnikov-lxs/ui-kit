@@ -296,7 +296,7 @@ onMounted(() => {
                     <slot name="body-header"></slot>
                 </div>
 
-                <ul :class="getClassName('Select__body')">
+                <ul v-if="optionsList.length" :class="getClassName('Select__body')">
                     <li v-for="option in optionsList"
                         :key="option.value"
                         :class="getClassName('Select__option')"
