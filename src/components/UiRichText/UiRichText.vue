@@ -93,6 +93,7 @@ function onChange(event: Event) {
     display: block;
     outline: none;
     -webkit-appearance: none;
+    transition: all .3s ease;
 
     &:focus {
         outline: none;
