@@ -79,9 +79,9 @@ function onChange(event: Event) {
 <template>
     <!--   todo: Все таки tiptap -->
     <textarea
+        v-bind="$attrs"
         :value="actualValue"
         :class="[getClassName('RichText'), classList]"
-        v-bind="$attrs"
         @input="onInput"
         @change="onChange"
     >
