@@ -1,4 +1,12 @@
 # CHANGELOG
+## [2.8.2](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.1...v2.8.2) (2023-05-08)
+
+
+### Bug Fixes
+
+* **UiSelect:** Поправил отображение Select__body ([d2fcfb3](https://github.com/ovchinnikov-lxs/ui-kit/commit/d2fcfb3a55f7e1af8da4a3ef7f2c594a5d6e80e0))
+* **UiToggle:** Добавил лейблам user-select: none ([0bb41ec](https://github.com/ovchinnikov-lxs/ui-kit/commit/0bb41ecefb5e23753ebd804fbc0f56f9aabbaaca))
+
 ## [2.8.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.0...v2.8.1) (2023-03-14)
 
 
