@@ -192,8 +192,14 @@ function onRemoveClick() {
     $emit('update:modelValue', actualValue.value);
 }
 
-const inputLabel = computed(() => 'input');
-const removeLabel = computed(() => 'remove');
+const inputLabel = computed(() => {
+    if (!actualValue.value) {
+        return 'Загрузить';
+    }
+
+    return 'Заменить';
+});
+const removeLabel = computed(() => 'Удалить');
 
 // Drag&Drop
 const dropInit = ref(false);
