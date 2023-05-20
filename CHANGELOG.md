@@ -1,4 +1,13 @@
 # CHANGELOG
+## [2.8.4](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.3...v2.8.4) (2023-05-20)
+
+
+### Bug Fixes
+
+* **UiRichText:** Добавил transition ([064589e](https://github.com/ovchinnikov-lxs/ui-kit/commit/064589e7eec67caa626cd73754d159b35c5d60be))
+* **UiRichText:** Поправил порядок атрибутов ([7dff56d](https://github.com/ovchinnikov-lxs/ui-kit/commit/7dff56d461583df26c56b57b2c80135f9eae9f24))
+* **UiTooltip:** Поправил закрытие тултипа ([3ba0105](https://github.com/ovchinnikov-lxs/ui-kit/commit/3ba0105e8a5b4c020cb8c4421a95b2dbdc48e2dc))
+
 ## [2.8.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.2...v2.8.3) (2023-05-08)
 
 
