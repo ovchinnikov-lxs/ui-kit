@@ -365,7 +365,7 @@ onMounted(() => {
     &__body {
         @include reset-list;
 
-        overflow: scroll;
+        overflow: auto;
         max-height: 220px;
     }
 

@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import DefaultView from '../views/DefaultView.vue';
+import SecondView from '../views/SecondView.vue';
 
 const router = createRouter({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -12,6 +13,11 @@ const router = createRouter({
             path: '/',
             name: 'DefaultView',
             component: DefaultView,
+        },
+        {
+            path: '/second',
+            name: 'SecondView',
+            component: SecondView,
         },
     ],
     async scrollBehavior(to, from, savedPosition) {

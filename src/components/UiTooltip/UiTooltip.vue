@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue';
 import type { PropType } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
 import { POSITION_OPTIONS } from '~/assets/utils/constants/position';
@@ -85,7 +85,7 @@ function onToggle(isOpenedValue: boolean) {
             isOpened.value = isOpenedValue;
             $emit('update:modelValue', isOpened.value);
         }
-    }, 150);
+    }, 50);
 }
 
 function moveToBody() {
@@ -103,6 +103,10 @@ function removeFromBody() {
 
     bottomRef.value.remove();
 }
+
+onBeforeUnmount(() => {
+    removeFromBody();
+});
 
 const classList = computed((): TypeClassList => [
     sizeClassList.value,
@@ -239,6 +243,7 @@ watch(isOpened, val => {
              :class="[getClassName('Tooltip__bottom'), classList]"
              @mouseenter="onToggle(true)"
              @mouseleave="onToggle(false)"
+             @click="onToggle(false)"
         >
             <transition
                 name="tooltip"
