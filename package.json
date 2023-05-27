@@ -17,7 +17,6 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "@types/quill": "^2.0.10",
         "animejs": "^3.2.1",
         "lodash": "^4.17.21",
         "quill": "^1.3.7",
@@ -29,6 +28,7 @@
         "@types/animejs": "^3.1.7",
         "@types/jest": "^29.4.0",
         "@types/lodash": "^4.14.191",
+        "@types/quill": "^2.0.10",
         "@types/node": "^16.18.11",
         "@vitejs/plugin-vue": "^4.2.3",
         "@vue/eslint-config-typescript": "^11.0.0",
