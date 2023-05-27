@@ -1,4 +1,12 @@
 # CHANGELOG
+## [2.9.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.9.0...v2.9.1) (2023-05-27)
+
+
+### Bug Fixes
+
+* **package.json:** Убрал в devDeps @types/quill ([e5cb851](https://github.com/ovchinnikov-lxs/ui-kit/commit/e5cb85177b9dbb137bd039ce3f5c92a8c836ec26))
+* **UiRichText:** Заменил на tiptap ([d213b78](https://github.com/ovchinnikov-lxs/ui-kit/commit/d213b7897904910972f5a8575b9e48ff35223374))
+
 ## [2.9.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.4...v2.9.0) (2023-05-27)
 
 
