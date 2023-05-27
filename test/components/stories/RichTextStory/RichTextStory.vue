@@ -4,7 +4,7 @@ import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
 import UiRichText from '../../../../src/components/UiRichText/UiRichText.vue';
 import { ref } from 'vue';
 
-const value = ref('lol');
+const value = ref('<p>A Vue.js wrapper component for tiptap to use <code>v-model</code>.</p>');
 </script>
 <template>
     <ComponentWrapper name="UiRichText">
