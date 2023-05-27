@@ -61,7 +61,7 @@ const { styleClassList } = useStyle(props);
 const actualValue = ref<ValueType>(null);
 
 const $emit = defineEmits<{
-    (e: 'update:modelValue', value: ValueType): void
+    'update:modelValue': [value: ValueType]
 }>();
 
 watch(() => props.modelValue, val => actualValue.value = val, { immediate: true });

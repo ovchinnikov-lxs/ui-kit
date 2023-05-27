@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import type { PropType } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
 
@@ -52,12 +52,15 @@ const classList = computed((): TypeClassList => [
 
 // Value Logic
 const $emit = defineEmits<{
-    (e: 'update:modelValue', value: ValueType): void
-    (e: 'change', value: ValueType): void
+    'update:modelValue': [value: ValueType]
+    change: [value: ValueType]
 }>();
 
 
 const actualValue = ref<ValueType>('');
+watch(() => props.modelValue, (val: ValueType) => {
+    actualValue.value = val;
+}, { immediate: true });
 
 function onInput(event: Event) {
     const target = event.target as HTMLInputElement;
@@ -77,15 +80,13 @@ function onChange(event: Event) {
 </script>
 
 <template>
-    <!--   todo: Все таки tiptap -->
     <textarea
         v-bind="$attrs"
         :value="actualValue"
         :class="[getClassName('RichText'), classList]"
         @input="onInput"
         @change="onChange"
-    >
-    </textarea>
+    />
 </template>
 
 <style lang="scss">

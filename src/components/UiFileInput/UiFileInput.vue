@@ -58,8 +58,8 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const $emit = defineEmits<{
-    (e: 'update:modelValue', value: TypeValue): void
-    (e: 'remove', value: TypeValue): void
+    'update:modelValue': [value: TypeValue]
+    remove: [value: TypeValue]
 }>();
 
 const inputRef = ref<HTMLInputElement | null>(null);

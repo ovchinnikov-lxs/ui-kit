@@ -33,7 +33,7 @@ const props = defineProps({
 });
 
 const $emit = defineEmits<{
-    (e: 'click', value: number | string): void
+    click: [value: number | string]
 }>();
 
 const { getClassName } = useClassName(props);

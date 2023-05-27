@@ -55,7 +55,10 @@ const props = defineProps({
 
 const attrs = useAttrs();
 const slots = useSlots();
-const emit = defineEmits(['origin-loaded', 'preview-loaded']);
+const emit = defineEmits<{
+    'origin-loaded': [void]
+    'preview-loaded': [void]
+}>();
 
 let observer: IUiLazyObserver | null = null;
 const el = ref(null);

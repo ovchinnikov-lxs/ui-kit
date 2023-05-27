@@ -51,10 +51,10 @@ const classList = computed((): TypeClassList => [
 const actualValue = ref<TypeValue>('');
 
 const $emit = defineEmits<{
-    (e: 'update:modelValue', value: TypeValue): void
-    (e: 'change', value: TypeValue): void
-    (e: 'blur', value: TypeValue): void
-    (e: 'focus', value: Event): void
+    'update:modelValue': [value: TypeValue]
+    change: [value: TypeValue]
+    blur: [value: TypeValue]
+    focus: [value: Event]
 }>();
 
 watch(() => props.modelValue, (val: TypeValue) => {

@@ -35,7 +35,7 @@ const actualValue = ref(false);
 watch(() => props.modelValue, val => actualValue.value = val);
 
 const $emit = defineEmits<{
-    (e: 'update:modelValue', value: boolean): void
+    'update:modelValue': [value: boolean]
 }>();
 
 function onClick() {

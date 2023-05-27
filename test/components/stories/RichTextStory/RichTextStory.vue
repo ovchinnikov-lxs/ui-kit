@@ -2,7 +2,9 @@
 // Components
 import ComponentWrapper from '../../ComponentWrapper/ComponentWrapper.vue';
 import UiRichText from '../../../../src/components/UiRichText/UiRichText.vue';
+import { ref } from 'vue';
 
+const value = ref('lol');
 </script>
 <template>
     <ComponentWrapper name="UiRichText">
@@ -10,7 +12,7 @@ import UiRichText from '../../../../src/components/UiRichText/UiRichText.vue';
             Control
         </template>
         <template #component>
-            <UiRichText/>
+            <UiRichText v-model="value"/>
         </template>
     </ComponentWrapper>
 </template>

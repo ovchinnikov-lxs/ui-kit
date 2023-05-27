@@ -71,8 +71,8 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const $emit = defineEmits<{
-    (e: 'update:modelValue', value: TypeValue): void
-    (e: 'update:error', value: string | null | boolean): void
+    'update:modelValue': [value: TypeValue]
+    'update:error': [value: string | null | boolean]
 }>();
 
 const isOpened = ref(false);

@@ -52,7 +52,7 @@ const { stateClassList } = useState(props);
 const { styleClassList } = useStyle(props);
 
 const $emit = defineEmits<{
-    (e: 'update:modelValue', value: boolean): void
+    'update:modelValue': [value: boolean]
 }>();
 
 

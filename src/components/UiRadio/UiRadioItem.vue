@@ -19,7 +19,7 @@ const classList = computed((): TypeClassList => [
 ]);
 
 defineEmits<{
-    (e: 'click'): void
+    click: [void]
 }>();
 
 </script>
