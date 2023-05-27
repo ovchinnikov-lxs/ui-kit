@@ -9,7 +9,7 @@ const value = ref('lol');
 <template>
     <ComponentWrapper name="UiRichText">
         <template #control>
-            Control
+            <div v-html="value"></div>
         </template>
         <template #component>
             <UiRichText v-model="value"/>

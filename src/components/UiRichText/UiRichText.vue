@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import Quill from 'quill';
+
+import { computed, onMounted, ref, watch } from 'vue';
 import type { PropType } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
 
@@ -24,14 +26,9 @@ const props = defineProps({
         default: '',
     },
 
-    resize: {
-        type: String,
-        default: 'none',
-        validator: (v: string) => [
-            'none',
-            'vertical',
-            'horizontal',
-        ].includes(v),
+    options: {
+        type: Object,
+        default: () => ({}),
     },
 });
 
@@ -46,47 +43,46 @@ const classList = computed((): TypeClassList => [
     colorClassList.value,
     stateClassList.value,
     styleClassList.value,
-    [`--${props.resize}-resize`],
 ]);
 
 
-// Value Logic
 const $emit = defineEmits<{
     'update:modelValue': [value: ValueType]
     change: [value: ValueType]
 }>();
 
+const editorRef = ref<HTMLDivElement | null>(null);
 
-const actualValue = ref<ValueType>('');
+let editor: typeof Quill = null;
+function onInit() {
+    editor = new Quill(editorRef.value, {
+        ...props.options,
+        theme: 'snow',
+    });
+    editor.clipboard.dangerouslyPasteHTML(props.modelValue);
+
+    editor.on('text-change', () => {
+        $emit('update:modelValue', editor.root.innerHTML);
+    });
+}
+
 watch(() => props.modelValue, (val: ValueType) => {
-    actualValue.value = val;
-}, { immediate: true });
+    if (val !== editor.root.innerHTML) {
+        editor.clipboard.dangerouslyPasteHTML(val);
+    }
+});
 
-function onInput(event: Event) {
-    const target = event.target as HTMLInputElement;
-
-    actualValue.value = target.value;
-
-    $emit('update:modelValue', actualValue.value);
-}
-
-function onChange(event: Event) {
-    const target = event.target as HTMLInputElement;
-
-    actualValue.value = target.value;
-
-    $emit('change', actualValue.value);
-}
+onMounted(() => {
+    onInit();
+});
 </script>
 
 <template>
-    <textarea
-        v-bind="$attrs"
-        :value="actualValue"
-        :class="[getClassName('RichText'), classList]"
-        @input="onInput"
-        @change="onChange"
-    />
+    <div v-bind="$attrs" :class="[getClassName('RichText'), classList]">
+        <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet" />
+
+        <div ref="editorRef" :class="getClassName('RichText__editor')"></div>
+    </div>
 </template>
 
 <style lang="scss">
@@ -103,18 +99,6 @@ function onChange(event: Event) {
     &.--is-disabled {
         pointer-events: none;
         user-select: none;
-    }
-
-    &.--none-resize {
-        resize: none;
-    }
-
-    &.--vertical-resize {
-        resize: vertical;
-    }
-
-    &.--horizontal-resize {
-        resize: horizontal;
     }
 }
 </style>
