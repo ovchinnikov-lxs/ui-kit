@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// Dependencies
 import Quill from 'quill';
 
 import { computed, onMounted, ref, watch } from 'vue';
@@ -79,13 +80,17 @@ onMounted(() => {
 
 <template>
     <div v-bind="$attrs" :class="[getClassName('RichText'), classList]">
-        <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet" />
+        <!--        <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet" />-->
 
         <div ref="editorRef" :class="getClassName('RichText__editor')"></div>
     </div>
 </template>
 
 <style lang="scss">
+@import 'quill/dist/quill.core.css';
+@import 'quill/dist/quill.bubble.css';
+@import 'quill/dist/quill.snow.css';
+
 .UiRichText {
     display: block;
     outline: none;
