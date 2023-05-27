@@ -1,4 +1,16 @@
 # CHANGELOG
+## [2.9.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.4...v2.9.0) (2023-05-27)
+
+
+### Features
+
+* **vue:** Обновил либу и актуализировал синтаксис defineEmits ([e1df45a](https://github.com/ovchinnikov-lxs/ui-kit/commit/e1df45ab2ebe1bd97c0022ebcedd05bd7a8db2e8))
+
+
+### Bug Fixes
+
+* **UiRichText:** Пробуем quill ([a5b336f](https://github.com/ovchinnikov-lxs/ui-kit/commit/a5b336f1118d2eb91a1bbdd95e7c113453720054))
+
 ## [2.8.4](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.8.3...v2.8.4) (2023-05-20)
 
 
