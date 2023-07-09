@@ -7,7 +7,6 @@ import { SIZE_ARGS } from '~/stories/assets/constants/sizes';
 import { COLOR_ARGS, COLOR_DICT } from '~/stories/assets/constants/colors';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { ERROR_ARGS, REQUIRED_ARGS } from '~/stories/assets/constants/states';
-import { STYLES_ARGS } from '~/stories/assets/constants/styles';
 import { DEFAULT_TEMPLATE } from '~/stories/UiFormCell/UiFormCell.template';
 
 const meta = {
@@ -26,7 +25,6 @@ const meta = {
         ...COLOR_ARGS,
         ...REQUIRED_ARGS,
         ...ERROR_ARGS,
-        ...STYLES_ARGS,
     },
     render: args => ({
         components: { UiFormCell },

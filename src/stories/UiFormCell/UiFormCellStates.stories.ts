@@ -31,7 +31,6 @@ const meta = {
         template: DEFAULT_TEMPLATE,
     }),
     args: {
-        active: false,
         color: COLOR_DICT.PRIMARY,
         size: SIZES_DICT.MEDIUM,
     },
@@ -40,11 +39,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-    args: {
-        active: false,
-    },
-};
+export const Default: Story = {};
 
 export const Required: Story = {
     args: {

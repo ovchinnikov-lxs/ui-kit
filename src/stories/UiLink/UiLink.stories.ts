@@ -7,7 +7,6 @@ import { SIZE_ARGS } from '~/stories/assets/constants/sizes';
 import { COLOR_ARGS, COLOR_DICT } from '~/stories/assets/constants/colors';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { STATE_ARGS } from '~/stories/assets/constants/states';
-import { STYLES_ARGS } from '~/stories/assets/constants/styles';
 import { DEFAULT_TEMPLATE } from '~/stories/UiLink/UiLink.template';
 
 const meta = {
@@ -25,7 +24,6 @@ const meta = {
         ...SIZE_ARGS,
         ...COLOR_ARGS,
         ...STATE_ARGS,
-        ...STYLES_ARGS,
     },
     render: args => ({
         components: { UiLink },
