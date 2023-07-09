@@ -25,6 +25,19 @@ const DISABLED_ARGS = {
     },
 };
 
+const REQUIRED_ARGS = {
+    required: {
+        description: 'Required state at component',
+        control: 'boolean',
+    },
+};
+
+const ERROR_ARGS = {
+    error: {
+        description: 'Error state or message at component',
+    },
+};
+
 const STATE_ARGS = {
     ...ACTIVE_ARGS,
     ...INTERESTING_ARGS,
@@ -37,4 +50,6 @@ export {
     ACTIVE_ARGS,
     INTERESTING_ARGS,
     DISABLED_ARGS,
+    REQUIRED_ARGS,
+    ERROR_ARGS,
 };

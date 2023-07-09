@@ -14,6 +14,9 @@ const props = defineProps({
     ...colorProps,
     ...sizeProps,
 
+    /**
+     *  Name for label clicks
+     */
     name: {
         type: String,
         default: '',

@@ -1,0 +1,66 @@
+.UiFormCell {
+    $cell: &;
+
+    &.--medium-size {
+        #{$cell} {
+            &__label,
+            &__info,
+            &__error {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &.--large-size {
+        #{$cell} {
+            &__label,
+            &__info,
+            &__error {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &.--is-error {
+        #{$cell} {
+            &__label {
+                color: red;
+            }
+        }
+    }
+
+    &.--is-required {
+        #{$cell} {
+            &__label {
+                column-gap: 8px;
+
+                &:after {
+                    content: '*';
+                    color: red;
+                }
+            }
+        }
+    }
+
+    &.--primary-color {
+        #{$cell} {
+            &__label,
+            &__info {
+                color: var(--ui-primary-color);
+            }
+        }
+    }
+
+    &.--secondary-color {
+        #{$cell} {
+            &__label,
+            &__info {
+                color: var(--ui-secondary-color);
+            }
+        }
+    }
+
+    &__error {
+        color: red;
+    }
+}

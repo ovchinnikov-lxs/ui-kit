@@ -3,8 +3,6 @@
 import { defineAsyncComponent } from 'vue';
 
 const components = [
-    'Link',
-    'FormCell',
     'Input',
     'FileInput',
     'RichText',
