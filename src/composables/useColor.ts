@@ -7,6 +7,9 @@ export interface IColorProps {
 }
 
 export const colorProps = {
+    /**
+     *  Color of the component
+     */
     color: {
         type: [String, null] as PropType<string | null>,
         default: null,

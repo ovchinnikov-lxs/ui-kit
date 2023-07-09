@@ -9,6 +9,9 @@ export interface ITagProps {
 }
 
 export const routableProps = {
+    /**
+     *  The html tag for routable components
+     */
     tag: {
         type: String as PropType<TypeTag>,
         default: 'button',

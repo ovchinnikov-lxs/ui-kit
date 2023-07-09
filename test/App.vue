@@ -6,6 +6,8 @@ import { RouterView } from 'vue-router';
     <main :class="$style.App">
         <header :class="$style.header">
             <h1>Ui-kit</h1>
+
+            (Потихоньку переношу в storybook)
         </header>
 
         <main :class="$style.container">
@@ -55,6 +57,9 @@ body {
 }
 
 .header {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
     padding: 0 32px;
     background-color: var(--ui-black-color);
     color: var(--ui-primary-color);

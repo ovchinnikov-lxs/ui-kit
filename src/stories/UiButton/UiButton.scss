@@ -1,0 +1,74 @@
+.UiButton {
+    &.--medium-size {
+        padding: 12px 32px;
+        font-size: 24px;
+
+        &.--is-icon {
+            width: 64px;
+            height: 64px;
+            padding: 0;
+        }
+
+        &.--is-rounded {
+            border-radius: 8px;
+
+            &.--is-icon {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &.--large-size {
+        padding: 24px 48px;
+        font-size: 32px;
+
+        &.--is-rounded {
+            border-radius: 24px;
+
+            &.--is-icon {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &.--primary-color {
+        background-color: var(--ui-primary-color);
+        color: var(--ui-white-color);
+
+        &.--is-disabled {
+            opacity: .4;
+        }
+
+        &.--is-active {
+            opacity: .8;
+        }
+
+        &.--is-interesting {
+            transform: scale(1.1);
+        }
+
+        &.--is-outline {
+            border: 1px solid var(--ui-primary-color);
+            background-color: transparent;
+            color: var(--ui-primary-color);
+
+            @include hover {
+                background-color: var(--ui-primary-color);
+                color: var(--ui-white-color);
+            }
+        }
+
+        @include hover {
+            opacity: .8;
+        }
+    }
+
+    &.--secondary-color {
+        background-color: var(--ui-secondary-color);
+        color: var(--ui-black-color);
+
+        @include hover {
+            background-color: var(--ui-primary-color);
+        }
+    }
+}

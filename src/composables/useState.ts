@@ -12,31 +12,49 @@ export interface IStateProps {
 }
 
 export const stateProps = {
+    /**
+     *  Active state for a component
+     */
     active: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     *  Interesting state for a component
+     */
     interesting: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     *  Required state for form components or others if you need
+     */
     required: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     *  Disabled state for a component
+     */
     disabled: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     *  Error state for a display error message or just state
+     */
     error: {
         type: [String, Number, null, Boolean] as PropType<string | number | null | boolean>,
         default: null,
     },
 
+    /**
+     *  State of loading component or some actions
+     */
     loading: {
         type: Boolean,
         default: false,

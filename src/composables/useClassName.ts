@@ -10,6 +10,9 @@ export interface IClassNameProps {
 export const DEFAULT_PREFIX = 'Ui';
 
 export const classNameProps = {
+    /**
+     *  The class prefix for custom settings
+     */
     classPrefix: {
         type: [String, null] as PropType<string | null>,
         default: null,
