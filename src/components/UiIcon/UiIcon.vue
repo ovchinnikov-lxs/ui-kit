@@ -13,21 +13,33 @@ const props = defineProps({
     ...classNameProps,
     ...sizeProps,
 
+    /**
+     * HTML tag for icon
+     */
     tag: {
         type: String,
         default: 'div',
     },
 
+    /**
+     *  Icon view box
+     */
     viewBox: {
         type: String,
         default: '0 0 32 32',
     },
 
+    /**
+     * Icon name from helpers.iconList
+     */
     name: {
         type: String,
         default: 'chevron',
     },
 
+    /**
+     *  Custom icon list
+     */
     icons: {
         type: Array as PropType<Array<IIconItem>>,
         default: () => [],

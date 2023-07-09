@@ -10,7 +10,6 @@ const components = [
     'Popover',
     'Select',
     'Tooltip',
-    'Icon',
     'Swiper',
     'Image',
     'Plate',

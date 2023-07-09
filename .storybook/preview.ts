@@ -6,6 +6,7 @@ import '../src/stories/UiLink/UiLink.scss';
 import '../src/stories/UiFormCell/UiFormCell.scss';
 import '../src/stories/UiCheckbox/UiCheckbox.scss';
 import '../src/stories/UiFileInput/UiFileInput.scss';
+import '../src/stories/UiIcon/UiIcon.scss';
 
 const preview: Preview = {
     parameters: {
