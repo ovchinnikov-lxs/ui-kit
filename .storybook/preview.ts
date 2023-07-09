@@ -8,6 +8,7 @@ import '../src/stories/UiCheckbox/UiCheckbox.scss';
 import '../src/stories/UiFileInput/UiFileInput.scss';
 import '../src/stories/UiIcon/UiIcon.scss';
 import '../src/stories/UiImage/UiImage.scss';
+import '../src/stories/UiInput/UiInput.scss';
 
 const preview: Preview = {
     parameters: {

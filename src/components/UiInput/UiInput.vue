@@ -20,11 +20,17 @@ const props = defineProps({
     ...stateProps,
     ...styleProps,
 
+    /**
+     *  Input value
+     */
     modelValue: {
         type: [String, Number] as PropType<TypeValue>,
         default: '',
     },
 
+    /**
+     *  Type value for some validations
+     */
     valueType: {
         type: String,
         default: TYPES_DICT.STRING,

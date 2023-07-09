@@ -1,0 +1,37 @@
+.UiInput {
+    &.--medium-size {
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    &.--large-size {
+        padding: 20px 32px;
+        border-radius: 8px;
+        font-size: 20px;
+    }
+
+    &.--primary-color {
+        border: 1px solid var(--ui-primary-color);
+
+        &:focus {
+            border-color: var(--ui-black-color);
+        }
+    }
+
+    &.--secondary-color {
+        border: 1px solid var(--ui-secondary-color);
+
+        &:focus {
+            border-color: var(--ui-black-color);
+        }
+    }
+
+    &.--is-disabled {
+        opacity: .32;
+    }
+
+    &.--is-error {
+        border-color: red;
+    }
+}

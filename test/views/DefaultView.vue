@@ -3,7 +3,6 @@
 import { defineAsyncComponent } from 'vue';
 
 const components = [
-    'Input',
     'RichText',
     'Toggle',
     'Radio',
