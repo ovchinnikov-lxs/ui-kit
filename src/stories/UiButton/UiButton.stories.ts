@@ -8,6 +8,7 @@ import { COLOR_ARGS, COLOR_DICT } from '~/stories/assets/constants/colors';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { STATE_ARGS } from '~/stories/assets/constants/states';
 import { STYLES_ARGS } from '~/stories/assets/constants/styles';
+import { DEFAULT_TEMPLATE } from '~/stories/UiButton/UiButton.template';
 
 const meta = {
     title: 'Example/UiButton',
@@ -31,7 +32,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: '<UiButton v-bind="args">Button</UiButton>',
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         size: SIZES_DICT.MEDIUM,

@@ -4,6 +4,7 @@ import UiButton from '~/components/UiButton/UiButton.vue';
 
 // Constants
 import { COLOR_ARGS, COLOR_DESCRIPTION, COLOR_DICT } from '~/stories/assets/constants/colors';
+import { DEFAULT_TEMPLATE } from '~/stories/UiButton/UiButton.template';
 
 const meta = {
     title: 'Example/UiButton/Colors',
@@ -24,7 +25,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: '<UiButton v-bind="args">Button</UiButton>',
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         color: COLOR_DICT.PRIMARY,

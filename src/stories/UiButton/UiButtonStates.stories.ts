@@ -6,6 +6,7 @@ import UiButton from '~/components/UiButton/UiButton.vue';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { COLOR_DICT } from '~/stories/assets/constants/colors';
 import { STATE_ARGS, STATES_DESCRIPTION } from '~/stories/assets/constants/states';
+import { DEFAULT_TEMPLATE } from '~/stories/UiButton/UiButton.template';
 
 const meta = {
     title: 'Example/UiButton/States',
@@ -26,7 +27,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: '<UiButton v-bind="args">Button</UiButton>',
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         active: false,
