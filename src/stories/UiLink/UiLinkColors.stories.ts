@@ -4,6 +4,7 @@ import UiLink from '~/components/UiLink/UiLink.vue';
 
 // Constants
 import { COLOR_ARGS, COLOR_DESCRIPTION, COLOR_DICT } from '~/stories/assets/constants/colors';
+import { DEFAULT_TEMPLATE } from '~/stories/UiLink/UiLink.template';
 
 const meta = {
     title: 'Example/UiLink/Colors',
@@ -24,7 +25,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: '<UiLink v-bind="args">Link</UiLink>',
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         color: COLOR_DICT.PRIMARY,

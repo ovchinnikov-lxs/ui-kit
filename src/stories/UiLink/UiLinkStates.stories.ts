@@ -6,6 +6,7 @@ import UiLink from '~/components/UiLink/UiLink.vue';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { COLOR_DICT } from '~/stories/assets/constants/colors';
 import { STATE_ARGS, STATES_DESCRIPTION } from '~/stories/assets/constants/states';
+import { DEFAULT_TEMPLATE } from '~/stories/UiLink/UiLink.template';
 
 const meta = {
     title: 'Example/UiLink/States',
@@ -26,7 +27,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: '<UiLink v-bind="args">Link</UiLink>',
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         active: false,

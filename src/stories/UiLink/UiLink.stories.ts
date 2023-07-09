@@ -8,6 +8,7 @@ import { COLOR_ARGS, COLOR_DICT } from '~/stories/assets/constants/colors';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { STATE_ARGS } from '~/stories/assets/constants/states';
 import { STYLES_ARGS } from '~/stories/assets/constants/styles';
+import { DEFAULT_TEMPLATE } from '~/stories/UiLink/UiLink.template';
 
 const meta = {
     title: 'Example/UiLink',
@@ -31,7 +32,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: '<UiLink v-bind="args">Link</UiLink>',
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         size: SIZES_DICT.MEDIUM,
