@@ -30,7 +30,7 @@ const IMAGE_TEMPLATE = `
 </UiFileInput>
 `;
 
-const FILES_TEMPLATE = `
+const DOCS_TEMPLATE = `
 <UiFileInput
     v-bind="args"
     class-prefix="UiDocs"
@@ -69,5 +69,5 @@ const FILES_TEMPLATE = `
 
 export {
     IMAGE_TEMPLATE,
-    FILES_TEMPLATE,
+    DOCS_TEMPLATE,
 };

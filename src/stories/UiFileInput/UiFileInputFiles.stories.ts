@@ -8,16 +8,16 @@ import UiButton from '~/components/UiButton/UiButton.vue';
 import { SIZE_ARGS } from '~/stories/assets/constants/sizes';
 import { COLOR_ARGS, COLOR_DICT } from '~/stories/assets/constants/colors';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
-import { FILES_TEMPLATE } from '~/stories/UiFileInput/UiFileInput.template';
+import { DOCS_TEMPLATE } from '~/stories/UiFileInput/UiFileInput.template';
 
 const meta = {
-    title: 'Example/UiFileInput/Files',
+    title: 'Example/UiFileInput/Docs',
     component: UiFileInput,
     tags: ['autodocs'],
     parameters: {
         docs: {
             description: {
-                component: 'Files input component',
+                component: 'Docs input component',
             },
         },
     },
@@ -34,7 +34,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: FILES_TEMPLATE,
+        template: DOCS_TEMPLATE,
     }),
     args: {
         size: SIZES_DICT.MEDIUM,
@@ -45,4 +45,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {};
+export const Default: Story = {};

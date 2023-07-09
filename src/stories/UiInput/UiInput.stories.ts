@@ -6,8 +6,7 @@ import UiInput from '~/components/UiInput/UiInput.vue';
 import { SIZE_ARGS } from '~/stories/assets/constants/sizes';
 import { COLOR_ARGS, COLOR_DICT } from '~/stories/assets/constants/colors';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
-import { STATE_ARGS } from '~/stories/assets/constants/states';
-import { STYLES_ARGS } from '~/stories/assets/constants/styles';
+import { DISABLED_ARGS, ERROR_ARGS } from '~/stories/assets/constants/states';
 import { DEFAULT_TEMPLATE } from '~/stories/UiInput/UiInput.template';
 
 const meta = {
@@ -24,8 +23,8 @@ const meta = {
     argTypes: {
         ...SIZE_ARGS,
         ...COLOR_ARGS,
-        ...STATE_ARGS,
-        ...STYLES_ARGS,
+        ...DISABLED_ARGS,
+        ...ERROR_ARGS,
     },
     render: args => ({
         components: { UiInput },
@@ -43,4 +42,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Docs: Story = {};
+export const Default: Story = {};

@@ -41,5 +41,5 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Custom: Story = {
+export const Default: Story = {
 };

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 import UiImage from '~/components/UiImage/UiImage.vue';
 
 const meta = {
-    title: 'Example/UiImage/Default',
+    title: 'Example/UiImage',
     component: UiImage,
     tags: ['autodocs'],
     parameters: {
@@ -30,7 +30,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-export const Docs: Story = {};
+export const Default: Story = {};
 
 export const CustomPreview: Story = {
     args: {
