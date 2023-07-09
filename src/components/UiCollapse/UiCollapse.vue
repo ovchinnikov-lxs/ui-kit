@@ -10,11 +10,17 @@ import { classNameProps, useClassName } from '~/composables/useClassName';
 const props = defineProps({
     ...classNameProps,
 
+    /**
+     *  State of open/close
+     */
     isOpened: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     * @param {'x' | 'y'} axis - Axis direction
+     */
     axis: {
         type: String,
         default: AXIS_TYPE.Y,

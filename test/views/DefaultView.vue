@@ -11,7 +11,6 @@ const components = [
     'Popover',
     'Select',
     'Tooltip',
-    'Collapse',
     'Icon',
     'Swiper',
     'Image',
