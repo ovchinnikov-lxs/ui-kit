@@ -19,6 +19,9 @@ const props = defineProps({
     ...stateProps,
     ...styleProps,
 
+    /**
+     *  Checked state value
+     */
     modelValue: {
         type: Boolean,
         default: false,

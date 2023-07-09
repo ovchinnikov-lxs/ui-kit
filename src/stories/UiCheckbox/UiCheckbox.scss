@@ -1,0 +1,104 @@
+.UiCheckbox {
+    $checkbox: &;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > * {
+            opacity: 0;
+        }
+    }
+
+    &.--medium-size {
+        #{$checkbox} {
+            &__button {
+                width: 16px;
+                height: 16px;
+                background-color: white;
+            }
+
+            &__wrapper {
+                column-gap: 12px;
+            }
+        }
+    }
+
+    &.--large-size {
+        #{$checkbox} {
+            &__label {
+                font-size: 20px;
+            }
+
+            &__button {
+                width: 24px;
+                height: 24px;
+                background-color: white;
+            }
+
+            &__wrapper {
+                column-gap: 16px;
+            }
+        }
+    }
+
+    &.--primary-color {
+        #{$checkbox} {
+            &__label {
+                color: var(--ui-primary-color);
+            }
+
+            &__button {
+                border: 1px solid var(--ui-primary-color);
+            }
+        }
+
+        &.--is-checked {
+            #{$checkbox} {
+                &__button {
+                    background-color: var(--ui-primary-color);
+                    color: var(--ui-white-color);
+
+                    & > * {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.--secondary-color {
+        #{$checkbox} {
+            &__label {
+                color: var(--ui-secondary-color);
+            }
+
+            &__button {
+                border: 1px solid var(--ui-secondary-color);
+            }
+        }
+
+        &.--is-checked {
+            #{$checkbox} {
+                &__button {
+                    background-color: var(--ui-secondary-color);
+                    color: var(--ui-white-color);
+
+                    & > * {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.--is-disabled {
+        opacity: .32;
+    }
+}

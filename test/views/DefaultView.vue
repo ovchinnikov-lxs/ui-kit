@@ -6,7 +6,6 @@ const components = [
     'Input',
     'FileInput',
     'RichText',
-    'Checkbox',
     'Toggle',
     'Radio',
     'Popover',

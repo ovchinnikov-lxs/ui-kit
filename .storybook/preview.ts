@@ -4,6 +4,7 @@ import '../src/stories/assets/style/shared/default.scss';
 import '../src/stories/UiButton/UiButton.scss';
 import '../src/stories/UiLink/UiLink.scss';
 import '../src/stories/UiFormCell/UiFormCell.scss';
+import '../src/stories/UiCheckbox/UiCheckbox.scss';
 
 const preview: Preview = {
     parameters: {
