@@ -25,26 +25,41 @@ const props = defineProps({
     ...stateProps,
     ...styleProps,
 
+    /**
+     *  Value - file or url to file or array
+     */
     modelValue: {
         type: [Array, File, String, null] as PropType<TypeValue>,
         default: null,
     },
 
+    /**
+     *  Max size file in bytes
+     */
     maxSize: {
         type: Number,
         default: 1024,
     },
 
+    /**
+     *  Extensions of file
+     */
     extensions: {
         type: Array as PropType<string[]>,
         default: () => [],
     },
 
+    /**
+     * Multiple select files
+     */
     multiple: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     * Placeholder text for CTA
+     */
     placeholder: {
         type: String,
         default: 'Choice a files',

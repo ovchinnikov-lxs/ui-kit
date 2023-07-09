@@ -5,6 +5,7 @@ import '../src/stories/UiButton/UiButton.scss';
 import '../src/stories/UiLink/UiLink.scss';
 import '../src/stories/UiFormCell/UiFormCell.scss';
 import '../src/stories/UiCheckbox/UiCheckbox.scss';
+import '../src/stories/UiFileInput/UiFileInput.scss';
 
 const preview: Preview = {
     parameters: {
