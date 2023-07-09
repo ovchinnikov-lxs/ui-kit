@@ -10,26 +10,41 @@ import { imageLoader } from '~/assets/utils/helpers/image-helpers';
 const props = defineProps({
     ...classNameProps,
 
+    /**
+     *  URL for lazy preview
+     */
     preview: {
         type: String,
         default: '',
     },
 
+    /**
+     *  URL for origin image
+     */
     origin: {
         type: String,
         default: '',
     },
 
+    /**
+     *  Lazy loading
+     */
     lazy: {
         type: Boolean,
         default: true,
     },
 
+    /**
+     *  Lazy loading from swiper
+     */
     swiperLazy: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     *  CSS object fit option
+     */
     objectFit: {
         type: String,
         default: 'cover',
@@ -42,6 +57,9 @@ const props = defineProps({
         ].includes(v),
     },
 
+    /**
+     * transition image appear
+     */
     transition: {
         type: String,
         default: 'fade',
