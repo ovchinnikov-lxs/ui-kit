@@ -8,6 +8,7 @@ import { COLOR_ARGS, COLOR_DICT } from '~/stories/assets/constants/colors';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { ERROR_ARGS, REQUIRED_ARGS } from '~/stories/assets/constants/states';
 import { STYLES_ARGS } from '~/stories/assets/constants/styles';
+import { DEFAULT_TEMPLATE } from '~/stories/UiFormCell/UiFormCell.template';
 
 const meta = {
     title: 'Example/UiFormCell',
@@ -32,14 +33,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: `
-            <UiFormCell v-bind="args">
-              <template #label>label slot</template>
-              <template #default>default slot</template>
-              <template #info>info slot</template>
-              <template #error="props">Error: {{ props.error }}</template>
-            </UiFormCell>
-        `,
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         size: SIZES_DICT.MEDIUM,

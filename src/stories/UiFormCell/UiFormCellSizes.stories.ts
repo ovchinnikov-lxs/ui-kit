@@ -6,6 +6,7 @@ import UiFormCell from '~/components/UiFormCell/UiFormCell.vue';
 import { SIZE_ARGS, SIZE_DESCRIPTION } from '~/stories/assets/constants/sizes';
 import { SIZES_DICT } from '~/assets/utils/constants/sizes';
 import { COLOR_DICT } from '~/stories/assets/constants/colors';
+import { DEFAULT_TEMPLATE } from '~/stories/UiFormCell/UiFormCell.template';
 
 const meta = {
     title: 'Example/UiFormCell/Sizes',
@@ -26,14 +27,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: `
-            <UiFormCell v-bind="args">
-              <template #label>label slot</template>
-              <template #default>default slot</template>
-              <template #info>info slot</template>
-              <template #error="props">Error: {{ props.error }}</template>
-            </UiFormCell>
-        `,
+        template: DEFAULT_TEMPLATE,
     }),
     args: {
         color: COLOR_DICT.PRIMARY,
