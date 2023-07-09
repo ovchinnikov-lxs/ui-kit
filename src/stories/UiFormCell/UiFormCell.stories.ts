@@ -16,7 +16,7 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Interactive component for display some buttons',
+                component: 'Component as wrap for some input fields',
             },
         },
     },
