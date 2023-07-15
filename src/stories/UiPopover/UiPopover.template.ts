@@ -1,5 +1,5 @@
 const DEFAULT_TEMPLATE = `
-<UiPopover v-bind="args">
+<UiPopover v-bind="args" v-model="args.modelValue">
     <template #top>TOP SIDE ELEMENT</template>
 
     <template #bottom>

@@ -12,6 +12,7 @@ import '../src/stories/UiInput/UiInput.scss';
 import '../src/stories/UiPlate/UiPlate.scss';
 import '../src/stories/UiPopover/UiPopover.scss';
 import '../src/stories/UiPreloader/UiPreloader.scss';
+import '../src/stories/UiRadio/UiRadio.scss';
 
 const preview: Preview = {
     parameters: {

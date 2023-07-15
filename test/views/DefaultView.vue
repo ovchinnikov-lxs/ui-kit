@@ -5,7 +5,6 @@ import { defineAsyncComponent } from 'vue';
 const components = [
     'RichText',
     'Toggle',
-    'Radio',
     'Select',
     'Tooltip',
     'Swiper',

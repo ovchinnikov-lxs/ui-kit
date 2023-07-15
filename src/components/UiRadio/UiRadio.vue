@@ -28,6 +28,9 @@ const props = defineProps({
     ...stateProps,
     ...styleProps,
 
+    /**
+     * Radio Options
+     */
     options: {
         type: Array as PropType<Array<IOptionItem>>,
         default: () => [
@@ -37,6 +40,9 @@ const props = defineProps({
         ],
     },
 
+    /**
+     * @param {'x' | 'y'} axis - Axis direction
+     */
     axis: {
         type: String,
         default: 'y',
@@ -46,6 +52,9 @@ const props = defineProps({
         ].includes(v),
     },
 
+    /**
+     * Active value
+     */
     modelValue: {
         type: [Boolean, null, String] as PropType<ValueType>,
         default: null,
