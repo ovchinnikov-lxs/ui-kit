@@ -1,0 +1,8 @@
+.UiPopover {
+    &__body {
+        margin: 24px;
+        padding: 24px;
+        background-color: var(--ui-secondary-color);
+        box-shadow: rgba(36, 46, 66, .09) 0 7px 29px 0;
+    }
+}

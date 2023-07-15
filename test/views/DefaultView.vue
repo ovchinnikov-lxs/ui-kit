@@ -6,7 +6,6 @@ const components = [
     'RichText',
     'Toggle',
     'Radio',
-    'Popover',
     'Select',
     'Tooltip',
     'Swiper',

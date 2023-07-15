@@ -19,11 +19,17 @@ const props = defineProps({
     ...stateProps,
     ...styleProps,
 
+    /**
+     *  State of open
+     */
     modelValue: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     * Dropdown position
+     */
     position: {
         type: String as PropType<TypePosition>,
         default: POSITION_OPTIONS.BOTTOM,
@@ -32,21 +38,25 @@ const props = defineProps({
             .includes(v),
     },
 
-    containerClass: {
-        type: [String, null] as PropType<string | null>,
-        default: null,
-    },
-
+    /**
+     * Dropdown inherit top width
+     */
     parentWidth: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     * Prevent open control
+     */
     preventControl: {
         type: Boolean,
         default: false,
     },
 
+    /**
+     * Auto closing after clicks outside or clicks inside
+     */
     autoClose: {
         type: Boolean,
         default: false,
