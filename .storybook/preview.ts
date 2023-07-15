@@ -11,6 +11,7 @@ import '../src/stories/UiImage/UiImage.scss';
 import '../src/stories/UiInput/UiInput.scss';
 import '../src/stories/UiPlate/UiPlate.scss';
 import '../src/stories/UiPopover/UiPopover.scss';
+import '../src/stories/UiPreloader/UiPreloader.scss';
 
 const preview: Preview = {
     parameters: {

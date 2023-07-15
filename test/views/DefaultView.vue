@@ -9,7 +9,6 @@ const components = [
     'Select',
     'Tooltip',
     'Swiper',
-    'Preloader',
 ].map(name => ({
     name,
     component: defineAsyncComponent(() => import(`../components/stories/${name}Story/${name}Story.vue`)),
