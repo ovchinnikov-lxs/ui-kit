@@ -10,7 +10,6 @@ const components = [
     'Select',
     'Tooltip',
     'Swiper',
-    'Plate',
     'Preloader',
 ].map(name => ({
     name,

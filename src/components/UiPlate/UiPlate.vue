@@ -13,6 +13,9 @@ import { stateProps, useState } from '~/composables/useState';
 import { styleProps, useStyle } from '~/composables/useStyle';
 
 const props = defineProps({
+    /**
+     * Root tag of a component
+     */
     tag: {
         type: String,
         default: 'div',
