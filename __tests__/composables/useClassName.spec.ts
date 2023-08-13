@@ -1,11 +1,11 @@
 import { useClassName } from '../../src/composables/useClassName';
 
 describe('Test composable useClassName', () => {
-    it('should be Availability', function() {
+    it('should be availability', () => {
         expect(typeof useClassName).toBe('function');
     });
 
-    it('should be return an object with a list of classes', function() {
+    it('should be return an object with a list of classes', () => {
         const COMPONENT_PROPS = {
             classPrefix: 'Test',
         };

@@ -1,7 +1,7 @@
 import { useColor } from '../../src/composables/useColor';
 
 describe('Test composable useColor', () => {
-    it('should be Availability', function() {
+    it('should be availability', () => {
         expect(typeof useColor).toBe('function');
     });
 
