@@ -1,10 +1,20 @@
 import { useClassName } from '../../src/composables/useClassName';
 
-describe('Проверка useClassName', () => {
-    it('Должен вернуть список с объектом классов', function() {
-        const CLASS_NAME = 'Test';
+describe('Test composable useClassName', () => {
+    it('should be Availability', function() {
+        expect(typeof useClassName).toBe('function');
+    });
 
-        const res = useClassName({ classPrefix: CLASS_NAME });
-        expect(res.getClassName.value(CLASS_NAME)).toEqual([{ UiTest: 'Ui', TestTest: true }]);
+    it('should be return an object with a list of classes', function() {
+        const COMPONENT_PROPS = {
+            classPrefix: 'Test',
+        };
+        const EXPECTED_VALUE = [{
+            UiSomeComponent: 'Ui',
+            TestSomeComponent: true,
+        }];
+
+        const { getClassName } = useClassName(COMPONENT_PROPS);
+        expect(getClassName.value('SomeComponent')).toEqual(EXPECTED_VALUE);
     });
 });

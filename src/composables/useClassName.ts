@@ -20,10 +20,10 @@ export const classNameProps = {
 };
 
 export function useClassName(classNameProps: IClassNameProps) {
-    const getClassName = computed(() => (className: string): TypeClassList => [
+    const getClassName = computed(() => (componentName: string): TypeClassList => [
         {
-            [`${DEFAULT_PREFIX}${className}`]: DEFAULT_PREFIX,
-            [`${classNameProps.classPrefix}${className}`]: Boolean(classNameProps.classPrefix),
+            [`${DEFAULT_PREFIX}${componentName}`]: DEFAULT_PREFIX,
+            [`${classNameProps.classPrefix}${componentName}`]: Boolean(classNameProps.classPrefix),
         },
     ]);
 
