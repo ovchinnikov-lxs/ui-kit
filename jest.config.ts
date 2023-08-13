@@ -25,6 +25,8 @@ const config: Config = {
         'src/**/*.ts',
         '!src/stories/**',
         '!src/vite-env.d.ts',
+        '!src/components/main.ts',
+        '!src/components/index.ts',
     ],
 
     // The directory where Jest should output its coverage files
