@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.10.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.9.1...v2.10.0) (2023-08-14)
+
+
+### Features
+
+* **UiSwiper:** Added swiper to build ([d084a41](https://github.com/ovchinnikov-lxs/ui-kit/commit/d084a417ac1c57722181f017e488824858efe71e))
+
 ## [2.9.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.9.0...v2.9.1) (2023-05-27)
 
 
