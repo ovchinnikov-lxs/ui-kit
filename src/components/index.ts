@@ -12,6 +12,7 @@ export { default as UiSelect } from './UiSelect/UiSelect.vue';
 export { default as UiTooltip } from './UiTooltip/UiTooltip.vue';
 export { default as UiSelectHeader } from './UiSelect/UiSelectHeader.vue';
 export { default as UiSelectOptions } from './UiSelect/UiSelectOptions.vue';
+export { default as UiSwiper } from './UiSwiper/UiSwiper.vue';
 export { default as UiIcon } from './UiIcon/UiIcon.vue';
 export { default as UiPlate } from './UiPlate/UiPlate.vue';
 export { default as UiImage } from './UiImage/UiImage.vue';

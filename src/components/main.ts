@@ -13,6 +13,7 @@ import {
     UiSelect,
     UiSelectHeader,
     UiSelectOptions,
+    UiSwiper,
     UiTooltip,
     UiIcon,
     UiPlate,
@@ -36,6 +37,7 @@ export default {
         app.component('UiSelect', UiSelect);
         app.component('UiSelectHeader', UiSelectHeader);
         app.component('UiSelectOptions', UiSelectOptions);
+        app.component('UiSwiper', UiSwiper);
         app.component('UiTooltip', UiTooltip);
         app.component('UiIcon', UiIcon);
         app.component('UiPlate', UiPlate);
@@ -59,6 +61,7 @@ export {
     UiSelect,
     UiSelectHeader,
     UiSelectOptions,
+    UiSwiper,
     UiTooltip,
     UiIcon,
     UiPlate,
