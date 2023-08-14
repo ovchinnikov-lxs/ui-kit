@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.10.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.0...v2.10.1) (2023-08-14)
+
+
+### Bug Fixes
+
+* **UiImage:** Added alt props ([9b14a07](https://github.com/ovchinnikov-lxs/ui-kit/commit/9b14a07fbc8e37f19b08795c75d5f5637d5a0ef3))
+
 ## [2.10.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.9.1...v2.10.0) (2023-08-14)
 
 
