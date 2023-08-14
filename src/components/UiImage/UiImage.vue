@@ -69,6 +69,14 @@ const props = defineProps({
             'zoom-out',
         ].includes(v),
     },
+
+    /**
+     *  Alternate text for an image
+     */
+    alt: {
+        type: String,
+        default: '',
+    },
 });
 
 const attrs = useAttrs();
@@ -231,15 +239,15 @@ const originClassList = computed((): TypeClassList => [{
                  :src="preview"
                  v-bind="$attrs"
                  draggable="false"
-                 alt=""
+                 :alt="alt"
                  :class="getClassName('Image__preview')"
             >
 
             <transition :name="initialLoaded ? 'none' : 'ui-image'" mode="out-in">
                 <img v-if="!lazy || (lazy && loaded) || initialLoaded"
                      v-bind="originAttrs"
+                     :alt="alt"
                      draggable="false"
-                     alt=""
                      :class="[getClassName('Image__origin'), originClassList]"
                 >
             </transition>
