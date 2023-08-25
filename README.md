@@ -1,15 +1,15 @@
-## UI-kit for my vue 3 projects
+# UI-kit for my vue 3 projects
 
 [![Versions](https://img.shields.io/npm/v/@ovchinnikov-lxs-frontend/ui-kit.svg)](https://www.npmjs.com/package/@ovchinnikov-lxs-frontend/ui-kit)
 [![Downloads](https://img.shields.io/npm/dt/@ovchinnikov-lxs-frontend/ui-kit.svg)](https://www.npmjs.com/package/@ovchinnikov-lxs-frontend/ui-kit)
 
-#### Install
+## Install
 
 ```sh
 npm i @ovchinnikov-lxs-frontend/ui-kit
 ```
 
-#### Example of usage:
+### Example of usage:
 
 1. ###### Import default ui-kit css styles
    `_bundle.sccs`
@@ -66,7 +66,7 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
     </template>
     ```
 
-#### List of the components
+### List of the components
 
 🛠 - in progress  
 🚧 - experimental
@@ -91,3 +91,30 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
 - [`UiPlate`](src%2Fcomponents%2FUiPlate%2FUiPlate.vue)
 - [`UiCollapse`](src%2Fcomponents%2FUiCollapse%2FUiCollapse.vue)
 - [`UiPreloader`](src%2Fcomponents%2FUiPreloader%2FUiPreloader.vue)
+
+>## Develop
+>
+> #### Install dependencies
+>
+> ```sh
+> npm install 
+>```
+>#### Storybook
+>```sh
+>npm run storybook
+>```
+>
+>#### Lint
+>*Check eslint and stylelint*
+>```sh
+>npm run lint:check
+>```
+>*Fix eslint and stylelint*
+>```sh
+>npm run lint:fix 
+>```
+>
+>#### Unit tests
+>```sh
+>npm run unit:test
+>```
