@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
 
 import { resolve } from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 import vue from '@vitejs/plugin-vue';
 import checker from 'vite-plugin-checker';
@@ -69,4 +69,15 @@ export default defineConfig({
     },
 
     optimizeDeps: { exclude: ['swiper/vue', 'swiper/types'] },
+
+    test: {
+        // enable jest-like global test APIs
+        globals: true,
+        // simulate DOM with happy-dom
+        // (requires installing happy-dom as a peer dependency)
+        environment: 'happy-dom',
+        coverage: {
+            provider: 'v8',
+        },
+    },
 });

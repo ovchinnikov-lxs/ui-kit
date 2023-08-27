@@ -31,33 +31,36 @@ const props = defineProps({
 const { getClassName } = useClassName(props);
 let animation: null | { pause: () => void } = null;
 
-function onBeforeEnter(el: HTMLElement) {
+function onBeforeEnter(el: Element) {
     const method = props.axis === AXIS_TYPE.Y
         ? onBeforeEnterY
         : onBeforeEnterX;
 
-    method(el);
+    const element = el as HTMLElement;
+    method(element);
 }
 
-function onEnter(el: HTMLElement, done: () => void) {
+function onEnter(el: Element, done: () => void) {
     stopAnimation();
 
     const method = props.axis === AXIS_TYPE.Y
         ? onEnterY
         : onEnterX;
 
-    method(el, done);
+    const element = el as HTMLElement;
+    method(element, done);
 }
 
-function onBeforeLeave(el: HTMLElement) {
+function onBeforeLeave(el: Element) {
     const method = props.axis === AXIS_TYPE.Y
         ? onBeforeLeaveY
         : onBeforeLeaveX;
 
-    method(el);
+    const element = el as HTMLElement;
+    method(element);
 }
 
-function onLeave(el: HTMLElement, done: () => void) {
+function onLeave(el: Element, done: () => void) {
     stopAnimation();
 
 
@@ -65,7 +68,8 @@ function onLeave(el: HTMLElement, done: () => void) {
         ? onLeaveY
         : onLeaveX;
 
-    method(el, done);
+    const element = el as HTMLElement;
+    method(element, done);
 }
 
 // Y

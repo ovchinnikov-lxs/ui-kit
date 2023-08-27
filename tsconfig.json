@@ -21,7 +21,8 @@
         "types": [
             "jest",
             "node",
-            "vite/client"
+            "vite/client",
+            "vitest/globals"
         ]
     },
     "references": [
