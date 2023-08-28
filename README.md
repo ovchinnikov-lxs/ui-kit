@@ -116,5 +116,5 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
 >
 >#### Unit tests
 >```sh
->npm run unit:test
+>npm run test
 >```
