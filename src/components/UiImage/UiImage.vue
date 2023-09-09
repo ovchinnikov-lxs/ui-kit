@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// TODO: FIX EMITS
 import { computed, onBeforeUnmount, onMounted, ref, useAttrs, useSlots } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
 import type { IUiLazyObserver } from '../../../global';
