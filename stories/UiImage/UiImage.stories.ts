@@ -18,7 +18,7 @@ const meta = {
         setup() {
             return { args };
         },
-        template: '<UiImage v-bind="args"/>',
+        template: '<UiImage v-bind="args" style="margin-top: 1000px;" @origin-loaded="console.log(\'origin loaded\')"/>',
     }),
     args: {
         origin: 'https://images.unsplash.com/photo-1675446340536-46f629dcb858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80',

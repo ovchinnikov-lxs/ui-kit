@@ -5,20 +5,18 @@ interface IImageData {
 }
 
 class ImageLoaderClass {
-    private readonly images: {
-        [key: string]: IImageData
-    };
+    private readonly images: Map<string, IImageData>;
 
     constructor() {
-        this.images = {};
+        this.images = new Map();
     }
 
-    getImage(src: string): object | boolean {
+    getImage(src: string): IImageData | false {
         if (!src.length) {
             return false;
         }
 
-        return this.images[src] || false;
+        return this.images.get(src) || false;
     }
 
     async loadImage(src: string) {
@@ -26,19 +24,17 @@ class ImageLoaderClass {
             const image = new Image();
 
             image.onload = () => {
-                if (typeof window !== 'undefined') {
-                    this.images[src] = {
-                        image,
-                        width: image.naturalWidth,
-                        height: image.naturalHeight,
-                    };
-                }
-
-                resolve({
-                    image: image,
+                const value = {
+                    image,
                     width: image.naturalWidth,
                     height: image.naturalHeight,
-                });
+                };
+
+                if (typeof window !== 'undefined') {
+                    this.images.set(src, value);
+                }
+
+                resolve(value);
             };
 
             image.onerror = e => {

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-// TODO: FIX EMITS
-import { computed, onBeforeUnmount, onMounted, ref, useAttrs, useSlots } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, useSlots } from 'vue';
 import type { TypeClassList } from '~/assets/utils/types';
 import type { IUiLazyObserver } from '../../../global';
 
@@ -80,7 +79,6 @@ const props = defineProps({
     },
 });
 
-const attrs = useAttrs();
 const slots = useSlots();
 const emit = defineEmits<{
     'origin-loaded': [void]
@@ -88,13 +86,25 @@ const emit = defineEmits<{
 }>();
 
 let observer: IUiLazyObserver | null = null;
-const el = ref(null);
-const id = Math.floor(Math.random() * 1000000);
+const imageRef = ref<HTMLDivElement>();
+const id = ref(Math.floor(Math.random() * 1000000));
 
 const loaded = ref(false);
-const loading = ref(false);
-const initialLoaded = ref(Boolean(imageLoader.getImage(props.origin)));
+const initialLoaded = ref(false);
 
+function clearObserver() {
+    if (!props.lazy || !observer || !imageRef.value) {
+        return false;
+    }
+
+    delete observer.actions[id.value];
+    observer.object.unobserve(imageRef.value);
+
+    if (!Object.keys(observer.actions).length) {
+        observer.object.disconnect();
+        window.UiLazyObserver = null;
+    }
+}
 function getObserver() {
     if (window.UiLazyObserver) {
         return window.UiLazyObserver;
@@ -126,27 +136,11 @@ function getObserver() {
     return window.UiLazyObserver;
 }
 
-function clearObserver() {
-    if (!props.lazy || !observer || !el.value) {
-        return false;
-    }
-
-    delete observer.actions[id];
-    observer.object.unobserve(el.value);
-
-    if (!Object.keys(observer.actions).length) {
-        observer.object.disconnect();
-        window.UiLazyObserver = null;
-    }
-}
-
 async function loadPreview() {
-    if (!attrs['preview-loaded']) {
-        return false;
-    }
-
     try {
-        await imageLoader.loadImage(props.preview);
+        if (!imageLoader.getImage(props.preview)) {
+            await imageLoader.loadImage(props.preview);
+        }
 
         emit('preview-loaded');
     } catch (e) {
@@ -156,32 +150,32 @@ async function loadPreview() {
 
 async function loadImage(target: Element) {
     try {
-        const isEqual = target.isEqualNode(el.value);
-
-        if (loading.value || loaded.value || !isEqual) {
+        if (!imageRef.value) {
             return false;
         }
 
-        loading.value = true;
+        const isEqual = target.isEqualNode(imageRef.value);
 
-        await imageLoader.loadImage(props.origin);
+        if (loaded.value || !isEqual) {
+            return false;
+        }
+
+        if (!imageLoader.getImage(props.origin)) {
+            await imageLoader.loadImage(props.origin);
+        }
 
         loaded.value = true;
 
-        if (attrs['origin-loaded']) {
-            emit('origin-loaded');
-        }
+        emit('origin-loaded');
     } catch (e) {
         console.error('UI_IMAGE:LOAD_IMAGE', e);
     }
 }
 
 function onInit() {
-    if (!props.lazy) {
-        return false;
-    }
+    initialLoaded.value = Boolean(imageLoader.getImage(props.origin));
 
-    if (initialLoaded.value) {
+    if (!props.lazy) {
         return false;
     }
 
@@ -191,13 +185,15 @@ function onInit() {
         return false;
     }
 
-    observer.actions[id] = loadImage;
+    observer.actions[id.value] = loadImage;
 
-    if (el.value) {
-        observer.object.observe(el.value);
+    if (imageRef.value) {
+        observer.object.observe(imageRef.value);
     }
 
-    loadPreview();
+    if (props.preview) {
+        loadPreview();
+    }
 }
 
 onMounted(() => {
@@ -219,7 +215,6 @@ const classList = computed((): TypeClassList => [
 ]);
 
 const originAttrs = computed(() => ({
-    ...attrs,
     ...!props.swiperLazy && { src: props.origin },
     ...props.swiperLazy && { 'data-src': props.origin },
 }));
@@ -229,7 +224,7 @@ const originClassList = computed((): TypeClassList => [{
 </script>
 
 <template>
-    <div ref="el" :class="[getClassName('Image'), classList]">
+    <div ref="imageRef" :class="[getClassName('Image'), classList]">
         <div :class="getClassName('Image__wrapper')">
 
             <div v-if="$slots.preview" :class="getClassName('Image__preview')">
@@ -238,19 +233,19 @@ const originClassList = computed((): TypeClassList => [{
 
             <img v-else-if="preview"
                  :src="preview"
-                 v-bind="$attrs"
                  draggable="false"
-                 :alt="alt"
+                 alt=""
                  :class="getClassName('Image__preview')"
             >
 
             <transition :name="initialLoaded ? 'none' : 'ui-image'" mode="out-in">
-                <img v-if="!lazy || (lazy && loaded) || initialLoaded"
-                     v-bind="originAttrs"
-                     :alt="alt"
-                     draggable="false"
-                     :class="[getClassName('Image__origin'), originClassList]"
-                >
+                <img
+                    v-if="!lazy || (lazy && loaded) || initialLoaded"
+                    v-bind="originAttrs"
+                    :alt="alt"
+                    draggable="false"
+                    :class="[getClassName('Image__origin'), originClassList]"
+                />
             </transition>
         </div>
     </div>
