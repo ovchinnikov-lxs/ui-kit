@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.10.2](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.1...v2.10.2) (2023-09-22)
+
+
+### Bug Fixes
+
+* **UiImage:** Some fixes ([14d93f2](https://github.com/ovchinnikov-lxs/ui-kit/commit/14d93f20970f02cf3aa49cd2e75de3c08a2a3f63))
+
 ## [2.10.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.0...v2.10.1) (2023-08-14)
 
 
