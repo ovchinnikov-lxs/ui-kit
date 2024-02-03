@@ -1,4 +1,11 @@
 # CHANGELOG
+## [2.10.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.2...v2.10.3) (2024-02-03)
+
+
+### Bug Fixes
+
+* **UiSelect:** fixed classList ([7dae8ae](https://github.com/ovchinnikov-lxs/ui-kit/commit/7dae8ae9345da866d7de0c0329affe238df5dc52))
+
 ## [2.10.2](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.1...v2.10.2) (2023-09-22)
 
 
