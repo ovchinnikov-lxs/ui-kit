@@ -211,7 +211,7 @@ const classList = computed((): TypeClassList => [
     stateClassList.value,
     styleClassList.value,
     {
-        '--is-disabled': isDisabled,
+        '--is-disabled': isDisabled.value,
     },
 ]);
 
