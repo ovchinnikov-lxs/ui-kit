@@ -1,6 +1,9 @@
 {
     "name": "@ovchinnikov-lxs-frontend/ui-kit",
     "version": "2.10.3",
+    "engines": {
+        "node": ">=20.10.0"
+    },
     "scripts": {
         "dev": "vite --port 3001",
         "build": "run-p type:check build-only",
@@ -9,10 +12,10 @@
         "type:check": "vue-tsc --noEmit",
         "el:check": "eslint --ext .ts --ext .vue .",
         "sl:check": "stylelint \"**/*.{css,scss,vue}\"",
-        "lint:check": "npm run el:check && npm run sl:check",
+        "lint:check": "pnpm run el:check && pnpm run sl:check",
         "el:fix": "eslint --ext .vue --ext .ts . --fix",
         "sl:fix": "stylelint \"**/*.{css,scss,vue}\" --fix",
-        "lint:fix": "npm run el:fix && npm run sl:fix",
+        "lint:fix": "pnpm run el:fix && pnpm run sl:fix",
         "test": "vitest run --coverage",
         "prepare": "husky install",
         "storybook": "storybook dev -p 6006",

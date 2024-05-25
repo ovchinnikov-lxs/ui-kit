@@ -6,7 +6,7 @@
 ## Install
 
 ```sh
-npm i @ovchinnikov-lxs-frontend/ui-kit
+pnpm i @ovchinnikov-lxs-frontend/ui-kit
 ```
 
 ### Example of usage:
@@ -97,24 +97,24 @@ npm i @ovchinnikov-lxs-frontend/ui-kit
 > #### Install dependencies
 >
 > ```sh
-> npm install 
+> pnpm install 
 >```
 >#### Storybook
 >```sh
->npm run storybook
+>pnpm run storybook
 >```
 >
 >#### Lint
 >*Check eslint and stylelint*
 >```sh
->npm run lint:check
+>pnpm run lint:check
 >```
 >*Fix eslint and stylelint*
 >```sh
->npm run lint:fix 
+>pnpm run lint:fix 
 >```
 >
 >#### Unit tests
 >```sh
->npm run test
+>pnpm run test
 >```
