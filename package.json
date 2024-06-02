@@ -25,7 +25,8 @@
         "prettier:check": "npx prettier . --check",
         "prettier:fix": "pnpm exec prettier . --write",
         "lint:check": "pnpm run eslint:check && pnpm run stylelint:check && pnpm run prettier:check",
-        "lint:fix": "pnpm run eslint:fix && pnpm run stylelint:fix && pnpm run prettier:fix"
+        "lint:fix": "pnpm run eslint:fix && pnpm run stylelint:fix && pnpm run prettier:fix",
+        "test": "vitest run --coverage"
     },
     "dependencies": {
         "@nuxtjs/svg-sprite": "^1.0.2",
@@ -45,6 +46,7 @@
         "@types/animejs": "^3.1.12",
         "@types/lodash": "^4.17.4",
         "@types/node": "^20.12.12",
+        "@vitest/coverage-v8": "^1.6.0",
         "@vue/test-utils": "^2.4.6",
         "@vueuse/core": "^10.9.0",
         "@vueuse/nuxt": "^10.9.0",
