@@ -21,7 +21,7 @@ jobs:
                     node-version: ${{ matrix.node-version }}
 
             -   name: Install dependents 🔧
-                run: npm ci
+                run: pnpm i
 
             -   name: Run Tests 🔨
-                run: npm run test
+                run: pnpm run test
