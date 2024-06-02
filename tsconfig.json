@@ -1,32 +1,3 @@
 {
-    "extends": "@vue/tsconfig/tsconfig.web.json",
-    "include": [
-        "env.d.ts",
-        "global.d.ts",
-        "src/**/*",
-        "src/**/*.vue"
-    ],
-    "exclude": [
-        "node_modules"
-    ],
-    "compilerOptions": {
-        "strict": true,
-        "baseUrl": ".",
-        "paths": {
-            "~/*": [
-                "./src/*"
-            ]
-        },
-        "declaration": true,
-        "types": [
-            "node",
-            "vite/client",
-            "vitest/globals"
-        ]
-    },
-    "references": [
-        {
-            "path": "./tsconfig.config.json"
-        }
-    ]
+    "extends": "./.playground/.nuxt/tsconfig.json"
 }

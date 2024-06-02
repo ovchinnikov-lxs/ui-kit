@@ -1,0 +1,5 @@
+@mixin ui-style($name) {
+    &.--is-#{$name} {
+        @content;
+    }
+}

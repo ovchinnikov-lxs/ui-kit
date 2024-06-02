@@ -1,6 +1,6 @@
-import { POSITION_OPTIONS } from '../../../../src/assets/utils/constants/position';
+import { describe, expect, it } from 'vitest';
 
-describe('Test position constants', () => {
+describe('test position constants', () => {
     it('should have correct values for POSITION_OPTIONS', () => {
         expect(POSITION_OPTIONS.TOP).toBe('top');
         expect(POSITION_OPTIONS.RIGHT).toBe('right');
