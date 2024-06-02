@@ -1,6 +1,6 @@
-import { AXIS_TYPE } from '../../../../src/assets/utils/constants/collapse';
+import { describe, expect, it } from 'vitest';
 
-describe('Test collapse constants', () => {
+describe('test collapse constants', () => {
     it('should have correct values for AXIS_TYPE', () => {
         expect(AXIS_TYPE.X).toBe('x');
         expect(AXIS_TYPE.Y).toBe('y');

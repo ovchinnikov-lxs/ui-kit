@@ -1,0 +1,24 @@
+{
+    "experimentalTernaries": false,
+    "printWidth": 180,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "htmlWhitespaceSensitivity": "css",
+    "vueIndentScriptAndStyle": false,
+    "singleAttributePerLine": true,
+    "proseWrap": "never",
+    "insertPragma": false,
+    "requirePragma": false,
+    "embeddedLanguageFormatting": "auto",
+    "plugins": [
+        "prettier-plugin-multiline-arrays"
+    ]
+}

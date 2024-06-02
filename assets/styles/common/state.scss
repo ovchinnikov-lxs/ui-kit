@@ -1,0 +1,49 @@
+@mixin disabled-element {
+    cursor: not-allowed;
+
+    & > * {
+        pointer-events: none;
+    }
+}
+
+@mixin loading-element {
+    cursor: progress;
+
+    & > * {
+        pointer-events: none;
+    }
+}
+
+@mixin ui-disabled-state {
+    &.--is-disabled,
+    &:disabled,
+    &[data-disabled='true'] {
+        @include disabled-element;
+
+        @content;
+    }
+}
+
+@mixin ui-loading-state {
+    &.--is-loading {
+        @include loading-element;
+
+        @content;
+    }
+}
+
+@mixin ui-state($name) {
+    @if $name == 'disabled' {
+        @include ui-disabled-state {
+            @content;
+        }
+    } @else if $name == 'loading' {
+        @include ui-loading-state {
+            @content;
+        }
+    } @else {
+        &.--is-#{$name} {
+            @content;
+        }
+    }
+}

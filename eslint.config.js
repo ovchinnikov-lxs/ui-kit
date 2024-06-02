@@ -1,0 +1,192 @@
+import { antfu } from '@antfu/eslint-config';
+import eslintConfigPrettier from 'eslint-config-prettier';
+
+export default antfu(
+    {
+        stylistic: false,
+        rules: {
+            'vue/block-order': [
+                'error',
+                {
+                    order: ['template', 'script', 'style'],
+                },
+            ],
+            'no-console': ['warn'],
+            'ts/ban-ts-comment': 'off',
+            curly: 'off',
+            'ts/no-unused-vars': [
+                'error',
+                {
+                    argsIgnorePattern: '^_',
+                    destructuredArrayIgnorePattern: '^_',
+                },
+            ],
+            'vue/no-unused-vars': ['error', { ignorePattern: '^_' }],
+            'vue/custom-event-name-casing': ['error', 'camelCase'],
+            'vue/no-async-in-computed-properties': 'error',
+            'vue/no-child-content': 'error',
+            'vue/no-computed-properties-in-data': 'error',
+            'vue/no-deprecated-data-object-declaration': 'error',
+            'vue/no-deprecated-destroyed-lifecycle': 'error',
+            'vue/no-deprecated-dollar-listeners-api': 'error',
+            'vue/no-deprecated-dollar-scopedslots-api': 'error',
+            'vue/no-deprecated-events-api': 'error',
+            'vue/no-deprecated-filter': 'error',
+            'vue/no-deprecated-functional-template': 'error',
+            'vue/no-deprecated-html-element-is': 'error',
+            'vue/no-deprecated-inline-template': 'error',
+            'vue/no-deprecated-scope-attribute': 'error',
+            'vue/no-deprecated-v-on-native-modifier': 'error',
+            'vue/no-deprecated-v-on-number-modifiers': 'error',
+            'vue/no-deprecated-vue-config-keycodes': 'error',
+            'vue/no-dupe-v-else-if': 'error',
+            'vue/no-duplicate-attributes': 'error',
+            'vue/no-export-in-script-setup': 'error',
+            'vue/no-expose-after-await': 'error',
+            'vue/no-lifecycle-after-await': 'error',
+            'vue/no-parsing-error': 'error',
+            'vue/no-ref-as-operand': 'error',
+            'vue/no-reserved-component-names': [
+                'error',
+                {
+                    disallowVueBuiltInComponents: true,
+                    disallowVue3BuiltInComponents: true,
+                },
+            ],
+            'vue/no-reserved-keys': 'error',
+            'vue/no-reserved-props': [
+                'error',
+                {
+                    vueVersion: 3,
+                },
+            ],
+            'vue/no-side-effects-in-computed-properties': 'error',
+            'vue/block-lang': [
+                'error',
+                {
+                    script: {
+                        lang: 'ts',
+                    },
+                },
+            ],
+            'vue/component-api-style': [
+                'error',
+                ['script-setup'],
+            ],
+            'vue/component-name-in-template-casing': [
+                'error',
+                'PascalCase',
+                {
+                    registeredComponentsOnly: false,
+                },
+            ],
+            'vue/component-options-name-casing': ['error', 'PascalCase'],
+            'vue/define-emits-declaration': ['error', 'type-literal'],
+            'vue/enforce-style-attribute': ['error', { allow: ['module', 'plain'] }],
+            'vue/html-button-has-type': [
+                'error',
+                {
+                    button: true,
+                    submit: true,
+                    reset: true,
+                },
+            ],
+            'vue/new-line-between-multi-line-property': [
+                'error',
+                {
+                    minLineOfMultilineProperty: 2,
+                },
+            ],
+            'vue/no-bare-strings-in-template': [
+                'error',
+                {
+                    allowlist: [
+                        'ID',
+                        '(',
+                        ')',
+                        ',',
+                        '.',
+                        '&',
+                        '+',
+                        '-',
+                        '=',
+                        '*',
+                        '/',
+                        '#',
+                        '%',
+                        '!',
+                        '?',
+                        ':',
+                        '[',
+                        ']',
+                        '{',
+                        '}',
+                        '<',
+                        '>',
+                        '\u00B7',
+                        '\u2022',
+                        '\u2010',
+                        '\u2013',
+                        '\u2014',
+                        '\u2212',
+                        '|',
+                        '&nbsp;',
+                    ],
+                    attributes: {
+                        '/.+/': ['title', 'aria-label', 'aria-placeholder', 'aria-roledescription', 'aria-valuetext'],
+                        input: ['placeholder'],
+                        img: ['alt'],
+                    },
+                },
+            ],
+            'vue/no-empty-component-block': 'error',
+            'vue/no-ref-object-reactivity-loss': 'warn',
+            'vue/no-required-prop-with-default': [
+                'error',
+                {
+                    autofix: true,
+                },
+            ],
+            'vue/no-root-v-if': 'error',
+            'vue/no-setup-props-reactivity-loss': 'error',
+            'vue/no-static-inline-styles': 'error',
+            'vue/no-unused-emit-declarations': 'error',
+            'vue/no-v-text': 'error',
+            'vue/padding-line-between-tags': [
+                'error',
+                [
+                    {
+                        blankLine: 'always',
+                        prev: '*',
+                        next: '*',
+                    },
+                ],
+            ],
+            'vue/prefer-define-options': 'error',
+            'vue/prefer-separate-static-class': 'error',
+            'vue/require-macro-variable-name': [
+                'error',
+                {
+                    defineProps: 'props',
+                    defineEmits: 'emit',
+                    defineSlots: 'slots',
+                    useSlots: 'slots',
+                    useAttrs: 'attrs',
+                },
+            ],
+            'vue/require-typed-ref': 'error',
+            'vue/valid-define-options': 'error',
+            'node/prefer-global/process': ['error', 'always'],
+            'eslint-comments/no-unlimited-disable': 'off',
+            'n/prefer-global/buffer': 'off',
+        },
+        typescript: true,
+        vue: true,
+        yaml: false,
+        jsonc: true,
+    },
+    eslintConfigPrettier,
+    {
+        ignores: ['**/analytics.ts', '**/.locales/*.*', '.gitlab-ci.yml'],
+    },
+);

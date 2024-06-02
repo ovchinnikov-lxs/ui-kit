@@ -1,13 +1,11 @@
-import { formatBytes } from '../../../../src/assets/utils/helpers/file-helpers';
+import { describe, expect, it } from 'vitest';
 
-describe('Test file helpers', () => {
-    it('should format bytes correctly', () => {
-        expect(formatBytes(1024)).toBe('1 КБ');
-        expect(formatBytes(1024 * 1024)).toBe('1 МБ');
-        expect(formatBytes(1024 * 1024 * 1024)).toBe('1 ГБ');
+describe('test file helpers', () => {
+    it('should return false on invalid URL', () => {
+        expect(isValidUrl('base/invalid')).toBe(false);
     });
 
-    it('should format zero bytes', () => {
-        expect(formatBytes(0)).toBe('0 Байт');
+    it('should return true on valid URL', () => {
+        expect(isValidUrl('https://google.com')).toBe(true);
     });
 });

@@ -1,6 +1,6 @@
-import { SIZES_DICT } from '../../../../src/assets/utils/constants/sizes';
+import { describe, expect, it } from 'vitest';
 
-describe('Test sizes constants', () => {
+describe('test sizes constants', () => {
     it('should have correct values for SIZES_DICT', () => {
         expect(SIZES_DICT.X_SMALL).toBe('x-small');
         expect(SIZES_DICT.SMALL).toBe('small');

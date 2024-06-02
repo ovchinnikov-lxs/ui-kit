@@ -156,3 +156,16 @@ ssl
 
 # Nuxt generate
 dist/
+
+*.log
+nuxt.d.ts
+.output
+.data
+package-lock.json
+framework
+
+# Local History
+.history
+
+# VSCode
+.vscode/
