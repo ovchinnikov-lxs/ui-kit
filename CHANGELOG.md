@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [3.0.2](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.1...v3.0.2) (2024-06-03)
+
+
+### Bug Fixes
+
+* **github-actions:** remove pnpm from publish.yml ([7f8c087](https://github.com/ovchinnikov-lxs/ui-kit/commit/7f8c0879fb9d629bcab8c199df2aae8e2710d2ef))
+
 ## [3.0.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.0...v3.0.1) (2024-06-03)
 
 
