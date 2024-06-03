@@ -1,7 +1,7 @@
 {
     "name": "@ovchinnikov-lxs-frontend/ui-kit",
     "type": "module",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "repository": {
         "type": "git",
         "url": "https://github.com/ovchinnikov-lxs/ui-kit.git"
