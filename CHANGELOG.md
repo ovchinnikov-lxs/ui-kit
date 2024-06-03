@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [3.0.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.3...v3.0.0) (2024-06-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt-layer:** added layer files to package.json
+
+### Features
+
+* **nuxt-layer:** added layer files to package.json ([6c9fa42](https://github.com/ovchinnikov-lxs/ui-kit/commit/6c9fa42df8e3654f8d7bb7cce8649c0e31d10feb))
+* **nuxt-layer:** added vitest coverage ([43819be](https://github.com/ovchinnikov-lxs/ui-kit/commit/43819be4d0bdda1eba7ccbee91e5e8b1b1c5212c))
+* **nuxt-layer:** refactor github actions ([fef9873](https://github.com/ovchinnikov-lxs/ui-kit/commit/fef9873b93a0ba51e121426c369965c3b17828fc))
+* **nuxt-layer:** refactor github actions ([77b39cc](https://github.com/ovchinnikov-lxs/ui-kit/commit/77b39cc9a26bb3fe3d3cb6433bf7a5e3f8352b46))
+* **nuxt-layer:** replaced npm to pnpm ([e99dfc0](https://github.com/ovchinnikov-lxs/ui-kit/commit/e99dfc060d183cf06134453fa2f84e428273d9a8))
+
 ## [2.10.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.2...v2.10.3) (2024-02-03)
 
 ### Bug Fixes
