@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [3.0.5](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.4...v3.0.5) (2024-06-03)
+
+
+### Bug Fixes
+
+* **layer:** changed deps ([a8b6335](https://github.com/ovchinnikov-lxs/ui-kit/commit/a8b6335aa6f7569b425032ee850a72817cbf51fc))
+
 ## [3.0.4](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.3...v3.0.4) (2024-06-03)
 
 
