@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [3.0.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.2...v3.0.3) (2024-06-03)
+
+
+### Bug Fixes
+
+* **github-actions:** publish.yml ([3704cc5](https://github.com/ovchinnikov-lxs/ui-kit/commit/3704cc5302a4a7b231c28b4f14123fced4fca9bf))
+
 ## [3.0.2](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.1...v3.0.2) (2024-06-03)
 
 
