@@ -7,6 +7,14 @@
         "url": "https://github.com/ovchinnikov-lxs/ui-kit.git"
     },
     "main": "./nuxt.config.ts",
+    "files": [
+        "assets",
+        "components",
+        "composables",
+        "plugins",
+        "types",
+        "utils"
+    ],
     "engines": {
         "node": ">=20.10.0"
     },
