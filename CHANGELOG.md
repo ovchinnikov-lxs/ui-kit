@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [3.0.1](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.0...v3.0.1) (2024-06-03)
+
+
+### Bug Fixes
+
+* **README:** change text ([f4c225a](https://github.com/ovchinnikov-lxs/ui-kit/commit/f4c225ac98f1e79431a3f7a76e927fe1a7332373))
+
 ## [3.0.0](https://github.com/ovchinnikov-lxs/ui-kit/compare/v2.10.3...v3.0.0) (2024-06-03)
 
 
