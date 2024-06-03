@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [3.0.4](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.3...v3.0.4) (2024-06-03)
+
+
+### Bug Fixes
+
+* **layer:** added nuxt.config in npm files ([82141a4](https://github.com/ovchinnikov-lxs/ui-kit/commit/82141a464be0ee751e4400088e709ad741a9f80c))
+
 ## [3.0.3](https://github.com/ovchinnikov-lxs/ui-kit/compare/v3.0.2...v3.0.3) (2024-06-03)
 
 
